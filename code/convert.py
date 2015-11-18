@@ -3,7 +3,6 @@ from gensim import utils
 import numpy as np
 from numpy import dtype, fromstring, float32
 
-
 # move this file to ~/Documents/nlp_resource/word2vec/
 # go to that directory and type:
 #
@@ -11,6 +10,7 @@ from numpy import dtype, fromstring, float32
 #
 # it creates the hdf5 file for you in the same directory. make sure
 # the freebase-vectors-skipgram1000-en.bin.gz is in the directory as well!
+# you can get it from https://docs.google.com/uc?id=0B7XkCwpI5KDYeFdmcVltWkhtbmM&export=download
 # you only need to run this ONCE. it will take nearly an hour.
 #
 # once created, you can use vector.py to access the vectors in a
