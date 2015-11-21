@@ -32,38 +32,90 @@ class VectorModel:
 
     def __init__(self):
         self.f = h5py.File(config.FREEBASE_FILE)
+        
+        with open(config.ENTITIES_FILE) as f:
+            self.entities = [ent.strip() for ent in f.readlines()]
 
 
     def vector(self, string):
-        if string == '': return None # bug where it hangs on empty string
+        if string == '':
+            return None # bug where it hangs on empty string
+        elif string not in self:
+            return None
 
-        string = self._format_string(string)
+        return self._vector(self._format_string(string))
 
-        if string in self.f:
-            return np.array(self.f[string])
 
-        return None # there is no vector
+    def _vector(self, string):
+        return np.array(self.f[string])
 
 
     def similarity(self, s1, s2):
-        v1 = self[s1]
-        v2 = self[s2]
+        u = self[s1]
+        v = self[s2]
 
-        if v1 != None and v2 != None:
-            return 1 - sps.distance.cosine(v1, v2)
+        if u is None or v is None:
+            return 0.0
 
-        return 0.0
+        return self._similarity(u, v)
+
+
+    def _similarity(self, u, v):
+        return 1 - sps.distance.cosine(u, v)
+
+
+    def most_similar(self, string, k=1):
+        if string not in self:
+            return []
+
+        u = self[string]
+
+        return self._most_similar(u, self._format_string(string), k=k)
+
+
+    def _most_similar(self, u, string, k=1):
+        best = [(None, float('-inf')) for _ in xrange(k)]
+
+        for ent in self.entities:
+            if ent == string: continue
+
+            v = self._vector(ent)
+            sim = self._similarity(u, v)
+            _, lowest_sim = best[0]
+
+            if sim > lowest_sim:
+                best[0] = (ent, sim)
+                self._move_up(best)
+
+        best.reverse()
+
+        return best
+
+
+    def _move_up(self, l):
+        k = len(l)
+
+        for i in xrange(k-1):
+            elem = l[i]
+            next_elem = l[i+1]
+            
+            if elem[1] > next_elem[1]:
+                l[i] = next_elem
+                l[i+1] = elem
+                continue
+            else:
+                break
 
 
     def _format_string(self, string):
         string = string.lower()
         string = self._nonalphanumeric_to_underscore(string)
         
-        return '/en/%s' % string
+        return string
 
 
     def _nonalphanumeric_to_underscore(self, string):
-        string = re.sub(r'\W+', '_', string)
+        string = re.sub(r'[^a-z0-9-]+', '_', string)
         
         return string
 
