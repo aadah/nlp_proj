@@ -5,7 +5,6 @@ from sklearn.cluster import DBSCAN
 from sklearn import metrics
 from vector import VectorModel
 
-
 class RelationCluster():
 
     def __init__(self, entity_set, eps=1.5, min_samples=3, metric='euclidean'):

@@ -33,7 +33,7 @@ def poc_two():
         ('Barack Obama', 'Michelle Obama'),
         ('David Cameron', 'Samantha Cameron'),
         ('John Lennon', 'Yoko Ono'),
-        ('Bonnie Parker', 'Clyde Barrow'),
+        ('Benjamin Millepied', 'Natalie Portman'),
         ('Bill Clinton', 'Hillary Rodham Clinton'),
         ('Will Smith', 'Jada Pinkett Smith'),
         ('David Beckham', 'Victoria Beckham'),
@@ -47,7 +47,7 @@ def poc_two():
         ('Xi Jinping', 'Peng Liyuan'),
         ('John Krasinski', 'Emily Blunt'),
         ('Chris Martin', 'Gwyneth Paltrow'),
-        ('Steve Jobs', 'Lauren Powell')
+        ('Steve Jobs', 'Laurene Powell')
     ]
 
     model = vector.VectorModel()
@@ -60,8 +60,15 @@ def poc_two():
         g1 = model[x] + relation
         g2 = model[y] - relation
 
-        print y, pprint(model._most_similar(g1, 'DUMMY', k=5))
-        print x, pprint(model._most_similar(g2, 'DUMMY', k=5))
+        # forward direction
+        print '%s --> ? (%s)' % (x, y)
+        pprint(model._most_similar(g1, 'DUMMY', k=5))
+        print
+
+        # backward direction
+        print '? (%s) <-- %s' % (x, y)
+        pprint(model._most_similar(g2, 'DUMMY', k=5))
+        print
 
     model.close()
 
