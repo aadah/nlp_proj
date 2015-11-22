@@ -5,9 +5,17 @@ import os
 import config
 from ner_recognize import ner_recognize_string
 from cluster import RelationCluster
+from vector import VectorModel
+
+VM = VectorModel()
 
 def get_entity_set(text):
-    return ner_recognize_string(text)
+    entity_set = ner_recognize_string(text)
+    new_entity_set = set()
+    for entity in entity_set:
+        if entity in VM:
+            new_entity_set.add(entity)
+    return new_entity_set
 
 def get_article_text(text):
     soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
@@ -25,7 +33,7 @@ def get_article_ents(text):
     entity_string += soup.companies.getText().upper()
     return entity_string
 
-def readSgm(fname, entity_set_list):
+def readSgm(fname, entity_pairs):
     count = 0
     with open(fname, 'r') as f:
         inArticle = False
@@ -38,29 +46,47 @@ def readSgm(fname, entity_set_list):
                     body = get_article_text(text)
                     print type(body)
                     entity_set = get_entity_set(body)
-                    print entity_set
-                    entity_set_list.append(entity_set)
+                    pair_set = get_entity_pairs(entity_set)
+                    print '%d entities' % len(entity_set)
+                    print '%d pairs' % len(pair_set)
+                    entity_pairs = entity_pairs.union(pair_set)
                     count += 1
                     print '%d articles read' % count
+                    #if count == 100:
+                    #    break
             elif line.startswith("<REUTERS"):
                 inArticle = True
                 text = ''
-    return entity_set_list
+    return entity_pairs
+
+def get_entity_pairs(entity_set):
+    pair_set = set()
+    for entity1 in entity_set:
+        for entity2 in entity_set:
+            if entity1 == entity2:
+                continue
+            pair_set.add((entity1, entity2))
+    return pair_set
+
+def write_entity_pairs(pair_set):
+    with open(config.PAIR_FILE, 'w') as f:
+        for pair in pair_set:
+            f.write(str(pair) + '\n')
                     
 def readDir(dirName):
-    entity_sets = []
+    pair_set = set()
     for fname in os.listdir(dirName):
         print fname
         if fname.endswith('.sgm'):
-            entity_sets += readSgm('%s/%s' %(dirName, fname), [])
-            print entity_sets
+            pair_set = readSgm('%s/%s' %(dirName, fname), pair_set)
             # for testing, only work with one sgm
             break
-    return entity_sets
+    write_entity_pairs(pair_set)
+    return pair_set
 
 def main():
-    entity_sets = readDir(config.REUTERS_DIR)
-    rc = RelationCluster(entity_sets)
+    entity_pairs = readDir(config.REUTERS_DIR)
+    rc = RelationCluster(entity_pairs)
     rc.print_clusters()
     
 if __name__=="__main__":
