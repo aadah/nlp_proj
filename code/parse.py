@@ -13,6 +13,17 @@ def get_article_text(text):
     soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
     if soup.content is not None:
         return soup.content.getText()
+    return ''
+
+def get_article_ents(text):
+    soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
+    entity_string = ''
+    entity_string += soup.places.getText().upper()
+    entity_string += soup.people.getText().upper()
+    entity_string += soup.orgs.getText().upper()
+    entity_string += soup.exchanges.getText().upper()
+    entity_string += soup.companies.getText().upper()
+    return entity_string
 
 def readSgm(fname, entity_set_list):
     count = 0
@@ -25,6 +36,7 @@ def readSgm(fname, entity_set_list):
                 if line.startswith("</REUTERS>"):
                     inArticle = False
                     body = get_article_text(text)
+                    print type(body)
                     entity_set = get_entity_set(body)
                     print entity_set
                     entity_set_list.append(entity_set)
