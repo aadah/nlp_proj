@@ -1,0 +1,70 @@
+Bill Gates --> ? (Melinda Gates)
+[('bill_gates', 0.94702607049945375),
+ ('melinda_gates', 0.6717758179282326),
+ ('steve_ballmer', 0.58581842074215884),
+ ('bill_melinda_gates_foundation', 0.55140180630715585),
+ ('jeff_raikes', 0.51561855251790234)]
+
+? (Bill Gates) <-- Melinda Gates
+[('melinda_gates', 0.94787450216745606),
+ ('bill_melinda_gates_foundation', 0.68258943220009083),
+ ('bill_gates', 0.67522660528019451),
+ ('patty_stonesifer', 0.50818448206657896),
+ ('william_h_gates_sr', 0.48096381927575182)]
+
+Xi Jinping --> ? (Peng Liyuan)
+[('xi_jinping', 0.94853244022170313),
+ ('hu_jintao', 0.7071904627342237),
+ ('li_keqiang', 0.69591390443783563),
+ ('vice_president_of_the_peoples_republic_of_china', 0.63764755130055251),
+ ('zeng_qinghong', 0.5955457926124581)]
+
+? (Xi Jinping) <-- Peng Liyuan
+[('peng_liyuan', 0.9461212011586847),
+ ('xi_jinping', 0.42619773756315826),
+ ('jiang_zemin', 0.38865893750266234),
+ ('li_keqiang', 0.3745342351130575),
+ ('communist_party_of_china', 0.37107646845680242)]
+
+John Krasinski --> ? (Emily Blunt)
+[('john_krasinski', 0.9540688998979473),
+ ('jenna_fischer', 0.63656013742888895),
+ ('rashida_jones', 0.61382481878631889),
+ ('drew_barrymore', 0.60656235217518617),
+ ('maya_rudolph', 0.6040126224187512)]
+
+? (John Krasinski) <-- Emily Blunt
+[('emily_blunt', 0.94379392646819182),
+ ('amy_adams', 0.57053385796494838),
+ ('james_mcavoy', 0.56242732679348129),
+ ('ryan_gosling', 0.54578435524166036),
+ ('rachel_weisz', 0.53794876842832251)]
+
+Chris Martin --> ? (Gwyneth Paltrow)
+[('chris_martin', 0.95102004080713964),
+ ('coldplay', 0.66228733982689525),
+ ('gwyneth_paltrow', 0.61682154604999584),
+ ('gwyn_ap_nudd', 0.58002976650682114),
+ ('beyonce', 0.56322305821263541)]
+
+? (Chris Martin) <-- Gwyneth Paltrow
+[('gwyneth_paltrow', 0.94315586505104609),
+ ('scarlett_johansson', 0.6426304537329609),
+ ('gwyn_ap_nudd', 0.61621904228702484),
+ ('robert_downey_jr', 0.58006996535824851),
+ ('julia_roberts', 0.57559084168182684)]
+
+Steve Jobs --> ? (Laurene Powell)
+[('steve_jobs', 0.94756992053630262),
+ ('tim_cook', 0.76008591545107385),
+ ('apple_inc', 0.6967796455773928),
+ ('apple_ii', 0.64354251163722909),
+ ('worldwide_developers_conference', 0.59583041582135432)]
+
+? (Steve Jobs) <-- Laurene Powell
+[('laurene_powell', 0.94710083391806077),
+ ('lisa_brennan_jobs', 0.45566312446232615),
+ ('steve_jobs', 0.42903758885985255),
+ ('mona_simpson', 0.38971465683716144),
+ ('walter_isaacson', 0.37318737613561781)]
+
