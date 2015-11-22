@@ -2,9 +2,12 @@ import os
 
 HOME = os.path.expanduser("~")
 DOCUMENTS = "%s/Documents" % HOME
-RESOUCRES = "%s/nlp_resources" % DOCUMENTS
+RESOURCES = "%s/nlp_resources" % DOCUMENTS
 
 # word2vec
-WORD2VEC_DIR = "%s/word2vec" % RESOUCRES
+WORD2VEC_DIR = "%s/word2vec" % RESOURCES
 ENTITIES_FILE = "%s/entities" % WORD2VEC_DIR
 FREEBASE_FILE = "%s/freebase-vectors-skipgram1000-en.bin.hdf5" % WORD2VEC_DIR
+
+# reuters
+REUTERS_DIR = "%s/reuters21578" % RESOURCES
