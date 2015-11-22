@@ -1,5 +1,12 @@
 import nltk
 
+# Readme: Steps to get nltk set up
+# 1) Install nltk via pip (pip install nltk)
+# 1.5) You must have nltk 3.1 -- use nltk.__version__ to check version
+# 2) Run nltk.download() in the Python shell to install necessary resources
+
+
+
 # input: filename of article to scan, relative to current directory
 # output: set of named entity strings
 def ner_recognize_file(filename):
