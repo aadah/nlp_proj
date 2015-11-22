@@ -1,0 +1,5 @@
+nlp_resoures/
+	word2vec/
+		# see convert.py to learn how to create these files
+		freebase-vectors-skipgram1000-en.bin.hdf5
+		entities

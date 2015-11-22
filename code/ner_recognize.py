@@ -8,7 +8,12 @@ def ner_recognize_file(filename):
         text = f.read()
 
     text = unicode(text, 'utf-8')
-    sentences = nltk.sent_tokenize(text)
+
+    return ner_recognize_string(text)
+
+
+def ner_recognize_string(string):
+    sentences = nltk.sent_tokenize(string)
     tokenized_sentences = []
     for sentence in sentences:
         tokenized_sentences.append(nltk.word_tokenize(sentence))
@@ -27,6 +32,7 @@ def ner_recognize_file(filename):
                 entities.add(string_from_tree(x))
 
     return entities
+    
 
 def string_from_tree(tree):
     strings = []
