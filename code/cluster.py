@@ -7,7 +7,7 @@ from vector import VectorModel
 
 class RelationCluster():
 
-    def __init__(self, entity_set, eps=1.5, min_samples=3, metric='euclidean'):
+    def __init__(self, entity_set, eps=0.7, min_samples=3, metric='euclidean'):
         self.vm = VectorModel()
         self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric)
         self.entity_set = entity_set
@@ -79,7 +79,6 @@ class RelationCluster():
         means = {}
         for label in self.get_unique_labels():
             cluster = np.array(clusters[label])
-            print cluster[label].shape
             mu = cluster.mean(axis=0)
             means[label] = mu
         return means
@@ -94,16 +93,16 @@ class RelationCluster():
             return
         clusters, index_clusters = self.get_vector_clusters()
         cluster_sizes = self.get_cluster_sizes()
-        cluster_vector_means = self.get_vector_cluster_means()
+        #cluster_vector_means = self.get_vector_cluster_means()
         for label in self.get_unique_labels():
             if label == -1:
                 continue
             print "Cluster: %d" % label
             print "cluster size: %d" % cluster_sizes[label]
-            mean = cluster_vector_means[label]
-            '''
+            #mean = cluster_vector_means[label]
             for index in index_clusters[label]:
                 print '\t' + str(self.relation_index[index])
+                '''
                 print ('\t euclidean diff from mean: ' + 
                        str(metrics.pairwise.pairwise_distances(clusters[index],mean)))
                        '''
