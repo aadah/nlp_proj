@@ -6,6 +6,14 @@ import config
 from ner_recognize import ner_recognize_string
 from cluster import RelationCluster
 
+def get_entity_set(text):
+    return ner_recognize_string(text)
+
+def get_article_text(text):
+    soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
+    if soup.content is not None:
+        return soup.content.getText()
+
 def readSgm(fname, entity_set_list):
     count = 0
     with open(fname, 'r') as f:
@@ -16,9 +24,10 @@ def readSgm(fname, entity_set_list):
                 text += line
                 if line.startswith("</REUTERS>"):
                     inArticle = False
-                    soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
-                    print type(soup.content.getText())
-                    entity_set_list.append(ner_recognize_string(soup.content.getText()))
+                    body = get_article_text(text)
+                    entity_set = get_entity_set(body)
+                    print entity_set
+                    entity_set_list.append(entity_set)
                     count += 1
                     print '%d articles read' % count
             elif line.startswith("<REUTERS"):
