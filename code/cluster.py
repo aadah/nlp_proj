@@ -6,7 +6,8 @@ from sklearn import metrics
 from vector import VectorModel
 
 class RelationCluster():
-
+    
+    '''
     def __init__(self, entity_set_list, eps=0.7, min_samples=3, metric='euclidean'):
         self.vm = VectorModel()
         self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric)
@@ -14,11 +15,21 @@ class RelationCluster():
         self.X, self.relation_index = self.get_relation_vecs()
         self.cluster.fit(self.X)
         self.labels = self.cluster.labels_
-        
-    def get_relation_vec(self, w1, w2):
-        # Gets the difference between the word vector for w1 and the word vector for w2
-        return self.vm.vector(w1) - self.vm.vector(w2)
+    '''
 
+    def __init__(self, entity_pairs, eps=0.5, min_samples=5, metric='euclidean'):
+        self.vm = VectorModel()
+        self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric)
+        self.entity_pairs = entity_pairs
+        self.X, self.relation_index = self.get_relation_vecs()
+        self.cluster.fit(self.X)
+        self.labels = self.cluster.labels_
+
+    def get_relation_vec(self, pair):
+        # Gets the difference between the word vector for w1 and the word vector for w2
+        w1, w2 = pair
+        return self.vm.vector(w1) - self.vm.vector(w2)
+    '''
     def get_relation_vecs(self):
         # Gets the relation vectors between every pair in the set
         relation_index = {}
@@ -36,6 +47,20 @@ class RelationCluster():
                     relation_index[index] = (entity1, entity2)
                     relation_list.append(self.get_relation_vec(entity1, entity2))
                     index += 1
+        X = np.array(relation_list)
+        return X, relation_index
+    '''
+
+    def get_relation_vecs(self):
+        # Gets the relation vectors between every pair in the set
+        relation_index = {}
+        relation_list = []
+        index = 0
+        for pair in self.entity_pairs:
+            relation_index[pair] = index
+            relation_index[index] = pair
+            relation_list.append(self.get_relation_vec(pair))
+            index += 1
         X = np.array(relation_list)
         return X, relation_index
 
