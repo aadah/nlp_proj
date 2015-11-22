@@ -3,3 +3,7 @@ nlp_resoures/
 		# see convert.py to learn how to create these files
 		freebase-vectors-skipgram1000-en.bin.hdf5
 		entities
+	reuters21578/
+		reut2-000.sgm
+		...
+		reut2-021.sgm
