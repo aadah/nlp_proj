@@ -7,10 +7,10 @@ from vector import VectorModel
 
 class RelationCluster():
 
-    def __init__(self, entity_set, eps=0.7, min_samples=3, metric='euclidean'):
+    def __init__(self, entity_set_list, eps=0.7, min_samples=3, metric='euclidean'):
         self.vm = VectorModel()
         self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric)
-        self.entity_set = entity_set
+        self.entity_set_list = entity_set_list
         self.X, self.relation_index = self.get_relation_vecs()
         self.cluster.fit(self.X)
         self.labels = self.cluster.labels_
@@ -24,14 +24,18 @@ class RelationCluster():
         relation_index = {}
         relation_list = []
         index = 0
-        for entity1 in self.entity_set:
-            for entity2 in self.entity_set:
-                if entity1 == entity2:
-                    continue
-                relation_index[(entity1, entity2)] = index
-                relation_index[index] = (entity1, entity2)
-                relation_list.append(self.get_relation_vec(entity1, entity2))
-                index += 1
+        for entity_set in self.entity_set_list:
+            for entity1 in entity_set:
+                for entity2 in entity_set:
+                    if entity1 == entity2:
+                        continue
+                    if (entity1, entity2) in relation_index:
+                        # the oredered pair has already been seen
+                        continue
+                    relation_index[(entity1, entity2)] = index
+                    relation_index[index] = (entity1, entity2)
+                    relation_list.append(self.get_relation_vec(entity1, entity2))
+                    index += 1
         X = np.array(relation_list)
         return X, relation_index
 
