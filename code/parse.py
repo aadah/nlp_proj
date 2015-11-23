@@ -6,11 +6,17 @@ import config
 from ner_recognize import ner_recognize_string
 from cluster import RelationCluster
 from vector import VectorModel
+from stanford import Tagger
 
 VM = VectorModel()
 
-def get_entity_set(text):
-    entity_set = ner_recognize_string(text)
+def get_entity_set(text, mode='stanford', stanford_model_num=3):
+    entity_set = set()
+    if mode == 'stanford':
+        tagger = Tagger(stanford_model_num)
+        entity_set = tagger.get_entities(text)
+    else:
+        entity_set = ner_recognize_string(text)
     new_entity_set = set()
     for entity in entity_set:
         if entity in VM:
@@ -52,8 +58,8 @@ def readSgm(fname, entity_pairs):
                     entity_pairs = entity_pairs.union(pair_set)
                     count += 1
                     print '%d articles read' % count
-                    #if count == 100:
-                    #    break
+                    if count == 100:
+                        break
             elif line.startswith("<REUTERS"):
                 inArticle = True
                 text = ''
