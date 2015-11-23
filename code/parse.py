@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 
 from bs4 import BeautifulSoup
-import os  
+import os
+import requests
 import config
 from ner_recognize import ner_recognize_string
 from cluster import RelationCluster
@@ -10,10 +11,11 @@ from stanford import Tagger
 
 VM = VectorModel()
 
-def get_entity_set(text, mode='stanford', stanford_model_num=3):
+def get_entity_set(text):
     entity_set = set()
+    mode = config.NER_MODE
     if mode == 'stanford':
-        tagger = Tagger(stanford_model_num)
+        tagger = Tagger(config.STANFORD_MODEL_NUM)
         entity_set = tagger.get_entities(text)
     else:
         entity_set = ner_recognize_string(text)
@@ -23,6 +25,21 @@ def get_entity_set(text, mode='stanford', stanford_model_num=3):
             new_entity_set.add(entity)
     return new_entity_set
 
+def get_entity_pairs(entity_set):
+    pair_set = set()
+    for entity1 in entity_set:
+        for entity2 in entity_set:
+            if entity1 == entity2:
+                continue
+            pair_set.add((entity1, entity2))
+    return pair_set
+
+def write_entity_pairs(pair_set):
+    with open(config.PAIR_OUTPUT_FILE, 'w') as f:
+        for pair in pair_set:
+            f.write(str(pair) + '\n')
+
+# Reuters specific methods
 def get_article_text(text):
     soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
     if soup.content is not None:
@@ -39,7 +56,7 @@ def get_article_ents(text):
     entity_string += soup.companies.getText().upper()
     return entity_string
 
-def readSgm(fname, entity_pairs):
+def read_sgm(fname, entity_pairs):
     count = 0
     with open(fname, 'r') as f:
         inArticle = False
@@ -66,33 +83,66 @@ def readSgm(fname, entity_pairs):
                 text = ''
     return entity_pairs
 
-def get_entity_pairs(entity_set):
+def read_reuters_dir():    
     pair_set = set()
-    for entity1 in entity_set:
-        for entity2 in entity_set:
-            if entity1 == entity2:
-                continue
-            pair_set.add((entity1, entity2))
-    return pair_set
-
-def write_entity_pairs(pair_set):
-    with open(config.STANFORD_PAIRS, 'w') as f:
-        for pair in pair_set:
-            f.write(str(pair) + '\n')
-                    
-def readDir(dirName):
-    pair_set = set()
+    dirName = config.REUTERS_DIR
     for fname in os.listdir(dirName):
         print fname
         if fname.endswith('.sgm'):
-            pair_set = readSgm('%s/%s' %(dirName, fname), pair_set)
+            pair_set = read_sgm('%s/%s' %(dirName, fname), pair_set)
             # for testing, only work with one sgm
             break
     write_entity_pairs(pair_set)
     return pair_set
 
+# BBC specific methods
+def get_linked_article(link):
+    r = requests.get(link.strip())
+    print r.status_code
+    if r.status_code == 200:
+        text = ''
+        all_text = r.text
+        soup = BeautifulSoup(all_text, 'lxml')
+        for para in soup.find_all('p'):
+            if para.get('class') is None:
+                text += para.getText() + ' '
+        print text
+        return text
+    else:
+        return ''
+             
+def read_links(fname, entity_pairs):
+    with open(fname, 'r') as f:
+        count = 0
+        for line in f:
+            print line.strip()
+            body = get_linked_article(line)
+            entity_set = get_entity_set(body)
+            pair_set = get_entity_pairs(entity_set)
+            print '%d entities' % len(entity_set)
+            print '%d pairs' % len(pair_set)
+            print pair_set
+            entity_pairs = entity_pairs.union(pair_set)
+            count += 1
+            print '%d links read' % count
+            if count == 100:
+                break
+    return entity_pairs
+
+def read_bbc_dir():
+    pair_set = set()
+    dirName = config.BBC_DIR
+    for fname in os.listdir(dirName):
+        print fname
+        pair_set = read_links('%s/%s' %(dirName, fname), pair_set)
+    write_entity_pairs(pair_set)
+    return pair_set
+
 def main():
-    entity_pairs = readDir(config.REUTERS_DIR)
+    if config.ARTICLE_SOURCE == 'reuters':
+        entity_pairs = read_reuters_dir()
+    elif config.ARTICLE_SOURCE == 'bbc':
+        entity_pairs = read_bbc_dir()
     rc = RelationCluster(entity_pairs)
     rc.print_clusters()
     
