@@ -39,6 +39,14 @@ def write_entity_pairs(pair_set):
         for pair in pair_set:
             f.write(str(pair) + '\n')
 
+def read_entity_pairs():
+    pair_set = set()
+    with open(config.PAIR_INPUT_FILE, 'r') as f:
+        for line in f:            
+            pair_set.add(eval(line.strip()))
+    print '%d pairs read' % len(pair_set)
+    return pair_set
+
 # Reuters specific methods
 def get_article_text(text):
     soup = BeautifulSoup(text.replace("BODY","CONTENT"), 'lxml')
@@ -139,12 +147,20 @@ def read_bbc_dir():
     return pair_set
 
 def main():
-    if config.ARTICLE_SOURCE == 'reuters':
-        entity_pairs = read_reuters_dir()
-    elif config.ARTICLE_SOURCE == 'bbc':
-        entity_pairs = read_bbc_dir()
-    rc = RelationCluster(entity_pairs)
+    entity_pairs = set()
+    if config.READ_FROM_PAIRS:
+        entity_pairs = read_entity_pairs()
+    else:
+        if config.ARTICLE_SOURCE == 'reuters':
+            entity_pairs = read_reuters_dir()
+        elif config.ARTICLE_SOURCE == 'bbc':
+            entity_pairs = read_bbc_dir()
+    rc = RelationCluster(entity_pairs,
+                         eps=config.CLUSTER_EPS, 
+                         min_samples=config.CLUSTER_MIN_SAMPLES,
+                         metric=config.CLUSTER_METRIC)
     rc.print_clusters()
+    return rc
     
 if __name__=="__main__":
     main()
