@@ -1,9 +1,15 @@
 nlp_resoures/
+
 	word2vec/
 		# see convert.py to learn how to create these files
 		freebase-vectors-skipgram1000-en.bin.hdf5
 		entities
+
 	reuters21578/
 		reut2-000.sgm
 		...
 		reut2-021.sgm
+
+	# Download and unzip: http://nlp.stanford.edu/software/stanford-ner-2014-08-27.zip
+	stanford-ner-2014-08-27/
+		[A BUNCH OF STUFF]
