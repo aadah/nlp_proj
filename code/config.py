@@ -30,5 +30,11 @@ STANFORD_7CLASS = '%s/english.muc.7class.distsim.crf.ser.gz' % STANFORD_NER_MODE
 # parameters
 NER_MODE = 'stanford'
 ARTICLE_SOURCE = 'bbc' # can be 'reuters'
-STANFORD_MODEL_NUM = 3
+READ_FROM_PAIRS = True
+STANFORD_MODEL_NUM = 5
 PAIR_OUTPUT_FILE = BBC_PAIRS
+PAIR_INPUT_FILE = BBC_PAIRS
+
+CLUSTER_EPS = 0.7
+CLUSTER_MIN_SAMPLES = 3
+CLUSTER_METRIC = 'euclidean'
