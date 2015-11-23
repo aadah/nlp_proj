@@ -55,6 +55,7 @@ def readSgm(fname, entity_pairs):
                     pair_set = get_entity_pairs(entity_set)
                     print '%d entities' % len(entity_set)
                     print '%d pairs' % len(pair_set)
+                    print pair_set
                     entity_pairs = entity_pairs.union(pair_set)
                     count += 1
                     print '%d articles read' % count
@@ -75,7 +76,7 @@ def get_entity_pairs(entity_set):
     return pair_set
 
 def write_entity_pairs(pair_set):
-    with open(config.PAIR_FILE, 'w') as f:
+    with open(config.STANFORD_PAIRS, 'w') as f:
         for pair in pair_set:
             f.write(str(pair) + '\n')
                     
