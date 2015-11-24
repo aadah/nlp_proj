@@ -33,7 +33,7 @@ ARTICLE_SOURCE = 'bbc' # can be 'reuters'
 ######## Change this to produce new pairs if you update bbc_links.txt
 READ_FROM_PAIRS = False
 ########
-STANFORD_MODEL_NUM = 5
+STANFORD_MODEL_NUM = 3
 PAIR_OUTPUT_FILE = BBC_PAIRS
 PAIR_INPUT_FILE = BBC_PAIRS
 
