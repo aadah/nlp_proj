@@ -13,7 +13,7 @@ class Tagger:
         elif model_num == 7:
             pathname = config.STANFORD_7CLASS
         else:
-            raise Error('No model for:', model_num)
+            raise Exception('No model for:', model_num)
 
         self.tagger = StanfordNERTagger(pathname, config.STANFORD_NER_JAR)
 
