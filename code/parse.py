@@ -35,9 +35,10 @@ def get_entity_pairs(entity_set):
     return pair_set
 
 def write_entity_pairs(pair_set):
-    with open(config.PAIR_OUTPUT_FILE, 'w') as f:
+    with open(config.PAIR_OUTPUT_FILE, 'w') as f:        
         for pair in pair_set:
             f.write(str(pair) + '\n')
+        print 'wrote %d pairs' % len(pair_set)
 
 def read_entity_pairs():
     pair_set = set()
@@ -105,7 +106,12 @@ def read_reuters_dir():
 
 # BBC specific methods
 def get_linked_article(link):
-    r = requests.get(link.strip())
+    r = None
+    try:
+        r = requests.get(link.strip())
+    except requests.exceptions.RequestException as e:
+        print e
+        return ''
     print r.status_code
     if r.status_code == 200:
         text = ''
@@ -114,7 +120,7 @@ def get_linked_article(link):
         for para in soup.find_all('p'):
             if para.get('class') is None:
                 text += para.getText() + ' '
-        print text
+        #print text
         return text
     else:
         return ''
@@ -129,7 +135,7 @@ def read_links(fname, entity_pairs):
             pair_set = get_entity_pairs(entity_set)
             print '%d entities' % len(entity_set)
             print '%d pairs' % len(pair_set)
-            print pair_set
+            #print pair_set
             entity_pairs = entity_pairs.union(pair_set)
             count += 1
             print '%d links read' % count
@@ -139,10 +145,14 @@ def read_links(fname, entity_pairs):
 
 def read_bbc_dir():
     pair_set = set()
+    '''
     dirName = config.BBC_DIR
     for fname in os.listdir(dirName):
         print fname
         pair_set = read_links('%s/%s' %(dirName, fname), pair_set)
+    '''
+    # because we moved links into code/ directory
+    pair_set = read_links(config.BBC_ARTICLES, pair_set)
     write_entity_pairs(pair_set)
     return pair_set
 
