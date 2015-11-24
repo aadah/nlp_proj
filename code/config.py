@@ -16,7 +16,7 @@ REUTERS_PAIRS = "%s/reuters_entity_pairs_stanford_1000.txt" % REUTERS_DIR
 
 # bbc
 BBC_DIR = "%s/bbc" % RESOURCES
-BBC_ARTICLES = "%s/links.txt" % BBC_DIR
+BBC_ARTICLES = "bbc_links.txt"
 BBC_PAIRS = "%s/entity_pairs.txt" % BBC_DIR
 
 # stanford
@@ -30,7 +30,9 @@ STANFORD_7CLASS = '%s/english.muc.7class.distsim.crf.ser.gz' % STANFORD_NER_MODE
 # parameters
 NER_MODE = 'stanford'
 ARTICLE_SOURCE = 'bbc' # can be 'reuters'
-READ_FROM_PAIRS = True
+######## Change this to produce new pairs if you update bbc_links.txt
+READ_FROM_PAIRS = False
+########
 STANFORD_MODEL_NUM = 5
 PAIR_OUTPUT_FILE = BBC_PAIRS
 PAIR_INPUT_FILE = BBC_PAIRS
@@ -38,3 +40,4 @@ PAIR_INPUT_FILE = BBC_PAIRS
 CLUSTER_EPS = 0.7
 CLUSTER_MIN_SAMPLES = 3
 CLUSTER_METRIC = 'euclidean'
+CLUSTER_ALGO = 'ball_tree'
