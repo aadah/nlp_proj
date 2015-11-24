@@ -158,7 +158,8 @@ def main():
     rc = RelationCluster(entity_pairs,
                          eps=config.CLUSTER_EPS, 
                          min_samples=config.CLUSTER_MIN_SAMPLES,
-                         metric=config.CLUSTER_METRIC)
+                         metric=config.CLUSTER_METRIC,
+                         algorithm=config.CLUSTER_ALGO)
     rc.print_clusters()
     return rc
     
