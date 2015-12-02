@@ -17,9 +17,9 @@ class RelationCluster():
         self.labels = self.cluster.labels_
     '''
 
-    def __init__(self, entity_pairs, eps=0.5, min_samples=5, metric='euclidean'):
+    def __init__(self, entity_pairs, eps=0.5, min_samples=5, metric='euclidean', algorithm='auto'):
         self.vm = VectorModel()
-        self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric)
+        self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric, algorithm=algorithm)
         self.entity_pairs = entity_pairs
         self.X, self.relation_index = self.get_relation_vecs()
         self.cluster.fit(self.X)
@@ -79,8 +79,12 @@ class RelationCluster():
         return self.labels[self.relation_index[pair]]
 
     def is_core(self, pair):
-        # Returns whether a pair's relation vector is part of a cluster
+        # Returns whether a pair's relation vector is a core component
         return self.relation_index[pair] in self.cluster.core_sample_indices_
+
+    def is_clustered(self, pair):
+        # Returns whether a pair's relation vector is part of a cluster
+        return self.labels[self.relation_index[pair]] != -1
 
     def get_cluster_sizes(self):
         # Returns a dictionary mapping cluster labels to the cluster sizes
@@ -98,9 +102,19 @@ class RelationCluster():
         clusters = collections.defaultdict(list)
         index_clusters = collections.defaultdict(list)
         core_indices = self.cluster.core_sample_indices_
-        for i in core_indices:
+        for i in xrange(len(self.labels)):
+            if self.labels[i] == -1:
+                continue
             clusters[self.labels[i]].append(self.X[i])
             index_clusters[self.labels[i]].append(i)
+        '''
+        for label in self.get_unique_labels():
+            for index in core_indices:
+                if self.labels[index] == label:
+                    index_clusters[label].append(index)
+        '''
+        print len([i for i in self.labels if i != -1])
+        print index_clusters
         return clusters, index_clusters
 
     def get_vector_cluster_means(self):
@@ -128,6 +142,7 @@ class RelationCluster():
                 continue
             print "Cluster: %d" % label
             print "cluster size: %d" % cluster_sizes[label]
+            print "indices in cluster: ", index_clusters[label]
             #mean = cluster_vector_means[label]
             for index in index_clusters[label]:
                 print '\t' + str(self.relation_index[index])
