@@ -21,18 +21,6 @@ PREFIX v: <http://www.wikidata.org/prop/statement/>
 PREFIX q: <http://www.wikidata.org/prop/qualifier/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
 
-        self.organization_properties = [
-            'P169', # cheif executive officer
-            'P488', # chairperson
-            'P112', # founder
-            'P159', # headquarters location
-            'P355', #subsidiaries
-        ]
-
-        self.location_properties = [
-            
-        ]
-
 
     def get_entity(self, query_string):
         rgx = re.compile('\s+')
@@ -54,6 +42,36 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
         q = div.a.attrs['href'].split('/')[-1]
 
         return q
+
+
+    def get_instances(self, relations, number_per_relation):
+        results_dict = {}
+
+        for relation in relations:
+            results = self.get_instance(relation, number_per_relation)
+
+            if len(results) > 1:
+                results_dict[relation] = results
+
+        return results_dict
+
+
+    def get_instance(self, relation, number):
+        query = """SELECT ?subjLabel ?objLabel ?subjMID ?objMID WHERE {
+   ?subj wdt:%s ?obj .
+   ?subj wdt:P646 ?subjMID .
+   ?obj wdt:P646 ?objMID .
+   
+   SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+   }
+ } LIMIT %d"""
+
+        query = query % (relation, number)
+        bindings = self._query(query)['results']['bindings']
+        results = process_bindings(bindings)
+
+        return results
 
     
     def relation_histo(self, cluster):
