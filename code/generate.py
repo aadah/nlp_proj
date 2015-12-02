@@ -100,7 +100,7 @@ def generate_instance_instance_matrix():
 
 
 def main():
-    #generate_instance_instance()
+    generate_instance_instance()
     generate_instance_instance_matrix()
 
 
