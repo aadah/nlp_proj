@@ -7,10 +7,6 @@ import config
 
 from sklearn.externals import joblib
 
-from keras.models import Sequential
-from keras.layers.core import Dense, Dropout, Activation
-from keras.optimizers import SGD
-
 def get_random_data(train_size=1000, cv_size=100, test_size=100):
 ##    print "starting to load data"
 ##    all_data = np.loadtxt("dummy_data/gisette_train.data.txt")
