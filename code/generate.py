@@ -9,9 +9,10 @@ import config
 def generate_instance_instance():
     np.random.seed(100)
 
+    vm = vector.MIDVectorModel()
     wd = sparql.WikiDataClient()
 
-    num_per_query = 300
+    num_per_query = 1000
     num_per_instance = 30
 
     print 'retrieving instances from wikidata . . .'
@@ -72,7 +73,7 @@ def generate_instance_instance_matrix():
 
     print 'loading instance pairs . . .'
     with open(config.TWO_INSTANCE_FILE) as f:
-        instance_pairs = map(eval, f.readlines())[:10]
+        instance_pairs = map(eval, f.readlines())
         instance_pairs = map(lambda x: (x[0][1], x[0][3], x[1][1], x[1][3], x[2]),
                              instance_pairs)
 
