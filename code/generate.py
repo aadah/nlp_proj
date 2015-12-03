@@ -9,11 +9,10 @@ import config
 def generate_instance_instance():
     np.random.seed(100)
 
-    vm = vector.MIDVectorModel()
     wd = sparql.WikiDataClient()
 
-    num_per_query = 1000
-    num_per_instance = 30
+    num_per_query = 10000
+    num_per_instance = 50
 
     print 'retrieving instances from wikidata . . .'
     results = wd.get_instances(config.WIKIDATA_PROPERTIES, num_per_query)
