@@ -176,3 +176,6 @@ CLUSTER_EPS = 0.7
 CLUSTER_MIN_SAMPLES = 3
 CLUSTER_METRIC = 'euclidean'
 CLUSTER_ALGO = 'ball_tree'
+
+# SVM results directory
+SVM_RESULTS_DIR = '%s/svm_results/' % RESOURCES
