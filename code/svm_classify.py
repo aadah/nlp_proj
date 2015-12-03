@@ -83,13 +83,13 @@ def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
         print c_iter
         gamma_iter=0
     print results
-    np.save(SVM_RESULTS_DIR+exp_name+"_cv_results.npy", results)
+    np.save(config.SVM_RESULTS_DIR+exp_name+"_cv_results.npy", results)
     best_coords = np.unravel_index(results.argmax(), results.shape)
     print best_coords
     best_c = 10**c_exp_range[best_coords[0]]
     best_gamma = 10**gamma_exp_range[best_coords[1]]
     print "best c:", best_c, ". best gamma:", best_gamma
-    np.save(SVM_RESULTS_DIR+exp_name+"_best_c_gamma.npy", np.array([best_c, best_gamma]))
+    np.save(config.SVM_RESULTS_DIR+exp_name+"_best_c_gamma.npy", np.array([best_c, best_gamma]))
     return best_c, best_gamma
 
 
@@ -97,7 +97,7 @@ def make_and_save_svm(exp_name):
 
     train_set, train_labels, \
         cv_set, cv_labels, \
-        test_set, test_labels = get_data(0.1,0.01,0.89)
+        test_set, test_labels = get_data(0.9,0.01,0.0)
 
     best_c, best_gamma = cross_validate_svm(train_set, train_labels,
                                             cv_set, cv_labels, exp_name)
@@ -105,7 +105,7 @@ def make_and_save_svm(exp_name):
     my_svc = create_svm(best_c, best_gamma)
     my_svc.fit(train_set, train_labels)
     
-    joblib.dump(my_svc, SVM_RESULTS_DIR+exp_name+"_svm_model.pkl")
+    joblib.dump(my_svc, config.SVM_RESULTS_DIR+exp_name+"_svm_model.pkl")
 
 def load_svm(filename):
     return joblib.load(filename)
