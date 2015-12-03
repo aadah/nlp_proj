@@ -1,6 +1,7 @@
 import sklearn.svm
 import numpy as np
 import math
+import sys
 
 import config
 
@@ -97,7 +98,7 @@ def make_and_save_svm(exp_name):
 
     train_set, train_labels, \
         cv_set, cv_labels, \
-        test_set, test_labels = get_data(0.9,0.01,0.0)
+        test_set, test_labels = get_data(0.9,0.1,0.0)
 
     best_c, best_gamma = cross_validate_svm(train_set, train_labels,
                                             cv_set, cv_labels, exp_name)
@@ -114,4 +115,6 @@ def fit_svm(test_data, filename):
     svm = load_svm(filename)
     labels = svm.fit(test_data)
     return labels
-        
+
+if __name__ == "__main__":
+    make_and_save_svm(sys.argv[0])
