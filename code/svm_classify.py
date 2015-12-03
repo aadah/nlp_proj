@@ -19,8 +19,8 @@ def get_random_data(train_size=1000, cv_size=100, test_size=100):
     all_labels = np.round(all_labels)
 
     return all_data[:train_size,:num_features], all_labels[:train_size], \
-           all_data[train_size:train_size+test_size,:num_features], all_labels[train_size:train_size+test_size], \
-           all_data[train_size+test_size:,:num_features], all_labels[train_size+test_size:]
+           all_data[train_size:train_size+cv_size,:num_features], all_labels[train_size:train_size+cv_size], \
+           all_data[train_size+cv_size:,:num_features], all_labels[train_size+cv_size:]
 
 def get_data(train_frac=0.8, cv_frac=0.1, test_frac=0.1):
 
