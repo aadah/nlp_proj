@@ -48,8 +48,8 @@ def get_data(train_frac=0.8, cv_frac=0.1, test_frac=0.1):
     all_labels = all_labels.ravel()
 
     return all_data[:train_size,:], all_labels[:train_size], \
-           all_data[train_size:train_size+test_size,:], all_labels[train_size:train_size+test_size], \
-           all_data[train_size+test_size:,:], all_labels[train_size+test_size:]
+           all_data[train_size:train_size+cv_size,:], all_labels[train_size:train_size+cv_size], \
+           all_data[train_size+cv_size:,:], all_labels[train_size+cv_size:]
     
 
 def create_svm(my_c, my_gamma):
@@ -61,6 +61,7 @@ def create_svm(my_c, my_gamma):
                              decision_function_shape=None, random_state=None) 
 
 def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
+        
     # grid search over c and gamma
     print "beginning cross-validation"
     c_exp_range = range(-5,6) #range(-5,16,2)
@@ -95,6 +96,13 @@ def make_and_save_svm(exp_name):
     train_set, train_labels, \
         cv_set, cv_labels, \
         test_set, test_labels = get_data(0.9,0.1,0.0)
+
+##    print "train_set shape:", train_set.shape, \
+##          "train_labels shape:", train_labels.shape, \
+##          "cv_set shape:", cv_set.shape, \
+##          "cv_labels shape:", cv_labels.shape, \
+##          "test_set shape:", test_set.shape, \
+##          "test_labels shape:", test_labels.shape
 
     best_c, best_gamma = cross_validate_svm(train_set, train_labels,
                                             cv_set, cv_labels, exp_name)
