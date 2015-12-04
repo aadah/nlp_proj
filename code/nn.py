@@ -19,8 +19,11 @@ class TrainNN(object):
         graph.add_input(name='in1', input_shape=(half_input_dim,))
         graph.add_input(name='in2', input_shape=(half_input_dim,))
 
-        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden1', input='in1')
-        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden2', input='in2')
+
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='pre_hidden1', input='in1')
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden1', input='pre_hidden1')
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='pre_hidden2', input='in2')
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden2', input='pre_hidden2')
         graph.add_node(Dense(1, activation='sigmoid'),
                        name='pre-out',
                        inputs=['hidden1', 'hidden2'],
@@ -36,7 +39,7 @@ class TrainNN(object):
         self.graph.compile(optimizer='sgd', loss={'out': 'binary_crossentropy'})
 
 
-    def train(self, X, y, epochs=10000):
+    def train(self, X, y, epochs=1000):
         _, D = X.shape
 
         X_in1 = X[:,:D/2]
