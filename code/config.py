@@ -162,6 +162,9 @@ WIKIDATA_PROPERTIES = [
 TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
 TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
 
+# neural net
+TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
+
 # parameters
 NER_MODE = 'stanford'
 ARTICLE_SOURCE = 'bbc' # can be 'reuters'
