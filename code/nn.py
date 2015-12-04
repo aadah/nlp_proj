@@ -9,6 +9,10 @@ import config
 np.random.seed(1000)
 
 
+def sigmoid(z):
+    return np.clip(1.0 / (1 + np.exp(-z)), 1e-5, 0.99999)
+
+
 class TrainNN(object):
     def __init__(self, input_dim=4000):
         graph = Graph()
@@ -20,10 +24,14 @@ class TrainNN(object):
         graph.add_input(name='in2', input_shape=(half_input_dim,))
 
 
-        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='pre_hidden1', input='in1')
-        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden1', input='pre_hidden1')
-        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='pre_hidden2', input='in2')
-        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden2', input='pre_hidden2')
+        #raph.add_node(Dense(hidden_dim, activation='sigmoid'), name='pre_hidden1', input='in1')
+        #graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden1', input='pre_hidden1')
+        #graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='pre_hidden2', input='in2')
+        #graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden2', input='pre_hidden2')
+
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden1', input='in1')
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden2', input='in2')
+
         graph.add_node(Dense(1, activation='sigmoid'),
                        name='pre-out',
                        inputs=['hidden1', 'hidden2'],
@@ -85,30 +93,38 @@ class TransformNN(object):
                             activation='sigmoid',
                             weights=weights_one))
         # need only to compile, no training
-        model_one.compile(loss='mse', optimizer='sgd')
+        #model_one.compile(loss='mse', optimizer='sgd')
 
         model_two = Sequential()
         model_two.add(Dense(hidden_dim,
                             activation='sigmoid',
                             weights=weights_two))
         # need only to compile, no training
-        model_two.compile(loss='mse', optimizer='sgd')
+        #model_two.compile(loss='mse', optimizer='sgd')
 
-        self.model_one = model_one
-        self.model_two = model_two
+        #self.model_one = model_one
+        #self.model_two = model_two
+        self.weights_one = weights_one
+        self.weights_two = weights_two
 
 
     def transform(self, X, model='one'):
         if model == 'one':
-            return self.model_one.predict(X)
+            W = self.weights_one[0]
+            b = self.weights_one[-1]
+            return sigmoid(np.dot(X, W) + b)
+            #return self.model_one.predict(X)
         elif model == 'two':
-            return self.model_one.predict(X)
+            W = self.weights_two[0]
+            b = self.weights_two[-1]
+            return sigmoid(np.dot(X, W) + b)
+            #return self.model_one.predict(X)
         else:
-            raise Exception("'model' param must me 'one' or 'two'")
+            raise Exception("'model' param must be 'one' or 'two'")
 
 
 def main():
-    #return
+    return
 
     data = np.load(config.TWO_INSTANCE_DATA)
     X = data[:,:-1]
@@ -120,7 +136,7 @@ def main():
     nn.compile()
 
     print 'training . . .'
-    nn.train(X, y, epochs=10000)
+    nn.train(X, y, epochs=1000)
 
     print 'saving model params . . .'
     nn.save_params(config.TWO_INSTANCE_PARAMS)
