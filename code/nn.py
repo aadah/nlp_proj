@@ -1,8 +1,9 @@
 from keras.models import Graph, Sequential
 from keras.layers.core import Dense
 from keras.optimizers import SGD
-
 import numpy as np
+
+import config
 
 
 np.random.seed(1000)
@@ -101,3 +102,28 @@ class TransformNN(object):
             return self.model_one.predict(X)
         else:
             raise Exception("'model' param must me 'one' or 'two'")
+
+
+def main():
+    #return
+
+    data = np.load(config.TWO_INSTANCE_DATA)
+    X = data[:,:-1]
+    y = data[:,-1]
+    _, D = X.shape
+
+    print 'building/compiling model . . .'
+    nn = TrainNN(D)
+    nn.compile()
+
+    print 'training . . .'
+    nn.train(X, y, epochs=10000)
+
+    print 'saving model params . . .'
+    nn.save_params(config.TWO_INSTANCE_PARAMS)
+
+    print 'Done!'
+
+
+if __name__ == '__main__':
+    main()
