@@ -56,15 +56,39 @@ class TrainNN(object):
         self.graph.fit({'in1':X_in1, 'in2':X_in2, 'out': y}, nb_epoch=epochs)
 
 
-    def predict(self, X):
+    def predict_probs(self, X):
         _, D = X.shape
 
         X_in1 = X[:,:D/2]
         X_in2 = X[:,D/2:]
 
         y_pred = self.graph.predict({'in1':X_in1, 'in2':X_in2})['out']
+        y_pred = y_pred.reshape((len(y_pred),))
 
         return y_pred
+
+
+    def predict(self, X):
+        N, _ = X.shape
+        y_pred = self.predict_probs(X)
+
+        for n in xrange(N):
+            if y_pred[n] > 0.5:
+                y_pred[n] = 1.0
+            else:
+                y_pred[n] = 0.0
+
+        return y_pred
+
+
+    def error_rate(self, X, y):
+        total = y.shape[0]
+        y_pred = self.predict(X)
+
+        comp = y_pred == y
+        correct = len(comp[comp==False])
+
+        return float(correct) / total
 
 
     def save_params(self, filename):
