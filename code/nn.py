@@ -13,6 +13,72 @@ def sigmoid(z):
     return np.clip(1.0 / (1 + np.exp(-z)), 1e-5, 0.99999)
 
 
+class TrainNN2(object):
+    def __init__(self, input_dim=4000):
+        graph = Graph()
+
+        hidden_dim = input_dim / 2
+        
+        graph.add_input(name='X', input_shape=(input_dim,))
+
+        graph.add_node(Dense(hidden_dim, activation='sigmoid'), name='hidden', input='X')
+
+        graph.add_node(Dense(1, activation='sigmoid'),
+                       name='pre-out',
+                       input='hidden')
+
+        # for training
+        graph.add_output(name='out', input='pre-out')
+
+        self.graph = graph
+
+
+    def compile(self):
+        self.graph.compile(optimizer='sgd', loss={'out': 'binary_crossentropy'})
+
+
+    def train(self, X, y, epochs=1000):        
+        self.graph.fit({'X': X, 'out': y}, nb_epoch=epochs)
+
+
+    def predict_probs(self, X):
+        y_pred = self.graph.predict({'X': X})['out']
+        y_pred = y_pred.reshape((len(y_pred),))
+
+        return y_pred
+
+
+    def predict(self, X):
+        N, _ = X.shape
+        y_pred = self.predict_probs(X)
+
+        for n in xrange(N):
+            if y_pred[n] > 0.5:
+                y_pred[n] = 1.0
+            else:
+                y_pred[n] = 0.0
+
+        return y_pred
+
+
+    def error_rate(self, X, y):
+        total = y.shape[0]
+        y_pred = self.predict(X)
+
+        comp = y_pred == y
+        correct = len(comp[comp==False])
+
+        return float(correct) / total
+
+
+    def save_params(self, filename):
+        self.graph.save_weights(filename, overwrite=True)
+
+    
+    def load_params(self, filename):
+        self.graph.load_weights(filename)
+
+
 class TrainNN(object):
     def __init__(self, input_dim=4000):
         graph = Graph()
@@ -156,17 +222,43 @@ def main():
     _, D = X.shape
 
     print 'building/compiling model . . .'
-    nn = TrainNN(D)
-    nn.compile()
+    n = TrainNN(D)
+    n.compile()
 
     print 'training . . .'
-    nn.train(X, y, epochs=1000)
+    n.train(X, y, epochs=1000)
 
     print 'saving model params . . .'
-    nn.save_params(config.TWO_INSTANCE_PARAMS)
+    n.save_params(config.TWO_INSTANCE_PARAMS)
+
+    print 'Error rate:', n.error_rate(X, y)
+
+    print 'Done!'
+
+
+def main2():
+    return
+
+    data = np.load(config.TWO_INSTANCE_DATA)
+    X = data[:,:-1]
+    y = data[:,-1]
+    _, D = X.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X, y, epochs=1000)
+
+    print 'saving model params . . .'
+    n.save_params(config.TWO_INSTANCE_PARAMS_CONNECT)
+
+    print 'Error rate:', n.error_rate(X, y)
 
     print 'Done!'
 
 
 if __name__ == '__main__':
-    main()
+    #main()
+    main2()

@@ -164,6 +164,7 @@ TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
 
 # neural net
 TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
+TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
 
 # parameters
 NER_MODE = 'stanford'
