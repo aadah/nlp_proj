@@ -13,6 +13,47 @@ def sigmoid(z):
     return np.clip(1.0 / (1 + np.exp(-z)), 1e-5, 0.99999)
 
 
+class AutoEncoderNN(object):
+    def __init__(self, input_dim=2000):
+        model = Sequential()
+
+        hidden_dim = input_dim / 2
+        
+        model.add(Dense(hidden_dim,
+                        input_dim=input_dim,
+                        activation='sigmoid'))
+
+        model.add(Dense(input_dim,
+                        input_dim=hidden_dim,
+                        activation='linear'))
+
+        self.model = model
+
+
+    def compile(self):
+        self.model.compile(optimizer='sgd', loss='mse')
+
+
+    def train(self, X, Y, epochs=1000):        
+        self.model.fit(X, Y,
+                       nb_epoch=epochs,
+                       validation_split=0.05)
+
+
+    def predict(self, X):
+        Y_pred = self.model.predict(X)
+
+        return Y_pred
+
+
+    def save_params(self, filename):
+        self.graph.save_weights(filename, overwrite=True)
+
+    
+    def load_params(self, filename):
+        self.graph.load_weights(filename)
+
+
 class TrainNN2(object):
     def __init__(self, input_dim=4000):
         graph = Graph()
@@ -259,6 +300,30 @@ def main2():
     print 'Done!'
 
 
+def main3():
+    #return
+
+    data = np.load(config.AUTOENCODER_DATA)
+    _, DD = data.shape
+    X = data[:,:DD]
+    Y = data[:,DD:]
+
+    _, D = X.shape
+
+    print 'building/compiling model . . .'
+    n = AutoEncoderNN(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X, Y, epochs=1000)
+
+    print 'saving model params . . .'
+    n.save_params(config.AUTOENCODER_PARAMS)
+
+    print 'Done!'
+
+
 if __name__ == '__main__':
     #main()
-    main2()
+    #main2()
+    main3()
