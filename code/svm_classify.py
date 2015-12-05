@@ -47,6 +47,9 @@ def get_data(train_frac=0.8, cv_frac=0.1, test_frac=0.1):
     all_labels[all_labels == 0] = -1
     all_labels = all_labels.ravel()
 
+    print all_labels
+    print all_data
+
     return all_data[:train_size,:], all_labels[:train_size], \
            all_data[train_size:train_size+cv_size,:], all_labels[train_size:train_size+cv_size], \
            all_data[train_size+cv_size:,:], all_labels[train_size+cv_size:]
@@ -64,8 +67,8 @@ def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
         
     # grid search over c and gamma
     print "beginning cross-validation"
-    c_exp_range = range(-5,6) #range(-5,16,2)
-    gamma_exp_range = range(-5,6) #range(-15,4,2)
+    c_exp_range = range(-2,9) #range(-5,16,2)
+    gamma_exp_range = range(-8,3) #range(-15,4,2)
     results = np.zeros((len(c_exp_range),len(gamma_exp_range)))
     c_iter = 0
     gamma_iter = 0
@@ -121,4 +124,4 @@ def fit_svm(test_data, filename):
     return labels
 
 if __name__ == "__main__":
-    make_and_save_svm(sys.argv[0])
+    make_and_save_svm(sys.argv[1])
