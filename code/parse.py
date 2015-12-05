@@ -8,6 +8,7 @@ from ner_recognize import ner_recognize_string
 from cluster import RelationCluster
 from vector import VectorModel
 from stanford import Tagger
+from stanford import DepParser
 
 VM = VectorModel()
 
@@ -25,7 +26,16 @@ def get_entity_set(text):
             new_entity_set.add(entity)
     return new_entity_set
 
-def get_entity_pairs(entity_set):
+def get_entity_pairs(text):
+    if config.PARSER == 'stanford_dep_parser':
+        parser = DepParser()
+        pair_set = parser.get_entity_pairs(text)
+        filtered_pair_set = set()
+        for pair in pair_set:
+            if pair[0] in VM and pair[1] in VM:
+                filtered_pair_set.add(pair)
+        return filtered_pair_set
+    entity_set = get_entity_set(text)
     pair_set = set()
     for entity1 in entity_set:
         for entity2 in entity_set:
@@ -76,10 +86,8 @@ def read_sgm(fname, entity_pairs):
                 if line.startswith("</REUTERS>"):
                     inArticle = False
                     body = get_article_text(text)
-                    print type(body)
-                    entity_set = get_entity_set(body)
-                    pair_set = get_entity_pairs(entity_set)
-                    print '%d entities' % len(entity_set)
+                    print type(body)                    
+                    pair_set = get_entity_pairs(body)
                     print '%d pairs' % len(pair_set)
                     print pair_set
                     entity_pairs = entity_pairs.union(pair_set)
@@ -131,11 +139,9 @@ def read_links(fname, entity_pairs):
         for line in f:
             print line.strip()
             body = get_linked_article(line)
-            entity_set = get_entity_set(body)
-            pair_set = get_entity_pairs(entity_set)
-            print '%d entities' % len(entity_set)
+            pair_set = get_entity_pairs(body)
             print '%d pairs' % len(pair_set)
-            #print pair_set
+            print pair_set
             entity_pairs = entity_pairs.union(pair_set)
             count += 1
             print '%d links read' % count
