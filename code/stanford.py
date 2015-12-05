@@ -32,10 +32,10 @@ class Parser:
         for r in nnp_relations:
             print r
         '''
-        pairs = self.build_relation_pairs(nnp_relations)
+        pairs = self.build_relation_pairs(nnp_relations, sent)
         return pairs
 
-    def build_compound_dict(self, relations):
+    def build_compound_dict(self, relations, words):
         compound_dict = collections.defaultdict(list)
         # works on the assumption that there are usually not many shared last names
         # so we can use the last name as the anchor for a compound NNP
@@ -43,9 +43,12 @@ class Parser:
         current = ''
         for r in relations:
             if r[1] == 'compound':
-                in_progress = True
+                # To prevent "Taipei, Taiwan" from being considered a compound entity
+                if words[words.index(r[0][0]) - 1] == ',':
+                    continue
                 current = r[0]
                 compound_dict[r[0]].append(r[2][0])
+                in_progress = True
             elif in_progress:
                 in_progress = False
                 compound_dict[current].append(current[0])
@@ -62,11 +65,15 @@ class Parser:
             entity = entity[0]
         return entity
 
-    def build_relation_dict(self, relations):
+    def build_relation_dict(self, relations, words):
         relation_dict = collections.defaultdict(list)
-        related = set()        
+        related = set()
         for r in relations:
             if r[1] == 'compound':
+                i = words.index(r[0][0])
+                if words[i-1] == ',':
+                    relation_dict[r[0]].append(r[2])
+                    relation_dict[r[2]].append(r[0])
                 continue
             #if r[1] in KEY_RELATIONS:
             relation_dict[r[0]].append(r[2])
@@ -74,10 +81,11 @@ class Parser:
             related.add(r[2])
         return relation_dict
 
-    def build_relation_pairs(self, relations):
+    def build_relation_pairs(self, relations, sent):
         pairs = set()
-        relation_dict = self.build_relation_dict(relations)
-        compound_dict = self.build_compound_dict(relations)
+        words = nltk.word_tokenize(sent)
+        relation_dict = self.build_relation_dict(relations, words)
+        compound_dict = self.build_compound_dict(relations, words)
         for entity in relation_dict:
             if not self.is_NNP(entity):
                 continue
