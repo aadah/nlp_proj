@@ -20,6 +20,7 @@ REUTERS_PAIRS = "%s/reuters_entity_pairs_stanford_1000.txt" % REUTERS_DIR
 BBC_DIR = "%s/bbc" % RESOURCES
 BBC_ARTICLES = "bbc_links.txt"
 BBC_PAIRS = "%s/entity_pairs.txt" % BBC_DIR
+BBC_DEP_PARSER_PAIRS = "%s/dep_parser_entity_pairs2.txt" % BBC_DIR
 
 # stanford
 STANFORD_NER_DIR = "%s/stanford-ner-2014-08-27" % RESOURCES
@@ -32,6 +33,34 @@ STANFORD_7CLASS = '%s/english.muc.7class.distsim.crf.ser.gz' % STANFORD_NER_MODE
 STANFORD_PARSER_DIR = "%s/stanford-parser-full-2015-04-20" % RESOURCES
 STANFORD_PARSER_JAR = "%s/stanford-parser.jar" % STANFORD_PARSER_DIR
 STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_DIR
+
+# data
+TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
+TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
+
+# neural net
+TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
+TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
+
+# parameters
+NER_MODE = 'stanford'
+PARSER = 'stanford_dep_parser'
+ARTICLE_SOURCE = 'bbc' # can be 'reuters'
+######## Change this to produce new pairs if you update bbc_links.txt
+#READ_FROM_PAIRS = True # Will not generate new pairs but rather simply reads from PAIR_INPUT_FILE
+READ_FROM_PAIRS = False # Will generate new pairs and write to PAIR_OUTPUT_FILE
+########
+STANFORD_MODEL_NUM = 3
+PAIR_OUTPUT_FILE = BBC_DEP_PARSER_PAIRS
+PAIR_INPUT_FILE = BBC_DEP_PARSER_PAIRS
+
+CLUSTER_EPS = 0.7
+CLUSTER_MIN_SAMPLES = 3
+CLUSTER_METRIC = 'euclidean'
+CLUSTER_ALGO = 'ball_tree'
+
+# SVM results directory
+SVM_RESULTS_DIR = '%s/svm_results/' % RESOURCES
 
 # wikidata
 WIKIDATA_ENDPOINT = 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
