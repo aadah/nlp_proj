@@ -66,18 +66,18 @@ class Parser:
         return entity
 
     def build_relation_dict(self, relations, words):
-        relation_dict = collections.defaultdict(list)
+        relation_dict = collections.defaultdict(set)
         related = set()
         for r in relations:
             if r[1] == 'compound':
                 i = words.index(r[0][0])
                 if words[i-1] == ',':
-                    relation_dict[r[0]].append(r[2])
-                    relation_dict[r[2]].append(r[0])
+                    relation_dict[r[0]].add(r[2])
+                    relation_dict[r[2]].add(r[0])
                 continue
             #if r[1] in KEY_RELATIONS:
-            relation_dict[r[0]].append(r[2])
-            relation_dict[r[2]].append(r[0])
+            relation_dict[r[0]].add(r[2])
+            relation_dict[r[2]].add(r[0])
             related.add(r[2])
         return relation_dict
 
@@ -86,9 +86,14 @@ class Parser:
         words = nltk.word_tokenize(sent)
         relation_dict = self.build_relation_dict(relations, words)
         compound_dict = self.build_compound_dict(relations, words)
+        subj = self.get_subj(relations)
+        subj_norm = self.normalize(subj,compound_dict)
         for entity in relation_dict:
             if not self.is_NNP(entity):
                 continue
+            if subj != entity:
+                pairs.add((self.normalize(entity,compound_dict),subj_norm))
+                pairs.add((subj_norm,self.normalize(entity,compound_dict)))
             for one_deg_sep in relation_dict[entity]:
                 if self.is_NNP(one_deg_sep):
                     if entity == one_deg_sep:
@@ -109,6 +114,11 @@ class Parser:
 
     def filter_for_NNP(self, relations):
         return [r for r in relations[0] if self.is_NNP(r[0]) or self.is_NNP(r[2])]
+
+    def get_subj(self, relations):
+        for r in relations:
+            if 'subj' in r[1] or r[1] == 'agent':
+                return r[2]
 
 class Tagger:
     def __init__(self, model_num):
