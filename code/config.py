@@ -20,7 +20,7 @@ REUTERS_PAIRS = "%s/reuters_entity_pairs_stanford_1000.txt" % REUTERS_DIR
 BBC_DIR = "%s/bbc" % RESOURCES
 BBC_ARTICLES = "bbc_links.txt"
 BBC_PAIRS = "%s/entity_pairs.txt" % BBC_DIR
-BBC_DEP_PARSER_PAIRS = "%s/dep_parser_entity_pairs.txt" % BBC_DIR
+BBC_DEP_PARSER_PAIRS = "%s/dep_parser_entity_pairs2.txt" % BBC_DIR
 
 # stanford
 STANFORD_NER_DIR = "%s/stanford-ner-2014-08-27" % RESOURCES
@@ -47,7 +47,8 @@ NER_MODE = 'stanford'
 PARSER = 'stanford_dep_parser'
 ARTICLE_SOURCE = 'bbc' # can be 'reuters'
 ######## Change this to produce new pairs if you update bbc_links.txt
-READ_FROM_PAIRS = False
+#READ_FROM_PAIRS = True # Will not generate new pairs but rather simply reads from PAIR_INPUT_FILE
+READ_FROM_PAIRS = False # Will generate new pairs and write to PAIR_OUTPUT_FILE
 ########
 STANFORD_MODEL_NUM = 3
 PAIR_OUTPUT_FILE = BBC_DEP_PARSER_PAIRS
