@@ -23,13 +23,12 @@ class DepParser:
         
     def _get_entity_pairs(self, sent):
         #words = nltk.word_tokenize(sent)
-        print sent
         relations = [list(parse.triples()) for parse in self.parser.raw_parse(sent)]
-
+        """
         print '***RELATIONS***'
         for r in relations[0]:
             print r
-
+        """
         nnp_relations = self.filter_for_NNP(relations)
 
         print '***ONLY NAMED ENTITIES***'
