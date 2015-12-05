@@ -1,8 +1,106 @@
 import nltk
 from nltk.tag import StanfordNERTagger
-
+from nltk.parse.stanford import StanfordDependencyParser
+import collections
 import config
 
+KEY_RELATIONS = ['agent','comp','obj','dobj','iobj','pobj','subj','nsubj','nsubjpass','csubj','cc','conj','appos','rcmod','ref','pobj']
+
+class Parser:
+    def __init__(self):
+        self.parser = StanfordDependencyParser(path_to_jar=config.STANFORD_PARSER_JAR,
+                                               path_to_models_jar=config.STANFORD_PARSER_MODEL)
+
+    def get_entity_pairs(self, text):
+        entities = []
+        sents = nltk.sent_tokenize(text)
+        for sent in sents:
+            entities.extend(self._get_entity_pairs(sent))
+        
+    def _get_entity_pairs(self, sent):
+        #words = nltk.word_tokenize(sent)
+        print sent
+        relations = [list(parse.triples()) for parse in self.parser.raw_parse(sent)]
+        '''
+        print '***RELATIONS***'
+        for r in relations:
+            print r
+        '''
+        nnp_relations = self.filter_for_NNP(relations)
+        '''
+        print '***ONLY NAMED ENTITIES***'
+        for r in nnp_relations:
+            print r
+        '''
+        pairs = self.build_relation_pairs(nnp_relations)
+        return pairs
+
+    def build_compound_dict(self, relations):
+        compound_dict = collections.defaultdict(list)
+        # works on the assumption that there are usually not many shared last names
+        # so we can use the last name as the anchor for a compound NNP
+        in_progress = False
+        current = ''
+        for r in relations:
+            if r[1] == 'compound':
+                in_progress = True
+                current = r[0]
+                compound_dict[r[0]].append(r[2][0])
+            elif in_progress:
+                in_progress = False
+                compound_dict[current].append(current[0])
+                current = ''
+        # To catch ending compound entities
+        if in_progress:
+            compound_dict[current].append(current[0])
+        return compound_dict
+
+    def normalize(self, entity, compound_dict):
+        if entity in compound_dict:
+            return ' '.join(compound_dict[entity])
+        if type(entity) is tuple:
+            entity = entity[0]
+        return entity
+
+    def build_relation_dict(self, relations):
+        relation_dict = collections.defaultdict(list)
+        related = set()        
+        for r in relations:
+            if r[1] == 'compound':
+                continue
+            #if r[1] in KEY_RELATIONS:
+            relation_dict[r[0]].append(r[2])
+            relation_dict[r[2]].append(r[0])
+            related.add(r[2])
+        return relation_dict
+
+    def build_relation_pairs(self, relations):
+        pairs = set()
+        relation_dict = self.build_relation_dict(relations)
+        compound_dict = self.build_compound_dict(relations)
+        for entity in relation_dict:
+            if not self.is_NNP(entity):
+                continue
+            for one_deg_sep in relation_dict[entity]:
+                if self.is_NNP(one_deg_sep):
+                    if entity == one_deg_sep:
+                        continue
+                    pairs.add((self.normalize(entity,compound_dict),
+                               self.normalize(one_deg_sep,compound_dict)))
+                for two_deg_sep in relation_dict[one_deg_sep]:
+                    if self.is_NNP(two_deg_sep):
+                        if entity == two_deg_sep:
+                            continue
+                        pairs.add((self.normalize(entity,compound_dict),
+                                   self.normalize(two_deg_sep,compound_dict)))
+        print pairs
+        return pairs
+
+    def is_NNP(self, ent):
+        return ent[1] in ['NNP','NNPS']
+
+    def filter_for_NNP(self, relations):
+        return [r for r in relations[0] if self.is_NNP(r[0]) or self.is_NNP(r[2])]
 
 class Tagger:
     def __init__(self, model_num):
@@ -78,3 +176,9 @@ class Tagger:
                     prev_entity = entity
         
         return entities
+
+if __name__=='__main__':
+    p = Parser()
+    text = 'Barack Hussein Obama II is the 44th and current President of the United States, as well as the first African American to hold the office. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he served as president of the Harvard Law Review.'
+    print text
+    p.get_entity_pairs(text)
