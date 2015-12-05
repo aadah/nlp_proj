@@ -27,6 +27,10 @@ STANFORD_3CLASS = '%s/english.all.3class.distsim.crf.ser.gz' % STANFORD_NER_MODE
 STANFORD_4CLASS = '%s/english.conll.4class.distsim.crf.ser.gz' % STANFORD_NER_MODELS_DIR
 STANFORD_7CLASS = '%s/english.muc.7class.distsim.crf.ser.gz' % STANFORD_NER_MODELS_DIR
 
+STANFORD_PARSER_DIR = "%s/stanford-parser-full-2015-04-20" % RESOURCES
+STANFORD_PARSER_JAR = "%s/stanford-parser.jar" % STANFORD_PARSER_DIR
+STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_DIR
+
 # parameters
 NER_MODE = 'stanford'
 ARTICLE_SOURCE = 'bbc' # can be 'reuters'
