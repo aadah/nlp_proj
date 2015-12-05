@@ -165,6 +165,8 @@ WIKIDATA_PROPERTIES = [
 # data
 TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
 TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
+AUTOENCODER_FILE = '%s/autoencoder.txt' % RESOURCES
+AUTOENCODER_DATA = '%s/autoencoder.npy' % RESOURCES
 
 # neural net
 TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES

@@ -5,6 +5,83 @@ import sparql
 import config
 
 
+# generates list of instance-instance for auto encoder
+def generate_instance_to_instance():
+    np.random.seed(1000)
+
+    wd = sparql.WikiDataClient()
+    limit = 10000
+    num_per_query = 25
+    f = open(config.AUTOENCODER_FILE, 'w')
+
+    print 'retrieving instances from wikidata . . .'
+    for relation in config.WIKIDATA_PROPERTIES:
+        try:
+            pre_instances = wd.get_instance(relation, limit)
+        except Exception:
+            print 'Error for %s' % relation
+            continue
+
+        pre_instances.sort(key=lambda inst: inst['subjLabel'])
+
+        if len(pre_instances) == 0:
+            print 'Nothing for %s' % relation
+            continue
+
+        instances = pre_instances[:num_per_query]
+
+        for instance_i in instances:
+            for instance_j in instances:
+                first = (instance_i['subjLabel'],
+                         instance_i['subjMID'],
+                         instance_i['objLabel'],
+                         instance_i['objMID'])
+                
+                second = (instance_j['subjLabel'],
+                          instance_j['subjMID'],
+                          instance_j['objLabel'],
+                          instance_j['objMID'])
+
+                instance_pair = (first, second)
+                f.write(str(instance_pair) + '\n')
+
+        del instances
+        del pre_instances
+        print relation
+
+    f.close()
+
+
+def generate_instance_to_instance_matrix():
+    vm = vector.MIDVectorModel()
+
+    print 'loading instance pairs . . .'
+    with open(config.AUTOENCODER_FILE) as f:
+        instance_pairs = map(eval, f.readlines())
+        instance_pairs = map(lambda x: (x[0][1], x[0][3],
+                                        x[1][1], x[1][3]),
+                             instance_pairs)
+
+    print 'building data matrix . . .'
+    data = []
+    
+    for instance_pair in instance_pairs:
+        mids = instance_pair
+
+        if not all([mid in vm for mid in mids]):
+            continue
+
+        vec = np.hstack([vm[mid] for mid in mids])
+        data.append(vec)
+        
+    vm.close()
+
+    matrix = np.vstack(data)
+    print matrix.shape
+
+    np.save(config.AUTOENCODER_DATA, matrix)
+
+
 # generates list of instance-instance classifier
 def generate_instance_instance():
     np.random.seed(100)
@@ -104,5 +181,11 @@ def main():
     generate_instance_instance_matrix()
 
 
+def main2():
+    generate_instance_to_instance()
+    generate_instance_to_instance_matrix()
+
+
 if __name__ == '__main__':
-    main()
+    #main()
+    main2()
