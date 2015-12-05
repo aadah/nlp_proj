@@ -1,0 +1,15 @@
+4656 pairs read
+6
+defaultdict(<type 'list'>, {0: [757, 1471, 1805], 1: [992, 1198, 4565]})
+Cluster: 0
+cluster size: 3
+indices in cluster:  [757, 1471, 1805]
+	(u'Syria', u'Christian Democrats')
+	(u'Syria', u'Christian Democratic Union')
+	(u'Syria', u'Social Democrats')
+Cluster: 1
+cluster size: 3
+indices in cluster:  [992, 1198, 4565]
+	(u'Social Democrats', u'Syria')
+	(u'Christian Democratic Union', u'Syria')
+	(u'Christian Democrats', u'Syria')

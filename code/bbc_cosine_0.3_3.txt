@@ -1,0 +1,4039 @@
+4656 pairs read
+2770
+defaultdict(<type 'list'>, {0: [2, 415, 453, 500, 755, 785, 941, 961, 1024, 1088, 1147, 1175, 1201, 1228, 1233, 1414, 1422, 1536, 1644, 1928, 1958, 2056, 2163, 2383, 2535, 2577, 2636, 2679, 2719, 2752, 2820, 2901, 3009, 3119, 3131, 3211, 3215, 3357, 3381, 3481, 3505, 3629, 3706, 4065, 4096, 4167, 4303, 4352, 4579, 4588, 4609], 1: [8, 154, 195, 243, 292, 319, 369, 516, 582, 799, 833, 868, 945, 992, 1027, 1032, 1117, 1133, 1139, 1172, 1198, 1202, 1247, 1257, 1266, 1272, 1295, 1344, 1396, 1426, 1429, 1445, 1517, 1553, 1559, 1570, 1623, 1647, 1718, 1738, 1778, 1815, 1920, 1987, 2082, 2138, 2199, 2218, 2311, 2313, 2353, 2378, 2400, 2503, 2696, 2721, 2751, 2759, 2781, 2812, 2844, 2859, 2892, 2903, 3077, 3153, 3261, 3273, 3334, 3377, 3440, 3490, 3500, 3537, 3649, 3698, 3799, 3955, 4125, 4194, 4256, 4258, 4263, 4349, 4387, 4474, 4515, 4548, 4565], 2: [9, 796, 886, 1161, 2299, 2305, 3175, 4487], 3: [11, 48, 464, 476, 715, 832, 864, 993, 1301, 1327, 1795, 2276, 2666, 4480], 4: [14, 1776, 2644, 3559], 5: [15, 3146, 3550], 6: [18, 77, 134, 254, 309, 465, 496, 499, 665, 767, 907, 1020, 1030, 1068, 1288, 1332, 1456, 1498, 1566, 1617, 1737, 1748, 1963, 2025, 2099, 2262, 2583, 2632, 2710, 2796, 2950, 2981, 3111, 3156, 3200, 3493, 3551, 3626, 3637, 3670, 3771, 3836, 3865, 3892, 3978, 3996, 4278, 4367, 4417, 4418, 4445, 4509, 4535, 4561, 4618], 7: [19, 136, 331, 544, 549, 828, 1363, 1742, 1972, 1985, 2402, 2550, 2760, 3268, 3426, 3454, 3693, 3766, 3780, 4004, 4051, 4080, 4333], 8: [21, 2255, 3236], 9: [22, 74, 91, 133, 137, 238, 359, 365, 477, 575, 789, 1081, 1164, 1622, 1789, 2154, 2186, 2268, 2274, 2440, 2602, 2650, 2735, 2769, 2813, 2884, 2987, 3038, 3076, 3083, 3183, 3237, 3295, 3331, 3375, 3506, 3524, 3574, 3580, 3689, 3732, 3831, 4016, 4043, 4091, 4128, 4227, 4290, 4322, 4331, 4354], 10: [26, 214, 2944, 3402, 3525, 3920], 11: [28, 240, 1206, 1600, 3552, 3959, 4131, 4199], 12: [29, 75, 163, 191, 249, 260, 307, 318, 385, 439, 491, 507, 547, 699, 708, 757, 826, 936, 1060, 1137, 1148, 1185, 1234, 1276, 1294, 1308, 1427, 1437, 1439, 1465, 1471, 1481, 1627, 1646, 1723, 1805, 1824, 1842, 1872, 1936, 1999, 2002, 2038, 2115, 2120, 2194, 2195, 2344, 2361, 2474, 2506, 2582, 2662, 2689, 2713, 2718, 2894, 2916, 2942, 3063, 3177, 3206, 3218, 3316, 3342, 3345, 3423, 3480, 3595, 3640, 3747, 3803, 3873, 3877, 3884, 3901, 3909, 3987, 4026, 4032, 4270, 4334, 4407, 4419, 4508, 4520, 4576, 4604, 4629], 13: [30, 1086, 1244, 1752, 1775, 2508, 3362, 3627], 14: [31, 1053, 1339, 1455, 1806, 3289], 15: [32, 1782, 2956, 3408], 16: [33, 64, 2103, 2399, 2432, 2684, 3659, 3911, 4129], 17: [34, 2850, 3354, 3646], 18: [35, 431, 628, 1434, 1786, 1922], 19: [37, 189, 1093, 1305, 2346, 4650], 20: [43, 495, 687, 1491, 1736, 3882, 4010, 4271], 21: [45, 812, 912, 1090, 1988, 4321], 22: [50, 623, 1946, 2405, 2882, 2906, 2918, 3022, 3796, 3806, 3843], 23: [55, 497, 810, 1002, 2096, 2116, 2362, 2381, 3322, 3475, 4236, 4423, 4525, 4589], 24: [56, 2171, 2618, 3597, 3611, 4451], 25: [57, 376, 931, 1707, 1713, 1735, 1974, 2940, 2962, 2974, 3298, 3681, 3856, 4332], 26: [58, 743, 1610, 1710, 3745], 27: [59, 95, 1890, 2205], 28: [60, 1250, 4085, 4106, 4132, 4257], 29: [61, 206, 667, 903, 960, 1343, 1664, 2124, 2297, 2454, 2465, 2502, 2657, 2726, 3275, 3312, 3410, 3443, 3534, 4081], 30: [62, 694, 838, 1591, 2036, 2126, 2304, 2879, 3018, 3047, 3547, 3735], 31: [63, 115, 2384], 32: [65, 1994, 2984, 3961, 4038, 4406], 33: [67, 862, 1899], 34: [70, 248, 506, 1076, 1637, 2161, 2739, 3817, 3834, 4061], 35: [72, 346, 383, 517, 720, 741, 896, 1104, 1151, 1242, 1923, 2466, 2500, 2544, 2818, 3181, 3468, 3682, 3699, 4003, 4337, 4397, 4425], 36: [73, 92, 114, 217, 276, 390, 764, 989, 1281, 1380, 1454, 1628, 1753, 1754, 1757, 1770, 1801, 2069, 2166, 2269, 2673, 2922, 3001, 3773, 3811, 3844, 3851, 3908, 3971, 4120, 4197, 4232, 4302, 4433, 4646], 37: [76, 594, 1037, 1067, 1113, 1154, 1274, 1819, 2794, 3993, 4095, 4553], 38: [78, 102, 341, 580, 714, 872, 1477, 1702, 1769, 2094, 2200, 2965, 3011, 3028, 4537, 4614], 39: [79, 1592, 3199, 4314], 40: [82, 897, 1028, 1277, 2224, 2340, 2423, 3428, 3642, 4276, 4544], 41: [85, 648, 1825, 1875, 1907, 2406, 2615, 2792, 3041, 3201, 3276, 3386, 3504, 4320], 42: [89, 1361, 2489], 43: [90, 2448, 3180, 3770], 44: [93, 403, 526, 1402, 1809, 2081, 2389, 3223, 3365, 4615], 45: [94, 1692, 1898, 3202, 3614, 4636], 46: [97, 620, 2100], 47: [103, 557, 2164, 2415], 48: [105, 314, 3549], 49: [108, 2130, 2514], 50: [110, 701, 1155, 1423, 2075, 3114, 4360], 51: [111, 1001, 1447, 2611, 3213, 4107], 52: [119, 910, 1480, 2258, 3232, 4428], 53: [124, 454, 2260], 54: [125, 463, 1394, 1573, 1711, 2106, 2261, 2775, 3157, 3687, 4138, 4162], 55: [130, 295, 393, 1031, 2143, 3069, 3634, 3841, 3907, 4033, 4592], 56: [131, 1459, 2546, 2858, 3558, 4190], 57: [141, 301, 922, 1876], 58: [143, 384, 2150], 59: [144, 2047, 2152, 2551], 60: [145, 146, 229, 2445, 2626, 3749, 3754], 61: [147, 382, 722, 775, 795, 1192, 1205, 1450, 1683, 1725, 1865, 2041, 2460, 2959, 3727, 4206], 62: [149, 3613, 3736], 63: [150, 327, 380, 577, 784, 807, 816, 1103, 2063, 2407, 2734, 2743, 3512, 3531, 4369, 4437], 64: [51, 151, 905, 1555, 1767, 1911, 2107, 2159, 2573, 2768], 65: [158, 468, 3050, 3084, 3503], 66: [159, 825, 2178, 4048], 67: [168, 587, 668, 696, 969, 1518], 68: [169, 705, 2197, 2307, 2453, 3372, 3765, 3768, 3818, 3942], 69: [170, 279, 498, 640, 824, 955, 2242, 2289, 2761, 3074, 3805, 4057], 70: [176, 2248, 2854, 4602], 71: [177, 780, 1092, 1768, 2869, 3353, 4040, 4076], 72: [178, 791, 2518], 73: [180, 1163, 1720, 3434, 4142, 4284], 74: [181, 523, 978, 996, 1513, 2334, 3466, 4126, 4198, 4468], 75: [182, 475, 485, 490, 1136, 1360, 1651, 1670, 1749, 1802, 1840, 2060, 2816, 2890, 2891, 3053, 3125, 3366, 4009, 4123], 76: [187, 1410, 1698], 77: [188, 546, 1635, 1910, 1995, 2410, 2808, 3109, 3209, 3712], 78: [197, 595, 934, 2356, 2793, 4098], 79: [199, 257, 283, 386, 676, 695, 747, 748, 1219, 1302, 1309, 1337, 1338, 1533, 1606, 1693, 1727, 1797, 1841, 1949, 1957, 2180, 2210, 2238, 2266, 2343, 2493, 2725, 2750, 2867, 2885, 2934, 3002, 3062, 3081, 3088, 3169, 3203, 3292, 3301, 3344, 3384, 3523, 3691, 3964, 4006, 4052, 4235, 4242, 4277, 4319, 4421, 4462, 4504, 4610], 80: [200, 1619, 2031, 3404, 3692, 3764], 81: [202, 329, 412, 793, 1134, 3662, 4000, 4216, 4289, 4344, 4448], 82: [204, 2954, 3241, 4327], 83: [210, 373, 1010, 1131, 1431, 2118, 2727, 3893, 4210, 4390], 84: [212, 1320, 2426], 85: [218, 347, 596, 800, 2784, 2874, 3305, 3625, 3685, 3951], 86: [39, 222, 312, 1457], 87: [226, 443, 2111], 88: [227, 1478, 3717, 3995, 4463], 89: [231, 3323, 4341, 4395], 90: [232, 298, 374, 904, 986, 1019, 1224, 1314, 1365, 1503, 1521, 1556, 2015, 2382, 2613, 2707, 2791, 2839, 2871, 3056, 3188, 3277, 3819, 3890, 3967, 3974, 4011, 4133, 4148, 4240, 4272, 4338, 4420, 4453, 4634], 91: [234, 277, 389, 421, 578, 1123, 1364, 1372, 1705, 1773, 1943, 2283, 2379, 2437, 2451, 2709, 2730, 2855, 3064, 3526, 3567, 4008, 4402, 4422, 4519, 4524], 92: [236, 379, 659, 1204, 1634, 1638, 1766, 2608, 2641, 2671, 2744, 2817, 3158, 3173, 3429, 3617, 3743, 3965, 4279], 93: [239, 404, 436, 452, 564, 603, 750, 1042, 1826, 1953, 2048, 2090, 2122, 2278, 2983, 3190, 3244, 3325, 3326, 3409, 3460, 3522, 3586, 3677, 4384, 4580], 94: [242, 504, 1290, 1808, 1925, 2388, 2872, 2948, 3934, 3953], 95: [244, 447, 466, 970, 1126, 1166, 1340, 1406, 1468, 1625, 1700, 1897, 2053, 2458, 2975, 3452, 3482, 3975, 4250], 96: [245, 1013, 1984], 97: [252, 971, 2899], 98: [258, 306, 561, 788, 1909, 2134, 2247, 2319, 2588, 2930, 2949, 3186, 4064, 4469], 99: [128, 259, 522, 831, 1282, 1418, 1475, 2014, 2147, 2609, 2630, 2702, 2914, 3152, 3225, 3327], 100: [262, 1278, 1489, 1548, 2540, 2826, 2945, 3162, 3636], 101: [266, 426, 560, 590, 717, 1193, 1342, 1581, 2089, 2140, 2176, 2552, 2680, 2783, 3457, 3572, 3702, 3784, 3927, 3970, 4001, 4203, 4294, 4316, 4388, 4416], 102: [268, 950, 2234, 2330, 2492, 2927, 3048, 3126, 3291, 3479, 3654, 4110], 103: [270, 811, 1540, 1687], 104: [271, 2723, 3235, 3988], 105: [272, 472, 1479], 106: [273, 890, 2606], 107: [113, 275, 1070, 1261, 1463, 2496, 3282, 3394, 3683], 108: [280, 1392, 3189], 109: [294, 876, 982, 1714, 1932, 2243], 110: [297, 343, 545, 556, 1686, 1929, 2360, 2501, 4151], 111: [300, 342, 662, 1467, 1798, 1818, 1926, 2078, 2341, 2421, 2629, 3361, 3663, 4546], 112: [302, 600, 3713], 113: [303, 486, 852, 1152, 2136, 2145, 3544, 4400], 114: [320, 1601, 2131, 2676, 4112, 4157], 115: [326, 964, 1122, 1476, 1587, 2753, 3138, 3639, 3746, 3905, 4582, 4643], 116: [328, 543, 675, 1254, 1716, 2322], 117: [330, 2285, 3051, 3192], 118: [332, 358, 3246, 4536], 119: [336, 467, 1165, 1378, 1462, 1494, 1564, 1674, 1823, 2219, 3272, 3358, 3651, 4532, 4560, 4601], 120: [337, 927, 2007, 2601, 2971, 3016, 3253, 3284], 121: [339, 2012, 3467, 3922], 122: [350, 3545, 3762], 123: [354, 641, 1066, 2043, 2589, 4415], 124: [355, 2358, 3655, 3937, 3999, 4436], 125: [356, 707, 972, 2868], 126: [361, 407, 984, 1221, 2017, 3709, 3894, 3969], 127: [367, 1804, 2284], 128: [370, 1316, 1370, 3035], 129: [377, 3998, 4554], 130: [378, 488, 550, 1051, 1199, 1356, 1689, 1917, 2825, 3195, 3310, 3352, 3657, 3949], 131: [387, 1291, 2772], 132: [388, 541, 762, 2102, 4204], 133: [395, 1018, 1300, 1543, 1565, 2567, 2670, 2788, 4298, 4430], 134: [400, 718, 2144, 2482, 2685, 2958], 135: [402, 1383, 4055, 4346], 136: [405, 4092, 4141], 137: [409, 2525, 3456, 4350], 138: [411, 625, 966, 2614, 2699, 2951, 3797], 139: [418, 1535, 1655, 1662, 2211, 2976, 3520, 3536, 3835], 140: [422, 2594, 4479, 4645], 141: [425, 1017, 2034], 142: [432, 2263, 3933, 4293], 143: [435, 2804, 2845], 144: [441, 2121, 4336, 4570], 145: [445, 480, 1304], 146: [448, 525, 1751, 2355, 3335, 4178], 147: [457, 1424, 1924, 4434], 148: [458, 566, 574, 703, 726, 822, 928, 1409, 2510, 2902, 3154, 3204, 3266, 3885, 4222], 149: [460, 622, 1156, 1269, 2555, 2677, 2815, 3564, 3756, 3863, 4215, 4493], 150: [462, 2065, 2870, 3174, 3436, 3450], 151: [469, 1227, 1315, 2072], 152: [471, 949, 1074, 1101, 3578, 3624], 153: [473, 511, 1466, 2576, 2822, 4473], 154: [484, 839, 1464], 155: [492, 2693, 2928], 156: [493, 776, 1868, 2612, 3726], 157: [501, 2051, 3521], 158: [518, 1408, 1803, 2228, 2350, 2422, 2977, 4023], 159: [521, 1550, 1665, 3980], 160: [528, 3632, 4466], 161: [530, 915, 2233, 3721], 162: [533, 572, 849, 3427, 4046, 4377], 163: [537, 1903, 4348], 164: [538, 2227, 2770, 3606], 165: [539, 815, 2345, 2943, 3900], 166: [542, 1669, 1927, 2241, 2294, 3902, 4371], 167: [548, 1458, 1965], 168: [553, 2797, 3031, 3577], 169: [554, 808, 1306, 2113, 2333, 2505, 3171, 3346, 3473, 4136, 4313, 4370], 170: [256, 555, 1620, 1780, 1948, 2141, 2694, 2700, 3430, 3570], 171: [568, 719, 1435, 1532, 1719, 2876], 172: [569, 1310, 1656, 1945], 173: [579, 2312, 3779], 174: [440, 583, 729, 787, 906, 933, 1169, 1194, 1307, 1393, 1743, 2371, 2404, 2530, 2534, 2660, 2787, 2840, 3078, 3255, 3848, 3977, 4137, 4163, 4275, 4542], 175: [593, 1022, 1425], 176: [598, 655, 919, 1005, 2267, 2526, 2755, 2830, 3075, 4527], 177: [601, 790, 3446], 178: [607, 2430, 3656], 179: [611, 850, 2182, 2779, 3044, 4593], 180: [624, 1178, 1525, 4261, 4483, 4528], 181: [626, 1834, 3297, 3343], 182: [629, 1176, 3042, 3306, 3767, 4196, 4355, 4558], 183: [631, 739, 1728, 1785, 2127, 2273, 2331, 3278, 3442, 3508, 3575, 3729, 4475, 4476], 184: [632, 3761, 3925], 185: [633, 738, 1015, 3150], 186: [573, 637, 2327, 2336, 3478], 187: [642, 2469, 3445, 3935], 188: [481, 645, 1376, 2306, 2566, 2748, 3095, 3182, 3674, 3748], 189: [646, 1902, 4619], 190: [653, 2545, 3100, 4063], 191: [660, 2853, 3507], 192: [663, 734, 4267], 193: [672, 1097, 2105, 2708, 2895, 3166, 3231, 4015, 4017, 4622], 194: [674, 3283, 3921], 195: [678, 1049, 1369, 1652, 1852, 1891, 2742, 4379], 196: [683, 1562, 1659, 1960, 2695, 3376], 197: [684, 751, 779, 783, 2703, 3697], 198: [697, 2419, 3514, 3678, 4179], 199: [709, 870, 1650, 2584, 3667, 3820], 200: [712, 911, 1121, 1251, 1420, 1557, 1939, 2537, 2873, 3065, 3112, 3795, 3832, 4050, 4059], 201: [716, 1657, 1951, 2280, 2992, 3947, 4340, 4501], 202: [728, 1038, 1158, 1397, 2790, 2866, 3397, 3533, 3562, 3760, 4027], 203: [733, 3160, 3603], 204: [744, 4539, 4608], 205: [749, 1061, 2412, 3425, 4211], 206: [752, 2265, 2908], 207: [758, 2088, 2253], 208: [766, 1500, 1908], 209: [768, 1114, 1448, 1512, 2021, 2203, 2365, 2416, 2463, 2652, 3338, 3576, 3635, 3641, 3968, 4005], 210: [769, 943, 4233], 211: [773, 2889, 4153], 212: [777, 2309, 2559, 2932, 3800], 213: [781, 995, 1063, 1505, 1981, 2237, 2301, 2377, 2507, 3553, 3838, 4373], 214: [742, 792, 1243, 1262, 2444, 3555], 215: [797, 967, 2236, 2565, 4226, 4467], 216: [801, 1215, 3591, 3788], 217: [803, 1095, 3860, 4251, 4598, 4605], 218: [805, 942, 3889, 4212], 219: [809, 2055, 2061, 3527], 220: [813, 2417, 3373], 221: [820, 999, 4626], 222: [836, 1441, 2086, 2564, 3128, 3214, 3318, 3898], 223: [842, 974, 2724, 3013], 224: [843, 3701, 3895], 225: [853, 2627, 3094], 226: [859, 1179, 4484], 227: [861, 1237, 2342, 2647, 3017, 3288, 4020, 4581], 228: [878, 1246, 2999], 229: [880, 3103, 3347], 230: [881, 1624, 1881, 2521, 2688], 231: [882, 1883, 1889, 2035, 4500, 4594], 232: [883, 913, 2864, 3073], 233: [891, 1186, 2298], 234: [895, 1240, 1268, 1694, 2092, 2093, 2217, 2359], 235: [406, 898, 1688, 3859], 236: [900, 2196, 3036, 3333, 3391, 4169], 237: [902, 2157, 2952], 238: [605, 918, 963], 239: [921, 1283, 1449, 2029, 2079, 2665], 240: [923, 1446, 2729], 241: [932, 1239, 1934, 2320, 3061, 3470], 242: [946, 2153, 3082, 3589, 4100], 243: [962, 1057, 1690, 2091, 3039], 244: [977, 3772, 4496], 245: [980, 1362, 1858, 3960, 4274, 4624], 246: [1004, 1691, 3931], 247: [1008, 3052, 3212], 248: [1016, 2004, 2190], 249: [333, 1029, 2450], 250: [1039, 1913, 4635], 251: [190, 1040, 2077, 2212, 3501, 4356], 252: [987, 1000, 1048, 1375, 3566, 4165], 253: [1050, 3587, 4047], 254: [1056, 2394, 3823, 4432], 255: [1058, 2705, 2917, 3880, 4292, 4486], 256: [1075, 3395, 4426], 257: [818, 979, 1080, 1317, 1816, 2762, 2763, 3897, 4028], 258: [651, 1085, 1895, 3455], 259: [1096, 1293, 1311, 1395, 1552, 2001, 2151, 3024, 3686, 3718, 3985], 260: [1098, 1980, 2189, 3401], 261: [1111, 2683, 4166], 262: [366, 1115, 2520, 3883], 263: [1116, 1519, 2888], 264: [184, 1120, 2045, 3546], 265: [1127, 3439, 4342], 266: [1132, 1209, 1236, 1837], 267: [1140, 1827, 3982], 268: [1143, 4069, 4186], 269: [1146, 1265, 1405, 1563], 270: [1150, 1961, 3444], 271: [725, 1168, 1188, 1585, 1884, 2282, 2531, 3093, 3926, 4182], 272: [1183, 1639, 1794, 2390, 4649], 273: [1184, 1264, 1997, 2201, 2675, 4409], 274: [1203, 1514, 3777, 4287], 275: [1248, 2396, 3060, 3118, 3728], 276: [1253, 1648, 1820, 4156], 277: [1263, 2213, 2658, 3148], 278: [1275, 1541, 4404], 279: [1280, 1469, 2348], 280: [1298, 1998, 2347, 2833, 3789, 4391], 281: [41, 1321, 1703, 3813], 282: [1323, 2733, 3855, 4472], 283: [140, 198, 1325, 2408, 2563, 2955, 3121, 3461, 3684], 284: [1329, 2504, 3265, 3451, 3787, 3990], 285: [1341, 1699, 1790, 3003, 3015, 3259], 286: [1347, 3274, 3515], 287: [1385, 3184, 4152], 288: [1401, 1675, 1977], 289: [349, 1412, 2420, 2995, 3919], 290: [1421, 2434, 3247, 3804], 291: [647, 1444, 1745, 1966, 2046, 3230, 3412, 3471, 3879], 292: [1493, 2411, 2461], 293: [1497, 3008, 4071], 294: [291, 474, 1312, 1504, 1560, 2188, 2764, 3034, 3615, 4317, 4488, 4506], 295: [251, 1523, 3336], 296: [1527, 2849, 3488, 3644], 297: [1528, 1577, 1849], 298: [1534, 1993, 2617, 4307], 299: [1538, 3781, 4280, 4365], 300: [1547, 1942, 2978, 3294, 3741, 4205, 4249, 4394], 301: [1567, 3903, 4225], 302: [1583, 2062, 3220], 303: [397, 1575, 1594], 304: [901, 1597, 2449], 305: [1598, 2561, 3415, 4201, 4514, 4616], 306: [1599, 1760, 4164], 307: [1355, 1609, 2863], 308: [1612, 3143, 4024, 4145], 309: [509, 1629, 1947, 3972], 310: [1632, 2338, 2427, 2476, 2687, 2776, 2923, 4154], 311: [1324, 1642, 1812, 3396], 312: [1643, 3257, 3915], 313: [1663, 2842, 3598], 314: [338, 1679, 3449, 3511], 315: [1685, 2487, 3307], 316: [1381, 1695, 2731, 2857, 3405, 3630, 4195, 4375], 317: [1386, 1697, 4041], 318: [1708, 1869, 4364, 4642], 319: [1721, 1796, 1861, 2805], 320: [782, 1724, 3387, 4207], 321: [1729, 2798, 3000], 322: [120, 1377, 1733], 323: [1746, 2435, 2619], 324: [1747, 3293, 4499], 325: [1756, 2128, 2472, 2621, 2715, 3067], 326: [1771, 2880, 3731, 4380, 4648], 327: [1777, 2032, 4143], 328: [1791, 2491, 2553], 329: [1807, 3337, 4285], 330: [1832, 1853, 3666], 331: [1404, 1846, 4574], 332: [1856, 2786, 3599, 3679], 333: [1862, 1866, 3263, 4555], 334: [1452, 1870, 1954, 3014], 335: [570, 1885, 4359], 336: [1590, 1893, 4607], 337: [1915, 2245, 3918], 338: [49, 1969, 2165, 3319, 3496, 3584, 3669, 4228, 4244, 4595], 339: [935, 1971, 3037, 3498], 340: [1510, 1976, 4526], 341: [375, 1978, 4031], 342: [2003, 2456, 3945], 343: [2030, 2562, 3487], 344: [2039, 2316, 2499, 2529, 3830, 3986], 345: [650, 1595, 2040], 346: [2050, 3723, 4312], 347: [636, 2083, 2256, 3881, 3923, 4260], 348: [920, 2095, 2244], 349: [2104, 3329, 4248], 350: [1568, 2110, 4497], 351: [2132, 2146, 2912], 352: [565, 2160, 3311, 4184], 353: [2174, 2193, 4172], 354: [2191, 2438, 3194], 355: [1867, 2279, 4318], 356: [1413, 2300, 2806, 3155], 357: [563, 2308, 3165, 4068], 358: [1894, 2349, 3579, 4538], 359: [215, 2352, 2973], 360: [929, 2431, 4644], 361: [2441, 3825, 4140], 362: [1874, 2459, 4082], 363: [264, 2464, 3364], 364: [1346, 2509, 3930], 365: [196, 344, 2532], 366: [951, 2572, 4229], 367: [2575, 3794, 4368, 4392], 368: [2622, 2785, 4478], 369: [759, 2706, 3491], 370: [2714, 3554, 3714], 371: [2380, 2745, 3167], 372: [2747, 3033, 4176], 373: [2773, 3348, 4002], 374: [1912, 2789, 4647], 375: [478, 505, 2807, 3032], 376: [152, 2831, 4238], 377: [2832, 2966, 4617], 378: [203, 2827, 2856], 379: [2893, 4170, 4633], 380: [958, 2911, 4013, 4116], 381: [2961, 3876, 4305], 382: [399, 1318, 2964, 3866], 383: [2968, 4056, 4639], 384: [2969, 4376, 4438], 385: [1374, 2593, 3043], 386: [1992, 3059, 3463, 3688], 387: [3098, 3388, 3958], 388: [3102, 3510, 3904], 389: [3106, 4266, 4300, 4523], 390: [3130, 4180, 4209], 391: [3168, 3710, 4173, 4516, 4533], 392: [1009, 1854, 3187], 393: [456, 3210, 4461], 394: [3240, 3328, 4326], 395: [940, 3267, 3281], 396: [704, 846, 3308, 3917], 397: [1389, 3360, 3474], 398: [2173, 3363, 3563, 4296], 399: [1516, 3447, 4362], 400: [884, 1411, 3509], 401: [317, 2861, 3541], 402: [3565, 3785, 4144, 4398], 403: [1319, 2332, 3658, 4189], 404: [1382, 3783, 4012], 405: [2980, 3233, 3798], 406: [3092, 3845, 4019], 407: [1487, 1572, 3850], 408: [3208, 3916, 4347], 409: [1220, 3643, 3936], 410: [2757, 3406, 3943], 411: [887, 1539, 3984], 412: [3459, 4036, 4599], 413: [654, 735, 4039], 414: [1701, 3068, 4109], 415: [959, 1964, 4113], 416: [888, 4255, 4265], 417: [4335, 4489, 4597], 418: [998, 4188, 4366], 419: [2080, 4053, 4491], 420: [2586, 3833, 4513], 421: [798, 3258, 4549]})
+Cluster: 0
+cluster size: 51
+indices in cluster:  [2, 415, 453, 500, 755, 785, 941, 961, 1024, 1088, 1147, 1175, 1201, 1228, 1233, 1414, 1422, 1536, 1644, 1928, 1958, 2056, 2163, 2383, 2535, 2577, 2636, 2679, 2719, 2752, 2820, 2901, 3009, 3119, 3131, 3211, 3215, 3357, 3381, 3481, 3505, 3629, 3706, 4065, 4096, 4167, 4303, 4352, 4579, 4588, 4609]
+	(u'US', u'AC Milan')
+	(u'UK', u'Kenya')
+	(u'US', u'Silvio Berlusconi')
+	(u'US', u'Russia')
+	(u'US', u'European Commission')
+	(u'UK', u'Eastern Europe')
+	(u'US', u'People of Freedom')
+	(u'US', u'Balkans')
+	(u'US', u'London')
+	(u'UK', u'Francois Hollande')
+	(u'US', u'Czech Republic')
+	(u'UK', u'Spain')
+	(u'US', u'Rome')
+	(u'US', u'Veronica Lario')
+	(u'US', u'Mediaset')
+	(u'UK', u'European Commission')
+	(u'US', u'Greece')
+	(u'UK', u'Paris')
+	(u'US', u'Romano Prodi')
+	(u'US', u'Noemi Letizia')
+	(u'US', u'Jordan')
+	(u'UK', u'Italy')
+	(u'UK', u'France')
+	(u'UK', u'Balkans')
+	(u'US', u'Turkey')
+	(u'UK', u'Belgium')
+	(u'US', u'Europe')
+	(u'UK', u'Portugal')
+	(u'UK', u'Europe')
+	(u'US', u'Portugal')
+	(u'UK', u'Czech Republic')
+	(u'US', u'Italy')
+	(u'US', u'Il Giornale')
+	(u'UK', u'Africa')
+	(u'US', u'Fininvest')
+	(u'US', u'Eastern Europe')
+	(u'US', u'Mario Monti')
+	(u'UK', u'Brussels')
+	(u'UK', u'Elysee Palace')
+	(u'US', u'Paris')
+	(u'UK', u'Greece')
+	(u'UK', u'Charles de Gaulle')
+	(u'UK', u'London')
+	(u'UK', u'Germany')
+	(u'US', u'Enrico Letta')
+	(u'UK', u'Barcelona')
+	(u'US', u'Qatar')
+	(u'US', u'Spain')
+	(u'US', u'Germany')
+	(u'US', u'Asia-Pacific')
+	(u'US', u'Forza Italia')
+Cluster: 1
+cluster size: 89
+indices in cluster:  [8, 154, 195, 243, 292, 319, 369, 516, 582, 799, 833, 868, 945, 992, 1027, 1032, 1117, 1133, 1139, 1172, 1198, 1202, 1247, 1257, 1266, 1272, 1295, 1344, 1396, 1426, 1429, 1445, 1517, 1553, 1559, 1570, 1623, 1647, 1718, 1738, 1778, 1815, 1920, 1987, 2082, 2138, 2199, 2218, 2311, 2313, 2353, 2378, 2400, 2503, 2696, 2721, 2751, 2759, 2781, 2812, 2844, 2859, 2892, 2903, 3077, 3153, 3261, 3273, 3334, 3377, 3440, 3490, 3500, 3537, 3649, 3698, 3799, 3955, 4125, 4194, 4256, 4258, 4263, 4349, 4387, 4474, 4515, 4548, 4565]
+	(u'Slovenia', u'Afghanistan')
+	(u'Slovenia', u'Turkey')
+	(u'Stade de France', u'Slovenia')
+	(u'Horst Seehofer', u'Sudan')
+	(u'Austria', u'Sudan')
+	(u'Serbia', u'Iran')
+	(u'Angela Merkel', u'Syria')
+	(u'Horst Seehofer', u'Syria')
+	(u'Balkans', u'Afghanistan')
+	(u'Elysee Palace', u'Syria')
+	(u'Belgium', u'Syria')
+	(u'Stade de France', u'Syria')
+	(u'Slovenia', u'Iraq')
+	(u'Social Democrats', u'Syria')
+	(u'Hamburg', u'Syria')
+	(u'Charles de Gaulle', u'Iraq')
+	(u'Macedonia', u'Iraq')
+	(u'Bavaria', u'Sudan')
+	(u'European Union', u'Syria')
+	(u'Europe', u'Syria')
+	(u'Christian Democratic Union', u'Syria')
+	(u'Christian Democrats', u'Sudan')
+	(u'Greece', u'Iraq')
+	(u'Stade de France', u'Serbia')
+	(u'France', u'Iraq')
+	(u'Serbia', u'Syria')
+	(u'Balkans', u'Syria')
+	(u'Serbia', u'Afghanistan')
+	(u'Francois Hollande', u'Syria')
+	(u'France', u'Syria')
+	(u'Balkans', u'Iran')
+	(u'Brussels', u'Iraq')
+	(u'Germany', u'Sudan')
+	(u'Balkans', u'Iraq')
+	(u'Helmut Kohl', u'Syria')
+	(u'Bavaria', u'Syria')
+	(u'Berlin', u'Syria')
+	(u'Francois Hollande', u'Iraq')
+	(u'Paris', u'Afghanistan')
+	(u'Balkans', u'Turkey')
+	(u'Stade de France', u'Afghanistan')
+	(u'Germany', u'Turkey')
+	(u'Brussels', u'Sudan')
+	(u'Croatia', u'Afghanistan')
+	(u'Hamburg', u'Sudan')
+	(u'Edinburgh', u'Syria')
+	(u'Macedonia', u'Syria')
+	(u'Charles de Gaulle', u'Syria')
+	(u'Austria', u'Syria')
+	(u'Macedonia', u'Iran')
+	(u'Macedonia', u'Afghanistan')
+	(u'Angela Merkel', u'Sudan')
+	(u'Serbia', u'Turkey')
+	(u'Stade de France', u'Iran')
+	(u'Europe', u'Iran')
+	(u'Belgium', u'Sudan')
+	(u'Germany', u'Syria')
+	(u'Helmut Kohl', u'Sudan')
+	(u'Paris', u'Turkey')
+	(u'Serbia', u'Iraq')
+	(u'Stade de France', u'Macedonia')
+	(u'Paris', u'Iran')
+	(u'Berlin', u'Sudan')
+	(u'Stade de France', u'Croatia')
+	(u'Slovenia', u'Iran')
+	(u'London', u'Syria')
+	(u'Belgium', u'Iraq')
+	(u'Paris', u'Syria')
+	(u'Paris', u'Iraq')
+	(u'Stade de France', u'Balkans')
+	(u'Brussels', u'Syria')
+	(u'European Union', u'Sudan')
+	(u'Europe', u'Sudan')
+	(u'Croatia', u'Iran')
+	(u'Stade de France', u'Iraq')
+	(u'Greece', u'Afghanistan')
+	(u'Europe', u'Turkey')
+	(u'Germany', u'Iran')
+	(u'Elysee Palace', u'Iraq')
+	(u'Croatia', u'Syria')
+	(u'Germany', u'Afghanistan')
+	(u'Croatia', u'Turkey')
+	(u'Slovenia', u'Syria')
+	(u'Europe', u'Afghanistan')
+	(u'Germany', u'Iraq')
+	(u'Stade de France', u'Turkey')
+	(u'Croatia', u'Iraq')
+	(u'Europe', u'Iraq')
+	(u'Christian Democrats', u'Syria')
+Cluster: 2
+cluster size: 8
+indices in cluster:  [9, 796, 886, 1161, 2299, 2305, 3175, 4487]
+	(u'US', u'Allergan')
+	(u'US', u'AstraZeneca')
+	(u'UK', u'Ian Read')
+	(u'UK', u'AstraZeneca')
+	(u'UK', u'Pfizer')
+	(u'US', u'Pfizer')
+	(u'UK', u'Allergan')
+	(u'US', u'Ian Read')
+Cluster: 3
+cluster size: 14
+indices in cluster:  [11, 48, 464, 476, 715, 832, 864, 993, 1301, 1327, 1795, 2276, 2666, 4480]
+	(u'Forbes', u'Mario Monti')
+	(u'Forbes', u'Fininvest')
+	(u'Forbes', u'Enrico Letta')
+	(u'Forbes', u'People of Freedom')
+	(u'Forbes', u'Italy')
+	(u'Forbes', u'Forza Italia')
+	(u'Forbes', u'Silvio Berlusconi')
+	(u'Forbes', u'Veronica Lario')
+	(u'Forbes', u'Noemi Letizia')
+	(u'Forbes', u'AC Milan')
+	(u'Forbes', u'Il Giornale')
+	(u'Forbes', u'Mediaset')
+	(u'Forbes', u'Romano Prodi')
+	(u'Forbes', u'Rome')
+Cluster: 4
+cluster size: 4
+indices in cluster:  [14, 1776, 2644, 3559]
+	(u'Martin', u'Noel Gallagher')
+	(u'Martin', u'Coldplay')
+	(u'Martin', u'Beyonce')
+	(u'Martin', u'Chris Martin')
+Cluster: 5
+cluster size: 3
+indices in cluster:  [15, 3146, 3550]
+	(u'George Lucas', u'Greenpeace')
+	(u'Star Wars', u'Greenpeace')
+	(u'Pixar', u'Greenpeace')
+Cluster: 6
+cluster size: 55
+indices in cluster:  [18, 77, 134, 254, 309, 465, 496, 499, 665, 767, 907, 1020, 1030, 1068, 1288, 1332, 1456, 1498, 1566, 1617, 1737, 1748, 1963, 2025, 2099, 2262, 2583, 2632, 2710, 2796, 2950, 2981, 3111, 3156, 3200, 3493, 3551, 3626, 3637, 3670, 3771, 3836, 3865, 3892, 3978, 3996, 4278, 4367, 4417, 4418, 4445, 4509, 4535, 4561, 4618]
+	(u'Brussels', u'Berlin')
+	(u'European Union', u'Bavaria')
+	(u'Brussels', u'Horst Seehofer')
+	(u'Europe', u'Hamburg')
+	(u'Brussels', u'Bavaria')
+	(u'Germany', u'Horst Seehofer')
+	(u'European Union', u'Germany')
+	(u'Europe', u'Christian Democrats')
+	(u'Europe', u'Helmut Kohl')
+	(u'Brussels', u'Austria')
+	(u'Brussels', u'Germany')
+	(u'Europe', u'Berlin')
+	(u'Germany', u'Angela Merkel')
+	(u'European Union', u'Angela Merkel')
+	(u'Belgium', u'Francois Hollande')
+	(u'Austria', u'Helmut Kohl')
+	(u'Europe', u'Bavaria')
+	(u'Berlin', u'Horst Seehofer')
+	(u'Belgium', u'Christian Democrats')
+	(u'Belgium', u'Elysee Palace')
+	(u'Austria', u'Angela Merkel')
+	(u'France', u'Elysee Palace')
+	(u'Hamburg', u'Angela Merkel')
+	(u'Berlin', u'Christian Democrats')
+	(u'Brussels', u'Angela Merkel')
+	(u'Brussels', u'Helmut Kohl')
+	(u'European Union', u'Christian Democrats')
+	(u'Germany', u'Helmut Kohl')
+	(u'Belgium', u'Helmut Kohl')
+	(u'Europe', u'Germany')
+	(u'Belgium', u'Horst Seehofer')
+	(u'Europe', u'Angela Merkel')
+	(u'Europe', u'Horst Seehofer')
+	(u'Germany', u'Christian Democrats')
+	(u'Brussels', u'Hamburg')
+	(u'Germany', u'Christian Democratic Union')
+	(u'Austria', u'Horst Seehofer')
+	(u'Austria', u'Bavaria')
+	(u'France', u'Francois Hollande')
+	(u'Berlin', u'Angela Merkel')
+	(u'European Union', u'Austria')
+	(u'Austria', u'Christian Democrats')
+	(u'Hamburg', u'Helmut Kohl')
+	(u'Hamburg', u'Horst Seehofer')
+	(u'Belgium', u'Angela Merkel')
+	(u'European Union', u'Horst Seehofer')
+	(u'Berlin', u'Helmut Kohl')
+	(u'European Union', u'Berlin')
+	(u'Belgium', u'Bavaria')
+	(u'Hamburg', u'Christian Democrats')
+	(u'Brussels', u'Christian Democrats')
+	(u'European Union', u'Helmut Kohl')
+	(u'European Commission', u'Germany')
+	(u'Germany', u'Social Democrats')
+	(u'European Union', u'Hamburg')
+Cluster: 7
+cluster size: 23
+indices in cluster:  [19, 136, 331, 544, 549, 828, 1363, 1742, 1972, 1985, 2402, 2550, 2760, 3268, 3426, 3454, 3693, 3766, 3780, 4004, 4051, 4080, 4333]
+	(u'Serbia', u'BBC')
+	(u'Italy', u'BBC')
+	(u'Paris', u'BBC')
+	(u'Croatia', u'BBC')
+	(u'Mediaset', u'BBC')
+	(u'Il Giornale', u'BBC')
+	(u'Veronica Lario', u'BBC')
+	(u'Slovenia', u'BBC')
+	(u'Romano Prodi', u'BBC')
+	(u'Noemi Letizia', u'BBC')
+	(u'Silvio Berlusconi', u'BBC')
+	(u'Balkans', u'BBC')
+	(u'Czech Republic', u'BBC')
+	(u'Rome', u'BBC')
+	(u'Macedonia', u'BBC')
+	(u'Mario Monti', u'BBC')
+	(u'Europe', u'BBC')
+	(u'Germany', u'BBC')
+	(u'Enrico Letta', u'BBC')
+	(u'Fininvest', u'BBC')
+	(u'Forza Italia', u'BBC')
+	(u'Greece', u'BBC')
+	(u'People of Freedom', u'BBC')
+Cluster: 8
+cluster size: 3
+indices in cluster:  [21, 2255, 3236]
+	(u'Manhattan', u'Paterson')
+	(u'Manhattan', u'New Jersey')
+	(u'Manhattan', u'Jersey City')
+Cluster: 9
+cluster size: 51
+indices in cluster:  [22, 74, 91, 133, 137, 238, 359, 365, 477, 575, 789, 1081, 1164, 1622, 1789, 2154, 2186, 2268, 2274, 2440, 2602, 2650, 2735, 2769, 2813, 2884, 2987, 3038, 3076, 3083, 3183, 3237, 3295, 3331, 3375, 3506, 3524, 3574, 3580, 3689, 3732, 3831, 4016, 4043, 4091, 4128, 4227, 4290, 4322, 4331, 4354]
+	(u'Il Giornale', u'US')
+	(u'Europe', u'UK')
+	(u'Fininvest', u'US')
+	(u'Italy', u'US')
+	(u'Europe', u'US')
+	(u'Noemi Letizia', u'US')
+	(u'Mario Monti', u'US')
+	(u'Asia-Pacific', u'US')
+	(u'Rome', u'US')
+	(u'Czech Republic', u'US')
+	(u'Spain', u'UK')
+	(u'Francois Hollande', u'UK')
+	(u'Silvio Berlusconi', u'US')
+	(u'Qatar', u'US')
+	(u'Turkey', u'US')
+	(u'Enrico Letta', u'US')
+	(u'Greece', u'US')
+	(u'Brussels', u'UK')
+	(u'Kenya', u'UK')
+	(u'Veronica Lario', u'US')
+	(u'Italy', u'UK')
+	(u'Belgium', u'UK')
+	(u'Charles de Gaulle', u'UK')
+	(u'Portugal', u'UK')
+	(u'Eastern Europe', u'US')
+	(u'Spain', u'US')
+	(u'Paris', u'UK')
+	(u'Czech Republic', u'UK')
+	(u'Jordan', u'US')
+	(u'Germany', u'US')
+	(u'Russia', u'US')
+	(u'Elysee Palace', u'UK')
+	(u'Forza Italia', u'US')
+	(u'European Commission', u'US')
+	(u'Africa', u'UK')
+	(u'Germany', u'UK')
+	(u'London', u'UK')
+	(u'Portugal', u'US')
+	(u'Mediaset', u'US')
+	(u'Barcelona', u'UK')
+	(u'Eastern Europe', u'UK')
+	(u'Paris', u'US')
+	(u'Balkans', u'UK')
+	(u'People of Freedom', u'US')
+	(u'European Commission', u'UK')
+	(u'AC Milan', u'US')
+	(u'London', u'US')
+	(u'Balkans', u'US')
+	(u'Romano Prodi', u'US')
+	(u'France', u'UK')
+	(u'Greece', u'UK')
+Cluster: 10
+cluster size: 6
+indices in cluster:  [26, 214, 2944, 3402, 3525, 3920]
+	(u'London', u'Antarctica')
+	(u'London', u'Shackleton')
+	(u'London', u'Ernest Shackleton')
+	(u'London', u'Weddell Sea')
+	(u'London', u'Elephant Island')
+	(u'London', u'Frank Hurley')
+Cluster: 11
+cluster size: 8
+indices in cluster:  [28, 240, 1206, 1600, 3552, 3959, 4131, 4199]
+	(u'Johansson', u'Italy')
+	(u'Johansson', u'Portugal')
+	(u'Johansson', u'Germany')
+	(u'Johansson', u'Balkans')
+	(u'Johansson', u'Spain')
+	(u'Johansson', u'Eastern Europe')
+	(u'Johansson', u'Europe')
+	(u'Johansson', u'Greece')
+Cluster: 12
+cluster size: 89
+indices in cluster:  [29, 75, 163, 191, 249, 260, 307, 318, 385, 439, 491, 507, 547, 699, 708, 757, 826, 936, 1060, 1137, 1148, 1185, 1234, 1276, 1294, 1308, 1427, 1437, 1439, 1465, 1471, 1481, 1627, 1646, 1723, 1805, 1824, 1842, 1872, 1936, 1999, 2002, 2038, 2115, 2120, 2194, 2195, 2344, 2361, 2474, 2506, 2582, 2662, 2689, 2713, 2718, 2894, 2916, 2942, 3063, 3177, 3206, 3218, 3316, 3342, 3345, 3423, 3480, 3595, 3640, 3747, 3803, 3873, 3877, 3884, 3901, 3909, 3987, 4026, 4032, 4270, 4334, 4407, 4419, 4508, 4520, 4576, 4604, 4629]
+	(u'Syria', u'Hamburg')
+	(u'Iraq', u'Charles de Gaulle')
+	(u'Iraq', u'Stade de France')
+	(u'Syria', u'London')
+	(u'Turkey', u'Stade de France')
+	(u'Sudan', u'Angela Merkel')
+	(u'Sudan', u'Brussels')
+	(u'Slovenia', u'Stade de France')
+	(u'Iran', u'Macedonia')
+	(u'Afghanistan', u'Serbia')
+	(u'Afghanistan', u'Macedonia')
+	(u'Syria', u'Belgium')
+	(u'Syria', u'Stade de France')
+	(u'Sudan', u'Austria')
+	(u'Sudan', u'Europe')
+	(u'Syria', u'Christian Democrats')
+	(u'Iraq', u'Slovenia')
+	(u'Iraq', u'Belgium')
+	(u'Syria', u'Francois Hollande')
+	(u'Syria', u'Croatia')
+	(u'Syria', u'Horst Seehofer')
+	(u'Iraq', u'France')
+	(u'Syria', u'Bavaria')
+	(u'Syria', u'Austria')
+	(u'Balkans', u'Stade de France')
+	(u'Syria', u'Elysee Palace')
+	(u'Croatia', u'Stade de France')
+	(u'Iraq', u'Paris')
+	(u'Syria', u'Paris')
+	(u'Syria', u'Balkans')
+	(u'Syria', u'Christian Democratic Union')
+	(u'Turkey', u'Germany')
+	(u'Iraq', u'Serbia')
+	(u'Sudan', u'Christian Democrats')
+	(u'Iran', u'Croatia')
+	(u'Syria', u'Social Democrats')
+	(u'Sudan', u'Helmut Kohl')
+	(u'Syria', u'Charles de Gaulle')
+	(u'Iraq', u'Greece')
+	(u'Sudan', u'Horst Seehofer')
+	(u'Serbia', u'Stade de France')
+	(u'Iraq', u'Brussels')
+	(u'Iran', u'Balkans')
+	(u'Sudan', u'Bavaria')
+	(u'Iran', u'Paris')
+	(u'Iraq', u'Elysee Palace')
+	(u'Iraq', u'Germany')
+	(u'Macedonia', u'Stade de France')
+	(u'Sudan', u'Berlin')
+	(u'Turkey', u'Croatia')
+	(u'Iraq', u'Macedonia')
+	(u'Turkey', u'Slovenia')
+	(u'Syria', u'Brussels')
+	(u'Syria', u'Berlin')
+	(u'Iran', u'Serbia')
+	(u'Iran', u'Germany')
+	(u'Turkey', u'Paris')
+	(u'Afghanistan', u'Stade de France')
+	(u'Iran', u'Slovenia')
+	(u'Iraq', u'Croatia')
+	(u'Sudan', u'Germany')
+	(u'Iraq', u'Balkans')
+	(u'Turkey', u'Europe')
+	(u'Sudan', u'Belgium')
+	(u'Afghanistan', u'Paris')
+	(u'Syria', u'France')
+	(u'Syria', u'Serbia')
+	(u'Syria', u'Macedonia')
+	(u'Syria', u'Angela Merkel')
+	(u'Afghanistan', u'Balkans')
+	(u'Syria', u'Helmut Kohl')
+	(u'Iran', u'Stade de France')
+	(u'Turkey', u'Balkans')
+	(u'Syria', u'Europe')
+	(u'Iran', u'Europe')
+	(u'Afghanistan', u'Germany')
+	(u'Syria', u'Slovenia')
+	(u'Iraq', u'Europe')
+	(u'Afghanistan', u'Greece')
+	(u'Afghanistan', u'Croatia')
+	(u'Syria', u'Germany')
+	(u'Sudan', u'Hamburg')
+	(u'Afghanistan', u'Europe')
+	(u'Turkey', u'Serbia')
+	(u'Iraq', u'Francois Hollande')
+	(u'Syria', u'European Union')
+	(u'Afghanistan', u'Slovenia')
+	(u'Syria', u'Edinburgh')
+	(u'Sudan', u'European Union')
+Cluster: 13
+cluster size: 8
+indices in cluster:  [30, 1086, 1244, 1752, 1775, 2508, 3362, 3627]
+	(u'Pfizer', u'US')
+	(u'Allergan', u'US')
+	(u'Ian Read', u'UK')
+	(u'Allergan', u'UK')
+	(u'Ian Read', u'US')
+	(u'Pfizer', u'UK')
+	(u'AstraZeneca', u'US')
+	(u'AstraZeneca', u'UK')
+Cluster: 14
+cluster size: 6
+indices in cluster:  [31, 1053, 1339, 1455, 1806, 3289]
+	(u'Argentina', u'Nestor Kirchner')
+	(u'Uruguay', u'Cristina Fernandez de Kirchner')
+	(u'Paraguay', u'Cristina Fernandez de Kirchner')
+	(u'Paraguay', u'Nestor Kirchner')
+	(u'Argentina', u'Cristina Fernandez de Kirchner')
+	(u'Uruguay', u'Nestor Kirchner')
+Cluster: 15
+cluster size: 4
+indices in cluster:  [32, 1782, 2956, 3408]
+	(u'Japan', u'US')
+	(u'China', u'US')
+	(u'South Korea', u'US')
+	(u'Xi Jinping', u'US')
+Cluster: 16
+cluster size: 9
+indices in cluster:  [33, 64, 2103, 2399, 2432, 2684, 3659, 3911, 4129]
+	(u'San Francisco', u'George Lucas')
+	(u'Palo Alto', u'Star Wars')
+	(u'San Francisco', u'Star Wars')
+	(u'Palo Alto', u'Pixar')
+	(u'Silicon Valley', u'Star Wars')
+	(u'Silicon Valley', u'Pixar')
+	(u'Palo Alto', u'George Lucas')
+	(u'San Francisco', u'Pixar')
+	(u'Silicon Valley', u'George Lucas')
+Cluster: 17
+cluster size: 4
+indices in cluster:  [34, 2850, 3354, 3646]
+	(u'David', u'Philippines')
+	(u'David', u'Loren Legarda')
+	(u'David', u'Luzon')
+	(u'David', u'Bulacan')
+Cluster: 18
+cluster size: 6
+indices in cluster:  [35, 431, 628, 1434, 1786, 1922]
+	(u'Shackleton', u'Macklin')
+	(u'Antarctica', u'Macklin')
+	(u'Frank Hurley', u'Macklin')
+	(u'Ernest Shackleton', u'Macklin')
+	(u'Weddell Sea', u'Macklin')
+	(u'Elephant Island', u'Macklin')
+Cluster: 19
+cluster size: 6
+indices in cluster:  [37, 189, 1093, 1305, 2346, 4650]
+	(u'Zane Lowe', u'Beyonce')
+	(u'Zane Lowe', u'Coldplay')
+	(u'Nick Grimshaw', u'Beyonce')
+	(u'Zane Lowe', u'Chris Martin')
+	(u'Nick Grimshaw', u'Chris Martin')
+	(u'Nick Grimshaw', u'Coldplay')
+Cluster: 20
+cluster size: 8
+indices in cluster:  [43, 495, 687, 1491, 1736, 3882, 4010, 4271]
+	(u'Cristiano Ronaldo', u'Gareth Bale')
+	(u'Ronaldo', u'Gareth Bale')
+	(u'Karim Benzema', u'Gareth Bale')
+	(u'Marca', u'Gareth Bale')
+	(u'Zinedine Zidane', u'Gareth Bale')
+	(u'Florentino Perez', u'Gareth Bale')
+	(u'Ramon Calderon', u'Gareth Bale')
+	(u'La Liga', u'Gareth Bale')
+Cluster: 21
+cluster size: 6
+indices in cluster:  [45, 812, 912, 1090, 1988, 4321]
+	(u'Crimea', u'Moscow')
+	(u'Sevastopol', u'Russia')
+	(u'Crimea', u'Russia')
+	(u'Sevastopol', u'Ukraine')
+	(u'Sevastopol', u'Moscow')
+	(u'Crimea', u'Ukraine')
+Cluster: 22
+cluster size: 11
+indices in cluster:  [50, 623, 1946, 2405, 2882, 2906, 2918, 3022, 3796, 3806, 3843]
+	(u'Paris', u'Central Bank')
+	(u'Germany', u'Mario Draghi')
+	(u'Paris', u'Greece')
+	(u'Germany', u'Central Bank')
+	(u'France', u'Central Bank')
+	(u'Paris', u'European Central Bank')
+	(u'Germany', u'European Central Bank')
+	(u'France', u'European Central Bank')
+	(u'France', u'Mario Draghi')
+	(u'Europe', u'Central Bank')
+	(u'Paris', u'Mario Draghi')
+Cluster: 23
+cluster size: 14
+indices in cluster:  [55, 497, 810, 1002, 2096, 2116, 2362, 2381, 3322, 3475, 4236, 4423, 4525, 4589]
+	(u'Fininvest', u'Senate')
+	(u'Silvio Berlusconi', u'Senate')
+	(u'Il Giornale', u'Senate')
+	(u'Italy', u'Senate')
+	(u'AC Milan', u'Senate')
+	(u'Enrico Letta', u'Senate')
+	(u'Romano Prodi', u'Senate')
+	(u'Rome', u'Senate')
+	(u'People of Freedom', u'Senate')
+	(u'Mario Monti', u'Senate')
+	(u'Veronica Lario', u'Senate')
+	(u'Forza Italia', u'Senate')
+	(u'Mediaset', u'Senate')
+	(u'Noemi Letizia', u'Senate')
+Cluster: 24
+cluster size: 6
+indices in cluster:  [56, 2171, 2618, 3597, 3611, 4451]
+	(u'Mike Markkula', u'Buddhist')
+	(u'Steve Jobs', u'Buddhist')
+	(u'Macbook Air', u'Buddhist')
+	(u'Microsoft', u'Buddhist')
+	(u'Bill Gates', u'Buddhist')
+	(u'Steve Wozniak', u'Buddhist')
+Cluster: 25
+cluster size: 14
+indices in cluster:  [57, 376, 931, 1707, 1713, 1735, 1974, 2940, 2962, 2974, 3298, 3681, 3856, 4332]
+	(u'Veronica Lario', u'Forbes')
+	(u'Mario Monti', u'Forbes')
+	(u'Enrico Letta', u'Forbes')
+	(u'People of Freedom', u'Forbes')
+	(u'Mediaset', u'Forbes')
+	(u'Silvio Berlusconi', u'Forbes')
+	(u'Forza Italia', u'Forbes')
+	(u'Rome', u'Forbes')
+	(u'Romano Prodi', u'Forbes')
+	(u'Il Giornale', u'Forbes')
+	(u'Italy', u'Forbes')
+	(u'AC Milan', u'Forbes')
+	(u'Noemi Letizia', u'Forbes')
+	(u'Fininvest', u'Forbes')
+Cluster: 26
+cluster size: 5
+indices in cluster:  [58, 743, 1610, 1710, 3745]
+	(u'Bulacan', u'China')
+	(u'Manila', u'China')
+	(u'Luzon', u'China')
+	(u'Loren Legarda', u'China')
+	(u'Philippines', u'China')
+Cluster: 27
+cluster size: 4
+indices in cluster:  [59, 95, 1890, 2205]
+	(u'Coldplay', u'Harry Potter')
+	(u'Noel Gallagher', u'Harry Potter')
+	(u'Chris Martin', u'Harry Potter')
+	(u'Beyonce', u'Harry Potter')
+Cluster: 28
+cluster size: 6
+indices in cluster:  [60, 1250, 4085, 4106, 4132, 4257]
+	(u'Qatar', u'Google')
+	(u'Jordan', u'Google')
+	(u'Qatar', u'Sergey Brin')
+	(u'Turkey', u'Google')
+	(u'Jordan', u'Sergey Brin')
+	(u'Turkey', u'Sergey Brin')
+Cluster: 29
+cluster size: 20
+indices in cluster:  [61, 206, 667, 903, 960, 1343, 1664, 2124, 2297, 2454, 2465, 2502, 2657, 2726, 3275, 3312, 3410, 3443, 3534, 4081]
+	(u'Merkel', u'Germany')
+	(u'Merkel', u'Austria')
+	(u'Merkel', u'Bavaria')
+	(u'Merkel', u'Belgium')
+	(u'Merkel', u'Berlin')
+	(u'Cameron', u'Paris')
+	(u'Cameron', u'Francois Hollande')
+	(u'Cameron', u'Belgium')
+	(u'Merkel', u'Hamburg')
+	(u'Merkel', u'Horst Seehofer')
+	(u'Merkel', u'Europe')
+	(u'Merkel', u'Christian Democrats')
+	(u'Cameron', u'Brussels')
+	(u'Cameron', u'France')
+	(u'Merkel', u'Helmut Kohl')
+	(u'Merkel', u'European Union')
+	(u'Cameron', u'Charles de Gaulle')
+	(u'Merkel', u'Angela Merkel')
+	(u'Cameron', u'Elysee Palace')
+	(u'Merkel', u'Brussels')
+Cluster: 30
+cluster size: 12
+indices in cluster:  [62, 694, 838, 1591, 2036, 2126, 2304, 2879, 3018, 3047, 3547, 3735]
+	(u'Kenya', u'Facebook')
+	(u'Africa', u'Wikipedia')
+	(u'Khartoum', u'Google')
+	(u'Omar al-Bashir', u'Google')
+	(u'Africa', u'Facebook')
+	(u'Sudan', u'Sergey Brin')
+	(u'Kenya', u'Google')
+	(u'Sudan', u'Google')
+	(u'Khartoum', u'Sergey Brin')
+	(u'Omar al-Bashir', u'Sergey Brin')
+	(u'Africa', u'Google')
+	(u'Kenya', u'Wikipedia')
+Cluster: 31
+cluster size: 3
+indices in cluster:  [63, 115, 2384]
+	(u'Uruguay', u'Tabare Vazquez')
+	(u'Paraguay', u'Tabare Vazquez')
+	(u'Argentina', u'Tabare Vazquez')
+Cluster: 32
+cluster size: 6
+indices in cluster:  [65, 1994, 2984, 3961, 4038, 4406]
+	(u'South China Sea', u'Asia Pacific')
+	(u'Kuala Lumpur', u'Asia Pacific')
+	(u'Philippines', u'Asia Pacific')
+	(u'Manila', u'Asia Pacific')
+	(u'Malaysia', u'Asia Pacific')
+	(u'Spratly Islands', u'Asia Pacific')
+Cluster: 33
+cluster size: 3
+indices in cluster:  [67, 862, 1899]
+	(u'San Francisco', u'Atari')
+	(u'Palo Alto', u'Atari')
+	(u'Silicon Valley', u'Atari')
+Cluster: 34
+cluster size: 10
+indices in cluster:  [70, 248, 506, 1076, 1637, 2161, 2739, 3817, 3834, 4061]
+	(u'Perez', u'Ronaldo')
+	(u'Perez', u'Zinedine Zidane')
+	(u'Perez', u'Ramon Calderon')
+	(u'Perez', u'La Liga')
+	(u'Perez', u'Carlo Ancelotti')
+	(u'Perez', u'Gareth Bale')
+	(u'Perez', u'Florentino Perez')
+	(u'Perez', u'Marca')
+	(u'Perez', u'Cristiano Ronaldo')
+	(u'Perez', u'Karim Benzema')
+Cluster: 35
+cluster size: 23
+indices in cluster:  [72, 346, 383, 517, 720, 741, 896, 1104, 1151, 1242, 1923, 2466, 2500, 2544, 2818, 3181, 3468, 3682, 3699, 4003, 4337, 4397, 4425]
+	(u'BBC', u'Germany')
+	(u'BBC', u'Silvio Berlusconi')
+	(u'BBC', u'Serbia')
+	(u'BBC', u'Greece')
+	(u'BBC', u'Slovenia')
+	(u'BBC', u'People of Freedom')
+	(u'BBC', u'Macedonia')
+	(u'BBC', u'Europe')
+	(u'BBC', u'Enrico Letta')
+	(u'BBC', u'Italy')
+	(u'BBC', u'Veronica Lario')
+	(u'BBC', u'Il Giornale')
+	(u'BBC', u'Romano Prodi')
+	(u'BBC', u'Balkans')
+	(u'BBC', u'Croatia')
+	(u'BBC', u'Mediaset')
+	(u'BBC', u'Fininvest')
+	(u'BBC', u'Mario Monti')
+	(u'BBC', u'Noemi Letizia')
+	(u'BBC', u'Forza Italia')
+	(u'BBC', u'Rome')
+	(u'BBC', u'Czech Republic')
+	(u'BBC', u'Paris')
+Cluster: 36
+cluster size: 35
+indices in cluster:  [73, 92, 114, 217, 276, 390, 764, 989, 1281, 1380, 1454, 1628, 1753, 1754, 1757, 1770, 1801, 2069, 2166, 2269, 2673, 2922, 3001, 3773, 3811, 3844, 3851, 3908, 3971, 4120, 4197, 4232, 4302, 4433, 4646]
+	(u'Karim Benzema', u'BBC')
+	(u'Florentino Perez', u'BBC Radio')
+	(u'Florentino Perez', u'BBC Sport')
+	(u'Ramon Calderon', u'BBC Sport')
+	(u'Ronaldo', u'BBC Radio')
+	(u'La Liga', u'BBC Radio')
+	(u'Marca', u'BBC')
+	(u'Eibar', u'BBC')
+	(u'Karim Benzema', u'BBC Sport')
+	(u'Stade de France', u'BBC')
+	(u'Gareth Bale', u'BBC Radio')
+	(u'Marca', u'BBC Sport')
+	(u'AC Milan', u'BBC')
+	(u'Karim Benzema', u'BBC Radio')
+	(u'Carlo Ancelotti', u'BBC Sport')
+	(u'Ramon Calderon', u'BBC')
+	(u'Eibar', u'BBC Radio')
+	(u'Gareth Bale', u'BBC')
+	(u'Zinedine Zidane', u'BBC Radio')
+	(u'Carlo Ancelotti', u'BBC Radio')
+	(u'Carlo Ancelotti', u'BBC')
+	(u'Eibar', u'BBC Sport')
+	(u'Gareth Bale', u'BBC Sport')
+	(u'Ronaldo', u'BBC')
+	(u'Marca', u'BBC Radio')
+	(u'Florentino Perez', u'BBC')
+	(u'Ronaldo', u'BBC Sport')
+	(u'Ramon Calderon', u'BBC Radio')
+	(u'La Liga', u'BBC')
+	(u'Cristiano Ronaldo', u'BBC Sport')
+	(u'Zinedine Zidane', u'BBC')
+	(u'Cristiano Ronaldo', u'BBC')
+	(u'Cristiano Ronaldo', u'BBC Radio')
+	(u'La Liga', u'BBC Sport')
+	(u'Zinedine Zidane', u'BBC Sport')
+Cluster: 37
+cluster size: 12
+indices in cluster:  [76, 594, 1037, 1067, 1113, 1154, 1274, 1819, 2794, 3993, 4095, 4553]
+	(u'World Health Organization', u'Sierra Leone')
+	(u'Margaret Chan', u'West Africa')
+	(u'Peter Piot', u'West Africa')
+	(u'Peter Piot', u'Sierra Leone')
+	(u'World Health Organization', u'Guinea')
+	(u'World Health Organization', u'West Africa')
+	(u'World Health Organization', u'Liberia')
+	(u'Peter Piot', u'Liberia')
+	(u'Margaret Chan', u'Guinea')
+	(u'Peter Piot', u'Guinea')
+	(u'Margaret Chan', u'Liberia')
+	(u'Margaret Chan', u'Sierra Leone')
+Cluster: 38
+cluster size: 16
+indices in cluster:  [78, 102, 341, 580, 714, 872, 1477, 1702, 1769, 2094, 2200, 2965, 3011, 3028, 4537, 4614]
+	(u'David Cameron', u'Europe')
+	(u'David Cameron', u'European Union')
+	(u'David Cameron', u'France')
+	(u'David Cameron', u'Berlin')
+	(u'David Cameron', u'Paris')
+	(u'David Cameron', u'Brussels')
+	(u'David Cameron', u'Charles de Gaulle')
+	(u'David Cameron', u'Austria')
+	(u'David Cameron', u'Christian Democrats')
+	(u'David Cameron', u'Hamburg')
+	(u'David Cameron', u'Germany')
+	(u'David Cameron', u'Horst Seehofer')
+	(u'David Cameron', u'Helmut Kohl')
+	(u'David Cameron', u'Belgium')
+	(u'David Cameron', u'Bavaria')
+	(u'David Cameron', u'Angela Merkel')
+Cluster: 39
+cluster size: 4
+indices in cluster:  [79, 1592, 3199, 4314]
+	(u'US', u'Dublin')
+	(u'UK', u'Dublin')
+	(u'US', u'Ireland')
+	(u'UK', u'Ireland')
+Cluster: 40
+cluster size: 11
+indices in cluster:  [82, 897, 1028, 1277, 2224, 2340, 2423, 3428, 3642, 4276, 4544]
+	(u'Ramon Calderon', u'Castilla')
+	(u'Zinedine Zidane', u'Castilla')
+	(u'Cristiano Ronaldo', u'Castilla')
+	(u'Ronaldo', u'Castilla')
+	(u'Karim Benzema', u'Castilla')
+	(u'Marca', u'Castilla')
+	(u'Florentino Perez', u'Castilla')
+	(u'Gareth Bale', u'Castilla')
+	(u'La Liga', u'Castilla')
+	(u'Carlo Ancelotti', u'Castilla')
+	(u'Eibar', u'Castilla')
+Cluster: 41
+cluster size: 14
+indices in cluster:  [85, 648, 1825, 1875, 1907, 2406, 2615, 2792, 3041, 3201, 3276, 3386, 3504, 4320]
+	(u'Italy', u'Hitler')
+	(u'Noemi Letizia', u'Hitler')
+	(u'Veronica Lario', u'Hitler')
+	(u'Mediaset', u'Hitler')
+	(u'Silvio Berlusconi', u'Hitler')
+	(u'Enrico Letta', u'Hitler')
+	(u'Fininvest', u'Hitler')
+	(u'Rome', u'Hitler')
+	(u'AC Milan', u'Hitler')
+	(u'Il Giornale', u'Hitler')
+	(u'People of Freedom', u'Hitler')
+	(u'Mario Monti', u'Hitler')
+	(u'Romano Prodi', u'Hitler')
+	(u'Forza Italia', u'Hitler')
+Cluster: 42
+cluster size: 3
+indices in cluster:  [89, 1361, 2489]
+	(u'Atari', u'San Francisco')
+	(u'Atari', u'Palo Alto')
+	(u'Atari', u'Silicon Valley')
+Cluster: 43
+cluster size: 4
+indices in cluster:  [90, 2448, 3180, 3770]
+	(u'Washington', u'AstraZeneca')
+	(u'Washington', u'Pfizer')
+	(u'Washington', u'Ian Read')
+	(u'Washington', u'Allergan')
+Cluster: 44
+cluster size: 10
+indices in cluster:  [93, 403, 526, 1402, 1809, 2081, 2389, 3223, 3365, 4615]
+	(u'Barcelona', u'Zinedine Zidane')
+	(u'Barcelona', u'Carlo Ancelotti')
+	(u'Barcelona', u'La Liga')
+	(u'Barcelona', u'Karim Benzema')
+	(u'Barcelona', u'Florentino Perez')
+	(u'Barcelona', u'Cristiano Ronaldo')
+	(u'Barcelona', u'Gareth Bale')
+	(u'Barcelona', u'Marca')
+	(u'Barcelona', u'Ronaldo')
+	(u'Barcelona', u'Ramon Calderon')
+Cluster: 45
+cluster size: 6
+indices in cluster:  [94, 1692, 1898, 3202, 3614, 4636]
+	(u'Coldplay', u'Zane Lowe')
+	(u'Coldplay', u'Nick Grimshaw')
+	(u'Beyonce', u'Nick Grimshaw')
+	(u'Chris Martin', u'Zane Lowe')
+	(u'Chris Martin', u'Nick Grimshaw')
+	(u'Beyonce', u'Zane Lowe')
+Cluster: 46
+cluster size: 3
+indices in cluster:  [97, 620, 2100]
+	(u'BBC Radio', u'Atletico Madrid')
+	(u'BBC Sport', u'Atletico Madrid')
+	(u'BBC', u'Atletico Madrid')
+Cluster: 47
+cluster size: 4
+indices in cluster:  [103, 557, 2164, 2415]
+	(u'Malaysia', u'Manila')
+	(u'Malaysia', u'Philippines')
+	(u'Kuala Lumpur', u'Philippines')
+	(u'Kuala Lumpur', u'Manila')
+Cluster: 48
+cluster size: 3
+indices in cluster:  [105, 314, 3549]
+	(u'Jordan', u'Sudan')
+	(u'Jordan', u'Omar al-Bashir')
+	(u'Jordan', u'Khartoum')
+Cluster: 49
+cluster size: 3
+indices in cluster:  [108, 2130, 2514]
+	(u'LA', u'SpaceX')
+	(u'LA', u'Elon Musk')
+	(u'LA', u'Nasa')
+Cluster: 50
+cluster size: 7
+indices in cluster:  [110, 701, 1155, 1423, 2075, 3114, 4360]
+	(u'Paris', u'Delilah')
+	(u'Elysee Palace', u'Delilah')
+	(u'Brussels', u'Delilah')
+	(u'Belgium', u'Delilah')
+	(u'Charles de Gaulle', u'Delilah')
+	(u'Francois Hollande', u'Delilah')
+	(u'France', u'Delilah')
+Cluster: 51
+cluster size: 6
+indices in cluster:  [111, 1001, 1447, 2611, 3213, 4107]
+	(u'Ramon Calderon', u'Ronaldo')
+	(u'Florentino Perez', u'Karim Benzema')
+	(u'Florentino Perez', u'Cristiano Ronaldo')
+	(u'Florentino Perez', u'Ronaldo')
+	(u'Ramon Calderon', u'Cristiano Ronaldo')
+	(u'Ramon Calderon', u'Karim Benzema')
+Cluster: 52
+cluster size: 6
+indices in cluster:  [119, 910, 1480, 2258, 3232, 4428]
+	(u'Star Wars', u'Mike Markkula')
+	(u'George Lucas', u'Steve Wozniak')
+	(u'Star Wars', u'Steve Wozniak')
+	(u'Star Wars', u'Steve Jobs')
+	(u'George Lucas', u'Mike Markkula')
+	(u'George Lucas', u'Steve Jobs')
+Cluster: 53
+cluster size: 3
+indices in cluster:  [124, 454, 2260]
+	(u'Macedonia', u'Croatia')
+	(u'Macedonia', u'Slovenia')
+	(u'Macedonia', u'Serbia')
+Cluster: 54
+cluster size: 12
+indices in cluster:  [125, 463, 1394, 1573, 1711, 2106, 2261, 2775, 3157, 3687, 4138, 4162]
+	(u'London School of Hygiene & Tropical Medicine', u'Liberia')
+	(u'The Lancet', u'Sierra Leone')
+	(u'Wellcome Trust', u'Sierra Leone')
+	(u'Wellcome Trust', u'West Africa')
+	(u'The Lancet', u'West Africa')
+	(u'London School of Hygiene & Tropical Medicine', u'Sierra Leone')
+	(u'London School of Hygiene & Tropical Medicine', u'Guinea')
+	(u'The Lancet', u'Liberia')
+	(u'The Lancet', u'Guinea')
+	(u'London School of Hygiene & Tropical Medicine', u'West Africa')
+	(u'Wellcome Trust', u'Liberia')
+	(u'Wellcome Trust', u'Guinea')
+Cluster: 55
+cluster size: 11
+indices in cluster:  [130, 295, 393, 1031, 2143, 3069, 3634, 3841, 3907, 4033, 4592]
+	(u'Andy West', u'Gareth Bale')
+	(u'Andy West', u'Marca')
+	(u'Andy West', u'Zinedine Zidane')
+	(u'Andy West', u'Karim Benzema')
+	(u'Andy West', u'Carlo Ancelotti')
+	(u'Andy West', u'Cristiano Ronaldo')
+	(u'Andy West', u'La Liga')
+	(u'Andy West', u'Ramon Calderon')
+	(u'Andy West', u'Florentino Perez')
+	(u'Andy West', u'Ronaldo')
+	(u'Andy West', u'Eibar')
+Cluster: 56
+cluster size: 6
+indices in cluster:  [131, 1459, 2546, 2858, 3558, 4190]
+	(u'Jobs', u'Steve Wozniak')
+	(u'Jobs', u'Microsoft')
+	(u'Jobs', u'Steve Jobs')
+	(u'Jobs', u'Macbook Air')
+	(u'Jobs', u'Mike Markkula')
+	(u'Jobs', u'Bill Gates')
+Cluster: 57
+cluster size: 4
+indices in cluster:  [141, 301, 922, 1876]
+	(u'Bernie Sanders', u'Pfizer')
+	(u'Bernie Sanders', u'Allergan')
+	(u'Bernie Sanders', u'AstraZeneca')
+	(u'Bernie Sanders', u'Ian Read')
+Cluster: 58
+cluster size: 3
+indices in cluster:  [143, 384, 2150]
+	(u'India', u'Silicon Valley')
+	(u'India', u'San Francisco')
+	(u'India', u'Palo Alto')
+Cluster: 59
+cluster size: 4
+indices in cluster:  [144, 2047, 2152, 2551]
+	(u'Lando', u'Philippines')
+	(u'Lando', u'Bulacan')
+	(u'Lando', u'Loren Legarda')
+	(u'Lando', u'Luzon')
+Cluster: 60
+cluster size: 7
+indices in cluster:  [145, 146, 229, 2445, 2626, 3749, 3754]
+	(u'Eva', u'Francois Hollande')
+	(u'Eva', u'Elysee Palace')
+	(u'Eva', u'Brussels')
+	(u'Eva', u'Belgium')
+	(u'Eva', u'France')
+	(u'Eva', u'Paris')
+	(u'Eva', u'Charles de Gaulle')
+Cluster: 61
+cluster size: 16
+indices in cluster:  [147, 382, 722, 775, 795, 1192, 1205, 1450, 1683, 1725, 1865, 2041, 2460, 2959, 3727, 4206]
+	(u'Spain', u'Mediterranean')
+	(u'Francois Hollande', u'Mediterranean')
+	(u'Portugal', u'Mediterranean')
+	(u'Belgium', u'Mediterranean')
+	(u'Greece', u'Mediterranean')
+	(u'Europe', u'Mediterranean')
+	(u'Brussels', u'Mediterranean')
+	(u'Elysee Palace', u'Mediterranean')
+	(u'Eastern Europe', u'Mediterranean')
+	(u'France', u'Mediterranean')
+	(u'Balkans', u'Mediterranean')
+	(u'Charles de Gaulle', u'Mediterranean')
+	(u'Italy', u'Mediterranean')
+	(u'Paris', u'Mediterranean')
+	(u'Germany', u'Mediterranean')
+	(u'European Commission', u'Mediterranean')
+Cluster: 62
+cluster size: 3
+indices in cluster:  [149, 3613, 3736]
+	(u'Barcelona', u'BBC Radio')
+	(u'Barcelona', u'BBC Sport')
+	(u'Barcelona', u'BBC')
+Cluster: 63
+cluster size: 16
+indices in cluster:  [150, 327, 380, 577, 784, 807, 816, 1103, 2063, 2407, 2734, 2743, 3512, 3531, 4369, 4437]
+	(u'Elysee Palace', u'Islamic State')
+	(u'Francois Hollande', u'Islamic State')
+	(u'Brussels', u'Islamic State')
+	(u'Charles de Gaulle', u'Islamic State')
+	(u'Europe', u'Islamic State')
+	(u'Croatia', u'Islamic State')
+	(u'Macedonia', u'Islamic State')
+	(u'Balkans', u'Islamic State')
+	(u'Slovenia', u'Islamic State')
+	(u'Greece', u'Islamic State')
+	(u'Belgium', u'Islamic State')
+	(u'Germany', u'Islamic State')
+	(u'Stade de France', u'Islamic State')
+	(u'France', u'Islamic State')
+	(u'Serbia', u'Islamic State')
+	(u'Paris', u'Islamic State')
+Cluster: 64
+cluster size: 10
+indices in cluster:  [51, 151, 905, 1555, 1767, 1911, 2107, 2159, 2573, 2768]
+	(u'Eibar', u'La Liga')
+	(u'Eibar', u'Carlo Ancelotti')
+	(u'Eibar', u'Zinedine Zidane')
+	(u'Eibar', u'Florentino Perez')
+	(u'Eibar', u'Karim Benzema')
+	(u'Eibar', u'Ronaldo')
+	(u'Eibar', u'Gareth Bale')
+	(u'Eibar', u'Ramon Calderon')
+	(u'Eibar', u'Cristiano Ronaldo')
+	(u'Eibar', u'Marca')
+Cluster: 65
+cluster size: 5
+indices in cluster:  [158, 468, 3050, 3084, 3503]
+	(u'Stockholm', u'Italy')
+	(u'Stockholm', u'Portugal')
+	(u'Stockholm', u'Greece')
+	(u'Stockholm', u'Spain')
+	(u'Stockholm', u'Germany')
+Cluster: 66
+cluster size: 4
+indices in cluster:  [159, 825, 2178, 4048]
+	(u'Philippines', u'America')
+	(u'South China Sea', u'America')
+	(u'Manila', u'America')
+	(u'Spratly Islands', u'America')
+Cluster: 67
+cluster size: 6
+indices in cluster:  [168, 587, 668, 696, 969, 1518]
+	(u'Bill Gates', u'Jobs')
+	(u'Steve Jobs', u'Jobs')
+	(u'Mike Markkula', u'Jobs')
+	(u'Macbook Air', u'Jobs')
+	(u'Microsoft', u'Jobs')
+	(u'Steve Wozniak', u'Jobs')
+Cluster: 68
+cluster size: 10
+indices in cluster:  [169, 705, 2197, 2307, 2453, 3372, 3765, 3768, 3818, 3942]
+	(u'La Liga', u'Liverpool')
+	(u'Florentino Perez', u'Liverpool')
+	(u'Cristiano Ronaldo', u'Liverpool')
+	(u'Ramon Calderon', u'Liverpool')
+	(u'Karim Benzema', u'Liverpool')
+	(u'Zinedine Zidane', u'Liverpool')
+	(u'Ronaldo', u'Liverpool')
+	(u'Marca', u'Liverpool')
+	(u'Gareth Bale', u'Liverpool')
+	(u'Carlo Ancelotti', u'Liverpool')
+Cluster: 69
+cluster size: 12
+indices in cluster:  [170, 279, 498, 640, 824, 955, 2242, 2289, 2761, 3074, 3805, 4057]
+	(u'Slovenia', u'Europe')
+	(u'Serbia', u'Germany')
+	(u'Macedonia', u'Germany')
+	(u'Croatia', u'Europe')
+	(u'Slovenia', u'Germany')
+	(u'Serbia', u'Europe')
+	(u'Macedonia', u'Europe')
+	(u'Austria', u'Europe')
+	(u'Croatia', u'Germany')
+	(u'Balkans', u'Europe')
+	(u'Balkans', u'Germany')
+	(u'Czech Republic', u'Europe')
+Cluster: 70
+cluster size: 4
+indices in cluster:  [176, 2248, 2854, 4602]
+	(u'Philippines', u'Asian')
+	(u'Loren Legarda', u'Asian')
+	(u'Bulacan', u'Asian')
+	(u'Luzon', u'Asian')
+Cluster: 71
+cluster size: 8
+indices in cluster:  [177, 780, 1092, 1768, 2869, 3353, 4040, 4076]
+	(u'Italy', u'Ostermalm')
+	(u'Eastern Europe', u'Ostermalm')
+	(u'Spain', u'Ostermalm')
+	(u'Europe', u'Ostermalm')
+	(u'Balkans', u'Ostermalm')
+	(u'Germany', u'Ostermalm')
+	(u'Greece', u'Ostermalm')
+	(u'Portugal', u'Ostermalm')
+Cluster: 72
+cluster size: 3
+indices in cluster:  [178, 791, 2518]
+	(u'UK', u'BBC')
+	(u'US', u'BBC')
+	(u'UK', u'BBC Radio')
+Cluster: 73
+cluster size: 6
+indices in cluster:  [180, 1163, 1720, 3434, 4142, 4284]
+	(u'Russia', u'Crimea')
+	(u'Ukraine', u'Sevastopol')
+	(u'Moscow', u'Crimea')
+	(u'Moscow', u'Sevastopol')
+	(u'Russia', u'Sevastopol')
+	(u'Ukraine', u'Crimea')
+Cluster: 74
+cluster size: 10
+indices in cluster:  [181, 523, 978, 996, 1513, 2334, 3466, 4126, 4198, 4468]
+	(u'Karim Benzema', u'Barcelona')
+	(u'Ronaldo', u'Barcelona')
+	(u'Zinedine Zidane', u'Barcelona')
+	(u'Ramon Calderon', u'Barcelona')
+	(u'Marca', u'Barcelona')
+	(u'Gareth Bale', u'Barcelona')
+	(u'Florentino Perez', u'Barcelona')
+	(u'Cristiano Ronaldo', u'Barcelona')
+	(u'Carlo Ancelotti', u'Barcelona')
+	(u'La Liga', u'Barcelona')
+Cluster: 75
+cluster size: 20
+indices in cluster:  [182, 475, 485, 490, 1136, 1360, 1651, 1670, 1749, 1802, 1840, 2060, 2816, 2890, 2891, 3053, 3125, 3366, 4009, 4123]
+	(u'Helmut Kohl', u'Merkel')
+	(u'Hamburg', u'Merkel')
+	(u'Austria', u'Merkel')
+	(u'European Union', u'Merkel')
+	(u'Germany', u'Merkel')
+	(u'France', u'Cameron')
+	(u'Brussels', u'Cameron')
+	(u'Christian Democrats', u'Merkel')
+	(u'Elysee Palace', u'Cameron')
+	(u'Berlin', u'Merkel')
+	(u'Paris', u'Cameron')
+	(u'Bavaria', u'Merkel')
+	(u'Francois Hollande', u'Cameron')
+	(u'Belgium', u'Cameron')
+	(u'Europe', u'Merkel')
+	(u'Brussels', u'Merkel')
+	(u'Belgium', u'Merkel')
+	(u'Charles de Gaulle', u'Cameron')
+	(u'Horst Seehofer', u'Merkel')
+	(u'Angela Merkel', u'Merkel')
+Cluster: 76
+cluster size: 3
+indices in cluster:  [187, 1410, 1698]
+	(u'UK', u'Donald Trump')
+	(u'US', u'Trump')
+	(u'US', u'Donald Trump')
+Cluster: 77
+cluster size: 10
+indices in cluster:  [188, 546, 1635, 1910, 1995, 2410, 2808, 3109, 3209, 3712]
+	(u'Zinedine Zidane', u'Atletico Madrid')
+	(u'Marca', u'Atletico Madrid')
+	(u'Carlo Ancelotti', u'Atletico Madrid')
+	(u'Gareth Bale', u'Atletico Madrid')
+	(u'Karim Benzema', u'Atletico Madrid')
+	(u'La Liga', u'Atletico Madrid')
+	(u'Ronaldo', u'Atletico Madrid')
+	(u'Florentino Perez', u'Atletico Madrid')
+	(u'Cristiano Ronaldo', u'Atletico Madrid')
+	(u'Ramon Calderon', u'Atletico Madrid')
+Cluster: 78
+cluster size: 6
+indices in cluster:  [197, 595, 934, 2356, 2793, 4098]
+	(u'Omar al-Bashir', u'Texas')
+	(u'Khartoum', u'Texas')
+	(u'Khartoum', u'Irving')
+	(u'Omar al-Bashir', u'Irving')
+	(u'Sudan', u'Irving')
+	(u'Sudan', u'Texas')
+Cluster: 79
+cluster size: 55
+indices in cluster:  [199, 257, 283, 386, 676, 695, 747, 748, 1219, 1302, 1309, 1337, 1338, 1533, 1606, 1693, 1727, 1797, 1841, 1949, 1957, 2180, 2210, 2238, 2266, 2343, 2493, 2725, 2750, 2867, 2885, 2934, 3002, 3062, 3081, 3088, 3169, 3203, 3292, 3301, 3344, 3384, 3523, 3691, 3964, 4006, 4052, 4235, 4242, 4277, 4319, 4421, 4462, 4504, 4610]
+	(u'Helmut Kohl', u'European Union')
+	(u'Christian Democrats', u'Brussels')
+	(u'Bavaria', u'Europe')
+	(u'Horst Seehofer', u'Hamburg')
+	(u'Hamburg', u'European Union')
+	(u'Francois Hollande', u'France')
+	(u'Christian Democrats', u'Austria')
+	(u'Helmut Kohl', u'Austria')
+	(u'Horst Seehofer', u'Brussels')
+	(u'Elysee Palace', u'Belgium')
+	(u'Helmut Kohl', u'Hamburg')
+	(u'Germany', u'European Union')
+	(u'Christian Democrats', u'Belgium')
+	(u'Angela Merkel', u'Brussels')
+	(u'Angela Merkel', u'Austria')
+	(u'Angela Merkel', u'Hamburg')
+	(u'Horst Seehofer', u'European Union')
+	(u'Berlin', u'European Union')
+	(u'Christian Democrats', u'European Union')
+	(u'Germany', u'European Commission')
+	(u'Hamburg', u'Brussels')
+	(u'Angela Merkel', u'Belgium')
+	(u'Christian Democratic Union', u'Germany')
+	(u'Germany', u'Europe')
+	(u'Helmut Kohl', u'Germany')
+	(u'Elysee Palace', u'France')
+	(u'Berlin', u'Brussels')
+	(u'Horst Seehofer', u'Europe')
+	(u'Horst Seehofer', u'Belgium')
+	(u'Christian Democrats', u'Hamburg')
+	(u'Horst Seehofer', u'Germany')
+	(u'Helmut Kohl', u'Europe')
+	(u'Bavaria', u'Austria')
+	(u'Angela Merkel', u'Europe')
+	(u'Angela Merkel', u'Berlin')
+	(u'Helmut Kohl', u'Belgium')
+	(u'Social Democrats', u'Germany')
+	(u'Horst Seehofer', u'Berlin')
+	(u'Angela Merkel', u'European Union')
+	(u'Christian Democrats', u'Berlin')
+	(u'Germany', u'Brussels')
+	(u'Helmut Kohl', u'Brussels')
+	(u'Bavaria', u'Brussels')
+	(u'Austria', u'Brussels')
+	(u'Austria', u'European Union')
+	(u'Berlin', u'Europe')
+	(u'Helmut Kohl', u'Berlin')
+	(u'Horst Seehofer', u'Austria')
+	(u'Bavaria', u'European Union')
+	(u'Angela Merkel', u'Germany')
+	(u'Christian Democrats', u'Germany')
+	(u'Christian Democrats', u'Europe')
+	(u'Hamburg', u'Europe')
+	(u'Francois Hollande', u'Belgium')
+	(u'Bavaria', u'Belgium')
+Cluster: 80
+cluster size: 6
+indices in cluster:  [200, 1619, 2031, 3404, 3692, 3764]
+	(u'UK', u'Elephant Island')
+	(u'UK', u'Antarctica')
+	(u'UK', u'Ernest Shackleton')
+	(u'UK', u'Shackleton')
+	(u'UK', u'Frank Hurley')
+	(u'UK', u'Weddell Sea')
+Cluster: 81
+cluster size: 11
+indices in cluster:  [202, 329, 412, 793, 1134, 3662, 4000, 4216, 4289, 4344, 4448]
+	(u'Cristiano Ronaldo', u'Andy West')
+	(u'Zinedine Zidane', u'Andy West')
+	(u'Marca', u'Andy West')
+	(u'Ronaldo', u'Andy West')
+	(u'Ramon Calderon', u'Andy West')
+	(u'La Liga', u'Andy West')
+	(u'Florentino Perez', u'Andy West')
+	(u'Karim Benzema', u'Andy West')
+	(u'Gareth Bale', u'Andy West')
+	(u'Eibar', u'Andy West')
+	(u'Carlo Ancelotti', u'Andy West')
+Cluster: 82
+cluster size: 4
+indices in cluster:  [204, 2954, 3241, 4327]
+	(u'Malibu', u'BBC Radio')
+	(u'Malibu', u'BBC')
+	(u'Los Angeles', u'BBC')
+	(u'Los Angeles', u'BBC Radio')
+Cluster: 83
+cluster size: 10
+indices in cluster:  [210, 373, 1010, 1131, 1431, 2118, 2727, 3893, 4210, 4390]
+	(u'Florentino Perez', u'Perez')
+	(u'Ramon Calderon', u'Perez')
+	(u'Cristiano Ronaldo', u'Perez')
+	(u'Marca', u'Perez')
+	(u'Ronaldo', u'Perez')
+	(u'La Liga', u'Perez')
+	(u'Gareth Bale', u'Perez')
+	(u'Zinedine Zidane', u'Perez')
+	(u'Carlo Ancelotti', u'Perez')
+	(u'Karim Benzema', u'Perez')
+Cluster: 84
+cluster size: 3
+indices in cluster:  [212, 1320, 2426]
+	(u'Silvio Berlusconi', u'Fininvest')
+	(u'Romano Prodi', u'Fininvest')
+	(u'Mario Monti', u'Fininvest')
+Cluster: 85
+cluster size: 10
+indices in cluster:  [218, 347, 596, 800, 2784, 2874, 3305, 3625, 3685, 3951]
+	(u'Telemilano', u'Forza Italia')
+	(u'Telemilano', u'Italy')
+	(u'Telemilano', u'Rome')
+	(u'Telemilano', u'Romano Prodi')
+	(u'Telemilano', u'People of Freedom')
+	(u'Telemilano', u'Veronica Lario')
+	(u'Telemilano', u'Silvio Berlusconi')
+	(u'Telemilano', u'Il Giornale')
+	(u'Telemilano', u'Noemi Letizia')
+	(u'Telemilano', u'Mario Monti')
+Cluster: 86
+cluster size: 4
+indices in cluster:  [39, 222, 312, 1457]
+	(u'Europe', u'Ian Read')
+	(u'Europe', u'AstraZeneca')
+	(u'Europe', u'Allergan')
+	(u'Europe', u'Pfizer')
+Cluster: 87
+cluster size: 3
+indices in cluster:  [226, 443, 2111]
+	(u'US', u'Omar al-Bashir')
+	(u'US', u'Khartoum')
+	(u'US', u'Sudan')
+Cluster: 88
+cluster size: 5
+indices in cluster:  [227, 1478, 3717, 3995, 4463]
+	(u'Morocco', u'Croatia')
+	(u'Morocco', u'Serbia')
+	(u'Morocco', u'Balkans')
+	(u'Morocco', u'Slovenia')
+	(u'Morocco', u'Macedonia')
+Cluster: 89
+cluster size: 4
+indices in cluster:  [231, 3323, 4341, 4395]
+	(u'Philippines', u'David')
+	(u'Luzon', u'David')
+	(u'Bulacan', u'David')
+	(u'Loren Legarda', u'David')
+Cluster: 90
+cluster size: 35
+indices in cluster:  [232, 298, 374, 904, 986, 1019, 1224, 1314, 1365, 1503, 1521, 1556, 2015, 2382, 2613, 2707, 2791, 2839, 2871, 3056, 3188, 3277, 3819, 3890, 3967, 3974, 4011, 4133, 4148, 4240, 4272, 4338, 4420, 4453, 4634]
+	(u'BBC Radio', u'Karim Benzema')
+	(u'BBC Radio', u'Ramon Calderon')
+	(u'BBC Radio', u'Gareth Bale')
+	(u'BBC', u'AC Milan')
+	(u'BBC', u'Gareth Bale')
+	(u'BBC Radio', u'Ronaldo')
+	(u'BBC', u'La Liga')
+	(u'BBC Sport', u'Gareth Bale')
+	(u'BBC Radio', u'La Liga')
+	(u'BBC Radio', u'Carlo Ancelotti')
+	(u'BBC', u'Stade de France')
+	(u'BBC Sport', u'La Liga')
+	(u'BBC', u'Ronaldo')
+	(u'BBC Sport', u'Ronaldo')
+	(u'BBC Sport', u'Eibar')
+	(u'BBC', u'Zinedine Zidane')
+	(u'BBC Sport', u'Cristiano Ronaldo')
+	(u'BBC Sport', u'Carlo Ancelotti')
+	(u'BBC', u'Cristiano Ronaldo')
+	(u'BBC Sport', u'Karim Benzema')
+	(u'BBC', u'Carlo Ancelotti')
+	(u'BBC Sport', u'Ramon Calderon')
+	(u'BBC Sport', u'Zinedine Zidane')
+	(u'BBC', u'Florentino Perez')
+	(u'BBC Radio', u'Cristiano Ronaldo')
+	(u'BBC', u'Marca')
+	(u'BBC Radio', u'Zinedine Zidane')
+	(u'BBC Radio', u'Marca')
+	(u'BBC', u'Eibar')
+	(u'BBC Sport', u'Florentino Perez')
+	(u'BBC Radio', u'Eibar')
+	(u'BBC Sport', u'Marca')
+	(u'BBC', u'Ramon Calderon')
+	(u'BBC Radio', u'Florentino Perez')
+	(u'BBC', u'Karim Benzema')
+Cluster: 91
+cluster size: 26
+indices in cluster:  [234, 277, 389, 421, 578, 1123, 1364, 1372, 1705, 1773, 1943, 2283, 2379, 2437, 2451, 2709, 2730, 2855, 3064, 3526, 3567, 4008, 4402, 4422, 4519, 4524]
+	(u'Steve Wozniak', u'US')
+	(u'Larry Page', u'US')
+	(u'San Francisco', u'US')
+	(u'Los Angeles', u'UK')
+	(u'New York', u'UK')
+	(u'Sergey Brin', u'UK')
+	(u'Larry Page', u'UK')
+	(u'Mike Markkula', u'US')
+	(u'Malibu', u'UK')
+	(u'Sergey Brin', u'US')
+	(u'Wikipedia', u'UK')
+	(u'San Francisco', u'UK')
+	(u'Facebook', u'US')
+	(u'Macbook Air', u'US')
+	(u'Reddit', u'US')
+	(u'Forbes', u'US')
+	(u'Google', u'US')
+	(u'Bill Gates', u'US')
+	(u'Facebook', u'UK')
+	(u'California', u'UK')
+	(u'Silicon Valley', u'US')
+	(u'Steve Jobs', u'US')
+	(u'Microsoft', u'US')
+	(u'Palo Alto', u'US')
+	(u'Google', u'UK')
+	(u'New York', u'US')
+Cluster: 92
+cluster size: 19
+indices in cluster:  [236, 379, 659, 1204, 1634, 1638, 1766, 2608, 2641, 2671, 2744, 2817, 3158, 3173, 3429, 3617, 3743, 3965, 4279]
+	(u'Spain', u'EU')
+	(u'Sevastopol', u'EU')
+	(u'Balkans', u'EU')
+	(u'Croatia', u'EU')
+	(u'Slovenia', u'EU')
+	(u'Crimea', u'EU')
+	(u'Serbia', u'EU')
+	(u'Portugal', u'EU')
+	(u'Europe', u'EU')
+	(u'Eastern Europe', u'EU')
+	(u'Arseniy Yatsenyuk', u'EU')
+	(u'Macedonia', u'EU')
+	(u'Ukraine', u'EU')
+	(u'Germany', u'EU')
+	(u'Italy', u'EU')
+	(u'Moscow', u'EU')
+	(u'Greece', u'EU')
+	(u'Russia', u'EU')
+	(u'Czech Republic', u'EU')
+Cluster: 93
+cluster size: 26
+indices in cluster:  [239, 404, 436, 452, 564, 603, 750, 1042, 1826, 1953, 2048, 2090, 2122, 2278, 2983, 3190, 3244, 3325, 3326, 3409, 3460, 3522, 3586, 3677, 4384, 4580]
+	(u'London', u'Hamburg')
+	(u'Edinburgh', u'Bavaria')
+	(u'Edinburgh', u'Belgium')
+	(u'Edinburgh', u'Christian Democrats')
+	(u'London', u'Berlin')
+	(u'Edinburgh', u'Angela Merkel')
+	(u'London', u'Germany')
+	(u'Edinburgh', u'Germany')
+	(u'London', u'Angela Merkel')
+	(u'Edinburgh', u'Europe')
+	(u'London', u'Christian Democrats')
+	(u'London', u'Helmut Kohl')
+	(u'London', u'Horst Seehofer')
+	(u'Edinburgh', u'Austria')
+	(u'London', u'Belgium')
+	(u'London', u'Bavaria')
+	(u'Edinburgh', u'Helmut Kohl')
+	(u'Edinburgh', u'Hamburg')
+	(u'London', u'Austria')
+	(u'Edinburgh', u'Berlin')
+	(u'Edinburgh', u'Brussels')
+	(u'London', u'Europe')
+	(u'London', u'Brussels')
+	(u'Edinburgh', u'European Union')
+	(u'Edinburgh', u'Horst Seehofer')
+	(u'London', u'European Union')
+Cluster: 94
+cluster size: 10
+indices in cluster:  [242, 504, 1290, 1808, 1925, 2388, 2872, 2948, 3934, 3953]
+	(u'Liverpool', u'Karim Benzema')
+	(u'Liverpool', u'La Liga')
+	(u'Liverpool', u'Ronaldo')
+	(u'Liverpool', u'Zinedine Zidane')
+	(u'Liverpool', u'Ramon Calderon')
+	(u'Liverpool', u'Carlo Ancelotti')
+	(u'Liverpool', u'Gareth Bale')
+	(u'Liverpool', u'Cristiano Ronaldo')
+	(u'Liverpool', u'Florentino Perez')
+	(u'Liverpool', u'Marca')
+Cluster: 95
+cluster size: 19
+indices in cluster:  [244, 447, 466, 970, 1126, 1166, 1340, 1406, 1468, 1625, 1700, 1897, 2053, 2458, 2975, 3452, 3482, 3975, 4250]
+	(u'EU', u'Portugal')
+	(u'EU', u'Greece')
+	(u'EU', u'Macedonia')
+	(u'EU', u'Europe')
+	(u'EU', u'Eastern Europe')
+	(u'EU', u'Slovenia')
+	(u'EU', u'Moscow')
+	(u'EU', u'Arseniy Yatsenyuk')
+	(u'EU', u'Italy')
+	(u'EU', u'Sevastopol')
+	(u'EU', u'Ukraine')
+	(u'EU', u'Russia')
+	(u'EU', u'Germany')
+	(u'EU', u'Crimea')
+	(u'EU', u'Balkans')
+	(u'EU', u'Spain')
+	(u'EU', u'Serbia')
+	(u'EU', u'Czech Republic')
+	(u'EU', u'Croatia')
+Cluster: 96
+cluster size: 3
+indices in cluster:  [245, 1013, 1984]
+	(u'Ronaldo', u'La Liga')
+	(u'Cristiano Ronaldo', u'La Liga')
+	(u'Zinedine Zidane', u'La Liga')
+Cluster: 97
+cluster size: 3
+indices in cluster:  [252, 971, 2899]
+	(u'Iraq', u'Montrouge')
+	(u'Islamic State', u'Montrouge')
+	(u'Syria', u'Montrouge')
+Cluster: 98
+cluster size: 14
+indices in cluster:  [258, 306, 561, 788, 1909, 2134, 2247, 2319, 2588, 2930, 2949, 3186, 4064, 4469]
+	(u'Forza Italia', u'Alan Johnston')
+	(u'Mediaset', u'Alan Johnston')
+	(u'Italy', u'Alan Johnston')
+	(u'AC Milan', u'Alan Johnston')
+	(u'Enrico Letta', u'Alan Johnston')
+	(u'Fininvest', u'Alan Johnston')
+	(u'Il Giornale', u'Alan Johnston')
+	(u'Veronica Lario', u'Alan Johnston')
+	(u'People of Freedom', u'Alan Johnston')
+	(u'Romano Prodi', u'Alan Johnston')
+	(u'Noemi Letizia', u'Alan Johnston')
+	(u'Mario Monti', u'Alan Johnston')
+	(u'Silvio Berlusconi', u'Alan Johnston')
+	(u'Rome', u'Alan Johnston')
+Cluster: 99
+cluster size: 16
+indices in cluster:  [128, 259, 522, 831, 1282, 1418, 1475, 2014, 2147, 2609, 2630, 2702, 2914, 3152, 3225, 3327]
+	(u'Islamic State', u'Greece')
+	(u'Islamic State', u'Germany')
+	(u'Islamic State', u'Belgium')
+	(u'Islamic State', u'Europe')
+	(u'Islamic State', u'Macedonia')
+	(u'Islamic State', u'Francois Hollande')
+	(u'Islamic State', u'Slovenia')
+	(u'Islamic State', u'Stade de France')
+	(u'Islamic State', u'Balkans')
+	(u'Islamic State', u'Charles de Gaulle')
+	(u'Islamic State', u'Paris')
+	(u'Islamic State', u'Croatia')
+	(u'Islamic State', u'Brussels')
+	(u'Islamic State', u'Serbia')
+	(u'Islamic State', u'Elysee Palace')
+	(u'Islamic State', u'France')
+Cluster: 100
+cluster size: 9
+indices in cluster:  [262, 1278, 1489, 1548, 2540, 2826, 2945, 3162, 3636]
+	(u'US', u'Malaysia')
+	(u'US', u'Spratly Islands')
+	(u'US', u'Manila')
+	(u'US', u'Vietnam')
+	(u'US', u'South China Sea')
+	(u'US', u'Philippines')
+	(u'UK', u'Vietnam')
+	(u'US', u'India')
+	(u'US', u'Kuala Lumpur')
+Cluster: 101
+cluster size: 26
+indices in cluster:  [266, 426, 560, 590, 717, 1193, 1342, 1581, 2089, 2140, 2176, 2552, 2680, 2783, 3457, 3572, 3702, 3784, 3927, 3970, 4001, 4203, 4294, 4316, 4388, 4416]
+	(u'US', u'San Francisco')
+	(u'UK', u'Wikipedia')
+	(u'US', u'Steve Jobs')
+	(u'US', u'Forbes')
+	(u'UK', u'Larry Page')
+	(u'US', u'Palo Alto')
+	(u'UK', u'New York')
+	(u'US', u'Mike Markkula')
+	(u'UK', u'Sergey Brin')
+	(u'US', u'New York')
+	(u'US', u'Larry Page')
+	(u'UK', u'Malibu')
+	(u'US', u'Macbook Air')
+	(u'UK', u'San Francisco')
+	(u'UK', u'California')
+	(u'UK', u'Facebook')
+	(u'US', u'Steve Wozniak')
+	(u'US', u'Silicon Valley')
+	(u'US', u'Bill Gates')
+	(u'US', u'Microsoft')
+	(u'US', u'Google')
+	(u'US', u'Facebook')
+	(u'UK', u'Los Angeles')
+	(u'US', u'Reddit')
+	(u'UK', u'Google')
+	(u'US', u'Sergey Brin')
+Cluster: 102
+cluster size: 12
+indices in cluster:  [268, 950, 2234, 2330, 2492, 2927, 3048, 3126, 3291, 3479, 3654, 4110]
+	(u'Europe', u'Serbia')
+	(u'Germany', u'Balkans')
+	(u'Europe', u'Balkans')
+	(u'Europe', u'Austria')
+	(u'Germany', u'Croatia')
+	(u'Europe', u'Czech Republic')
+	(u'Europe', u'Macedonia')
+	(u'Europe', u'Slovenia')
+	(u'Germany', u'Slovenia')
+	(u'Germany', u'Serbia')
+	(u'Germany', u'Macedonia')
+	(u'Europe', u'Croatia')
+Cluster: 103
+cluster size: 4
+indices in cluster:  [270, 811, 1540, 1687]
+	(u'Greenpeace', u'Mike Markkula')
+	(u'Greenpeace', u'Macbook Air')
+	(u'Greenpeace', u'Steve Wozniak')
+	(u'Greenpeace', u'Steve Jobs')
+Cluster: 104
+cluster size: 4
+indices in cluster:  [271, 2723, 3235, 3988]
+	(u'Siemens', u'Germany')
+	(u'Siemens', u'Europe')
+	(u'Siemens', u'France')
+	(u'Siemens', u'Paris')
+Cluster: 105
+cluster size: 3
+indices in cluster:  [272, 472, 1479]
+	(u'Irving Independent School District', u'Omar al-Bashir')
+	(u'Irving Independent School District', u'Khartoum')
+	(u'Irving Independent School District', u'Sudan')
+Cluster: 106
+cluster size: 3
+indices in cluster:  [273, 890, 2606]
+	(u'Sudan', u'Jordan')
+	(u'Khartoum', u'Jordan')
+	(u'Omar al-Bashir', u'Jordan')
+Cluster: 107
+cluster size: 9
+indices in cluster:  [113, 275, 1070, 1261, 1463, 2496, 3282, 3394, 3683]
+	(u'Jenny', u'European Commission')
+	(u'Jenny', u'Eastern Europe')
+	(u'Jenny', u'Europe')
+	(u'Jenny', u'Greece')
+	(u'Jenny', u'Portugal')
+	(u'Jenny', u'Germany')
+	(u'Jenny', u'Balkans')
+	(u'Jenny', u'Spain')
+	(u'Jenny', u'Italy')
+Cluster: 108
+cluster size: 3
+indices in cluster:  [280, 1392, 3189]
+	(u'Macbook Air', u'Silicon Valley')
+	(u'Macbook Air', u'Palo Alto')
+	(u'Macbook Air', u'San Francisco')
+Cluster: 109
+cluster size: 6
+indices in cluster:  [294, 876, 982, 1714, 1932, 2243]
+	(u'Macklin', u'Frank Hurley')
+	(u'Macklin', u'Antarctica')
+	(u'Macklin', u'Weddell Sea')
+	(u'Macklin', u'Shackleton')
+	(u'Macklin', u'Ernest Shackleton')
+	(u'Macklin', u'Elephant Island')
+Cluster: 110
+cluster size: 9
+indices in cluster:  [297, 343, 545, 556, 1686, 1929, 2360, 2501, 4151]
+	(u'George Lucas', u'Silicon Valley')
+	(u'Star Wars', u'Silicon Valley')
+	(u'Pixar', u'Palo Alto')
+	(u'George Lucas', u'Palo Alto')
+	(u'Pixar', u'Silicon Valley')
+	(u'Star Wars', u'San Francisco')
+	(u'Star Wars', u'Palo Alto')
+	(u'George Lucas', u'San Francisco')
+	(u'Pixar', u'San Francisco')
+Cluster: 111
+cluster size: 14
+indices in cluster:  [300, 342, 662, 1467, 1798, 1818, 1926, 2078, 2341, 2421, 2629, 3361, 3663, 4546]
+	(u'Hitler', u'Fininvest')
+	(u'Hitler', u'Enrico Letta')
+	(u'Hitler', u'Romano Prodi')
+	(u'Hitler', u'Forza Italia')
+	(u'Hitler', u'Noemi Letizia')
+	(u'Hitler', u'Veronica Lario')
+	(u'Hitler', u'Silvio Berlusconi')
+	(u'Hitler', u'People of Freedom')
+	(u'Hitler', u'Mediaset')
+	(u'Hitler', u'Mario Monti')
+	(u'Hitler', u'AC Milan')
+	(u'Hitler', u'Il Giornale')
+	(u'Hitler', u'Italy')
+	(u'Hitler', u'Rome')
+Cluster: 112
+cluster size: 3
+indices in cluster:  [302, 600, 3713]
+	(u'Star Wars', u'India')
+	(u'George Lucas', u'India')
+	(u'Pixar', u'India')
+Cluster: 113
+cluster size: 8
+indices in cluster:  [303, 486, 852, 1152, 2136, 2145, 3544, 4400]
+	(u'Manchester United', u'La Liga')
+	(u'Manchester United', u'Florentino Perez')
+	(u'Manchester United', u'Ramon Calderon')
+	(u'Manchester United', u'Ronaldo')
+	(u'Manchester United', u'Cristiano Ronaldo')
+	(u'Manchester United', u'Marca')
+	(u'Manchester United', u'Karim Benzema')
+	(u'Manchester United', u'Zinedine Zidane')
+Cluster: 114
+cluster size: 6
+indices in cluster:  [320, 1601, 2131, 2676, 4112, 4157]
+	(u'California', u'Nasa')
+	(u'California', u'SpaceX')
+	(u'San Francisco', u'SpaceX')
+	(u'California', u'Elon Musk')
+	(u'San Francisco', u'Nasa')
+	(u'San Francisco', u'Elon Musk')
+Cluster: 115
+cluster size: 12
+indices in cluster:  [326, 964, 1122, 1476, 1587, 2753, 3138, 3639, 3746, 3905, 4582, 4643]
+	(u'Milan', u'Romano Prodi')
+	(u'Milan', u'Rome')
+	(u'Milan', u'Forza Italia')
+	(u'Milan', u'Veronica Lario')
+	(u'Milan', u'Silvio Berlusconi')
+	(u'Milan', u'Mario Monti')
+	(u'Milan', u'People of Freedom')
+	(u'Milan', u'Mediaset')
+	(u'Milan', u'Il Giornale')
+	(u'Milan', u'Noemi Letizia')
+	(u'Milan', u'Fininvest')
+	(u'Milan', u'Italy')
+Cluster: 116
+cluster size: 6
+indices in cluster:  [328, 543, 675, 1254, 1716, 2322]
+	(u'Montrouge', u'Paris')
+	(u'Montrouge', u'Belgium')
+	(u'Montrouge', u'Francois Hollande')
+	(u'Montrouge', u'Elysee Palace')
+	(u'Montrouge', u'Brussels')
+	(u'Montrouge', u'France')
+Cluster: 117
+cluster size: 4
+indices in cluster:  [330, 2285, 3051, 3192]
+	(u'Luzon', u'UN')
+	(u'Bulacan', u'UN')
+	(u'Philippines', u'UN')
+	(u'Loren Legarda', u'UN')
+Cluster: 118
+cluster size: 4
+indices in cluster:  [332, 358, 3246, 4536]
+	(u'Asian', u'Luzon')
+	(u'Asian', u'Philippines')
+	(u'Asian', u'Loren Legarda')
+	(u'Asian', u'Bulacan')
+Cluster: 119
+cluster size: 16
+indices in cluster:  [336, 467, 1165, 1378, 1462, 1494, 1564, 1674, 1823, 2219, 3272, 3358, 3651, 4532, 4560, 4601]
+	(u'Mediterranean', u'Germany')
+	(u'Mediterranean', u'Spain')
+	(u'Mediterranean', u'Europe')
+	(u'Mediterranean', u'Portugal')
+	(u'Mediterranean', u'Brussels')
+	(u'Mediterranean', u'France')
+	(u'Mediterranean', u'Francois Hollande')
+	(u'Mediterranean', u'Italy')
+	(u'Mediterranean', u'Greece')
+	(u'Mediterranean', u'European Commission')
+	(u'Mediterranean', u'Eastern Europe')
+	(u'Mediterranean', u'Elysee Palace')
+	(u'Mediterranean', u'Charles de Gaulle')
+	(u'Mediterranean', u'Paris')
+	(u'Mediterranean', u'Belgium')
+	(u'Mediterranean', u'Balkans')
+Cluster: 120
+cluster size: 8
+indices in cluster:  [337, 927, 2007, 2601, 2971, 3016, 3253, 3284]
+	(u'Google', u'San Francisco')
+	(u'Bill Gates', u'Palo Alto')
+	(u'Google', u'California')
+	(u'Microsoft', u'Silicon Valley')
+	(u'Microsoft', u'San Francisco')
+	(u'Bill Gates', u'San Francisco')
+	(u'Bill Gates', u'Silicon Valley')
+	(u'Microsoft', u'Palo Alto')
+Cluster: 121
+cluster size: 4
+indices in cluster:  [339, 2012, 3467, 3922]
+	(u'Zane Lowe', u'Malibu')
+	(u'Zane Lowe', u'Los Angeles')
+	(u'Nick Grimshaw', u'Los Angeles')
+	(u'Nick Grimshaw', u'Malibu')
+Cluster: 122
+cluster size: 3
+indices in cluster:  [350, 3545, 3762]
+	(u'Eastern Europe', u'Stockholm')
+	(u'Balkans', u'Stockholm')
+	(u'Europe', u'Stockholm')
+Cluster: 123
+cluster size: 6
+indices in cluster:  [354, 641, 1066, 2043, 2589, 4415]
+	(u'Bill Gates', u'Star Wars')
+	(u'Microsoft', u'Star Wars')
+	(u'Bill Gates', u'Pixar')
+	(u'Bill Gates', u'George Lucas')
+	(u'Microsoft', u'George Lucas')
+	(u'Microsoft', u'Pixar')
+Cluster: 124
+cluster size: 6
+indices in cluster:  [355, 2358, 3655, 3937, 3999, 4436]
+	(u'Leopoldo Lopez', u'Paraguay')
+	(u'Leopoldo Lopez', u'Cristina Fernandez de Kirchner')
+	(u'Leopoldo Lopez', u'Daniel Scioli')
+	(u'Leopoldo Lopez', u'Nestor Kirchner')
+	(u'Leopoldo Lopez', u'Uruguay')
+	(u'Leopoldo Lopez', u'Argentina')
+Cluster: 125
+cluster size: 4
+indices in cluster:  [356, 707, 972, 2868]
+	(u'BBC Radio', u'Malibu')
+	(u'BBC', u'Malibu')
+	(u'BBC', u'Los Angeles')
+	(u'BBC Radio', u'Los Angeles')
+Cluster: 126
+cluster size: 8
+indices in cluster:  [361, 407, 984, 1221, 2017, 3709, 3894, 3969]
+	(u'San Francisco', u'Microsoft')
+	(u'Silicon Valley', u'Microsoft')
+	(u'Palo Alto', u'Microsoft')
+	(u'Silicon Valley', u'Bill Gates')
+	(u'Palo Alto', u'Bill Gates')
+	(u'San Francisco', u'Google')
+	(u'San Francisco', u'Bill Gates')
+	(u'California', u'Google')
+Cluster: 127
+cluster size: 3
+indices in cluster:  [367, 1804, 2284]
+	(u'Mario Monti', u'AC Milan')
+	(u'Romano Prodi', u'AC Milan')
+	(u'Silvio Berlusconi', u'AC Milan')
+Cluster: 128
+cluster size: 4
+indices in cluster:  [370, 1316, 1370, 3035]
+	(u'Pfizer', u'Dublin')
+	(u'AstraZeneca', u'Dublin')
+	(u'Allergan', u'Dublin')
+	(u'Ian Read', u'Dublin')
+Cluster: 129
+cluster size: 3
+indices in cluster:  [377, 3998, 4554]
+	(u'SpaceX', u'Imperial College London')
+	(u'Elon Musk', u'Imperial College London')
+	(u'Nasa', u'Imperial College London')
+Cluster: 130
+cluster size: 14
+indices in cluster:  [378, 488, 550, 1051, 1199, 1356, 1689, 1917, 2825, 3195, 3310, 3352, 3657, 3949]
+	(u'Senate', u'Fininvest')
+	(u'Senate', u'Rome')
+	(u'Senate', u'Noemi Letizia')
+	(u'Senate', u'Mario Monti')
+	(u'Senate', u'Il Giornale')
+	(u'Senate', u'Mediaset')
+	(u'Senate', u'Enrico Letta')
+	(u'Senate', u'Romano Prodi')
+	(u'Senate', u'Italy')
+	(u'Senate', u'Veronica Lario')
+	(u'Senate', u'Silvio Berlusconi')
+	(u'Senate', u'People of Freedom')
+	(u'Senate', u'Forza Italia')
+	(u'Senate', u'AC Milan')
+Cluster: 131
+cluster size: 3
+indices in cluster:  [387, 1291, 2772]
+	(u'Khartoum', u'Turkey')
+	(u'Sudan', u'Turkey')
+	(u'Omar al-Bashir', u'Turkey')
+Cluster: 132
+cluster size: 5
+indices in cluster:  [388, 541, 762, 2102, 4204]
+	(u'Manila', u'India')
+	(u'Philippines', u'India')
+	(u'Loren Legarda', u'India')
+	(u'Bulacan', u'India')
+	(u'Luzon', u'India')
+Cluster: 133
+cluster size: 10
+indices in cluster:  [395, 1018, 1300, 1543, 1565, 2567, 2670, 2788, 4298, 4430]
+	(u'Graham Hunter', u'Cristiano Ronaldo')
+	(u'Graham Hunter', u'Karim Benzema')
+	(u'Graham Hunter', u'Carlo Ancelotti')
+	(u'Graham Hunter', u'Ramon Calderon')
+	(u'Graham Hunter', u'Florentino Perez')
+	(u'Graham Hunter', u'Zinedine Zidane')
+	(u'Graham Hunter', u'La Liga')
+	(u'Graham Hunter', u'Marca')
+	(u'Graham Hunter', u'Ronaldo')
+	(u'Graham Hunter', u'Gareth Bale')
+Cluster: 134
+cluster size: 6
+indices in cluster:  [400, 718, 2144, 2482, 2685, 2958]
+	(u'Bill Gates', u'India')
+	(u'Microsoft', u'India')
+	(u'Steve Jobs', u'India')
+	(u'Mike Markkula', u'India')
+	(u'Steve Wozniak', u'India')
+	(u'Macbook Air', u'India')
+Cluster: 135
+cluster size: 4
+indices in cluster:  [402, 1383, 4055, 4346]
+	(u'America', u'South China Sea')
+	(u'America', u'Spratly Islands')
+	(u'America', u'Philippines')
+	(u'America', u'Manila')
+Cluster: 136
+cluster size: 3
+indices in cluster:  [405, 4092, 4141]
+	(u'Atletico Madrid', u'BBC')
+	(u'Atletico Madrid', u'BBC Sport')
+	(u'Atletico Madrid', u'BBC Radio')
+Cluster: 137
+cluster size: 4
+indices in cluster:  [409, 2525, 3456, 4350]
+	(u'Europe', u'Williamson')
+	(u'France', u'Williamson')
+	(u'Germany', u'Williamson')
+	(u'Paris', u'Williamson')
+Cluster: 138
+cluster size: 7
+indices in cluster:  [411, 625, 966, 2614, 2699, 2951, 3797]
+	(u'Charles de Gaulle', u'Eva')
+	(u'Francois Hollande', u'Eva')
+	(u'France', u'Eva')
+	(u'Elysee Palace', u'Eva')
+	(u'Belgium', u'Eva')
+	(u'Brussels', u'Eva')
+	(u'Paris', u'Eva')
+Cluster: 139
+cluster size: 9
+indices in cluster:  [418, 1535, 1655, 1662, 2211, 2976, 3520, 3536, 3835]
+	(u'Italy', u'Jenny')
+	(u'Europe', u'Jenny')
+	(u'Spain', u'Jenny')
+	(u'Eastern Europe', u'Jenny')
+	(u'European Commission', u'Jenny')
+	(u'Greece', u'Jenny')
+	(u'Germany', u'Jenny')
+	(u'Balkans', u'Jenny')
+	(u'Portugal', u'Jenny')
+Cluster: 140
+cluster size: 4
+indices in cluster:  [422, 2594, 4479, 4645]
+	(u'Russia', u'Philippines')
+	(u'Russia', u'Malaysia')
+	(u'Russia', u'Kuala Lumpur')
+	(u'Russia', u'Manila')
+Cluster: 141
+cluster size: 3
+indices in cluster:  [425, 1017, 2034]
+	(u'Portugal', u'Germany')
+	(u'Spain', u'Germany')
+	(u'Greece', u'Germany')
+Cluster: 142
+cluster size: 4
+indices in cluster:  [432, 2263, 3933, 4293]
+	(u'Allergan', u'New York')
+	(u'AstraZeneca', u'New York')
+	(u'Pfizer', u'New York')
+	(u'Ian Read', u'New York')
+Cluster: 143
+cluster size: 3
+indices in cluster:  [435, 2804, 2845]
+	(u'US', u'Star Wars')
+	(u'US', u'George Lucas')
+	(u'US', u'Pixar')
+Cluster: 144
+cluster size: 4
+indices in cluster:  [441, 2121, 4336, 4570]
+	(u'Allergan', u'Europe')
+	(u'AstraZeneca', u'Europe')
+	(u'Pfizer', u'Europe')
+	(u'Ian Read', u'Europe')
+Cluster: 145
+cluster size: 3
+indices in cluster:  [445, 480, 1304]
+	(u'Palo Alto', u'Apple')
+	(u'Silicon Valley', u'Apple')
+	(u'San Francisco', u'Apple')
+Cluster: 146
+cluster size: 6
+indices in cluster:  [448, 525, 1751, 2355, 3335, 4178]
+	(u'Sergey Brin', u'Turkey')
+	(u'Google', u'Jordan')
+	(u'Google', u'Turkey')
+	(u'Sergey Brin', u'Qatar')
+	(u'Google', u'Qatar')
+	(u'Sergey Brin', u'Jordan')
+Cluster: 147
+cluster size: 4
+indices in cluster:  [457, 1424, 1924, 4434]
+	(u'South Korea', u'Manila')
+	(u'Japan', u'Philippines')
+	(u'Japan', u'Manila')
+	(u'South Korea', u'Philippines')
+Cluster: 148
+cluster size: 15
+indices in cluster:  [458, 566, 574, 703, 726, 822, 928, 1409, 2510, 2902, 3154, 3204, 3266, 3885, 4222]
+	(u'Italy', u'Eastern Europe')
+	(u'Italy', u'Europe')
+	(u'Spain', u'Eastern Europe')
+	(u'Spain', u'Balkans')
+	(u'Greece', u'Balkans')
+	(u'Portugal', u'Europe')
+	(u'Greece', u'Serbia')
+	(u'Spain', u'Europe')
+	(u'Greece', u'Eastern Europe')
+	(u'Greece', u'Slovenia')
+	(u'Portugal', u'Eastern Europe')
+	(u'Italy', u'Balkans')
+	(u'Greece', u'Croatia')
+	(u'Portugal', u'Balkans')
+	(u'Greece', u'Europe')
+Cluster: 149
+cluster size: 12
+indices in cluster:  [460, 622, 1156, 1269, 2555, 2677, 2815, 3564, 3756, 3863, 4215, 4493]
+	(u'Liberia', u'Wellcome Trust')
+	(u'Liberia', u'The Lancet')
+	(u'Liberia', u'London School of Hygiene & Tropical Medicine')
+	(u'Sierra Leone', u'The Lancet')
+	(u'West Africa', u'The Lancet')
+	(u'West Africa', u'Wellcome Trust')
+	(u'Guinea', u'London School of Hygiene & Tropical Medicine')
+	(u'Sierra Leone', u'London School of Hygiene & Tropical Medicine')
+	(u'Guinea', u'Wellcome Trust')
+	(u'Sierra Leone', u'Wellcome Trust')
+	(u'West Africa', u'London School of Hygiene & Tropical Medicine')
+	(u'Guinea', u'The Lancet')
+Cluster: 150
+cluster size: 6
+indices in cluster:  [462, 2065, 2870, 3174, 3436, 3450]
+	(u'Hooper', u'Ernest Shackleton')
+	(u'Hooper', u'Elephant Island')
+	(u'Hooper', u'Shackleton')
+	(u'Hooper', u'Frank Hurley')
+	(u'Hooper', u'Weddell Sea')
+	(u'Hooper', u'Antarctica')
+Cluster: 151
+cluster size: 4
+indices in cluster:  [469, 1227, 1315, 2072]
+	(u'BBC', u'Bulacan')
+	(u'BBC', u'Loren Legarda')
+	(u'BBC', u'Philippines')
+	(u'BBC', u'Luzon')
+Cluster: 152
+cluster size: 6
+indices in cluster:  [471, 949, 1074, 1101, 3578, 3624]
+	(u'Beyonce', u'UK')
+	(u'Nick Grimshaw', u'UK')
+	(u'Chris Martin', u'UK')
+	(u'Coldplay', u'UK')
+	(u'Zane Lowe', u'UK')
+	(u'Noel Gallagher', u'UK')
+Cluster: 153
+cluster size: 6
+indices in cluster:  [473, 511, 1466, 2576, 2822, 4473]
+	(u'Jordan', u'Irving')
+	(u'Qatar', u'Irving')
+	(u'Turkey', u'Irving')
+	(u'Qatar', u'Texas')
+	(u'Turkey', u'Texas')
+	(u'Jordan', u'Texas')
+Cluster: 154
+cluster size: 3
+indices in cluster:  [484, 839, 1464]
+	(u'Manchester United', u'BBC Sport')
+	(u'Manchester United', u'BBC Radio')
+	(u'Manchester United', u'BBC')
+Cluster: 155
+cluster size: 3
+indices in cluster:  [492, 2693, 2928]
+	(u'Syria', u'Gavin Hewitt')
+	(u'Turkey', u'Gavin Hewitt')
+	(u'Iran', u'Gavin Hewitt')
+Cluster: 156
+cluster size: 5
+indices in cluster:  [493, 776, 1868, 2612, 3726]
+	(u'Paris', u'Croatia')
+	(u'Paris', u'Slovenia')
+	(u'Paris', u'Balkans')
+	(u'Paris', u'Serbia')
+	(u'Paris', u'Macedonia')
+Cluster: 157
+cluster size: 3
+indices in cluster:  [501, 2051, 3521]
+	(u'Venezuela', u'Paraguay')
+	(u'Venezuela', u'Uruguay')
+	(u'Venezuela', u'Argentina')
+Cluster: 158
+cluster size: 8
+indices in cluster:  [518, 1408, 1803, 2228, 2350, 2422, 2977, 4023]
+	(u'Ramon Calderon', u'Manchester United')
+	(u'Zinedine Zidane', u'Manchester United')
+	(u'Ronaldo', u'Manchester United')
+	(u'Karim Benzema', u'Manchester United')
+	(u'Florentino Perez', u'Manchester United')
+	(u'Cristiano Ronaldo', u'Manchester United')
+	(u'Marca', u'Manchester United')
+	(u'La Liga', u'Manchester United')
+Cluster: 159
+cluster size: 4
+indices in cluster:  [521, 1550, 1665, 3980]
+	(u'BBC', u'Nick Grimshaw')
+	(u'BBC Radio', u'Nick Grimshaw')
+	(u'BBC', u'Zane Lowe')
+	(u'BBC Radio', u'Zane Lowe')
+Cluster: 160
+cluster size: 3
+indices in cluster:  [528, 3632, 4466]
+	(u'White House', u'Jersey City')
+	(u'White House', u'New Jersey')
+	(u'White House', u'Paterson')
+Cluster: 161
+cluster size: 4
+indices in cluster:  [530, 915, 2233, 3721]
+	(u'Irving', u'Sergey Brin')
+	(u'Irving', u'Google')
+	(u'Texas', u'Google')
+	(u'Texas', u'Sergey Brin')
+Cluster: 162
+cluster size: 6
+indices in cluster:  [533, 572, 849, 3427, 4046, 4377]
+	(u'Mario Monti', u'Noemi Letizia')
+	(u'Romano Prodi', u'Veronica Lario')
+	(u'Silvio Berlusconi', u'Noemi Letizia')
+	(u'Silvio Berlusconi', u'Veronica Lario')
+	(u'Romano Prodi', u'Noemi Letizia')
+	(u'Mario Monti', u'Veronica Lario')
+Cluster: 163
+cluster size: 3
+indices in cluster:  [537, 1903, 4348]
+	(u'Jersey City', u'Trump')
+	(u'New Jersey', u'Trump')
+	(u'Paterson', u'Trump')
+Cluster: 164
+cluster size: 4
+indices in cluster:  [538, 2227, 2770, 3606]
+	(u'France', u'Siemens')
+	(u'Europe', u'Siemens')
+	(u'Paris', u'Siemens')
+	(u'Germany', u'Siemens')
+Cluster: 165
+cluster size: 5
+indices in cluster:  [539, 815, 2345, 2943, 3900]
+	(u'Gavin Hewitt', u'Croatia')
+	(u'Gavin Hewitt', u'Serbia')
+	(u'Gavin Hewitt', u'Macedonia')
+	(u'Gavin Hewitt', u'Balkans')
+	(u'Gavin Hewitt', u'Slovenia')
+Cluster: 166
+cluster size: 7
+indices in cluster:  [542, 1669, 1927, 2241, 2294, 3902, 4371]
+	(u'Delilah', u'Elysee Palace')
+	(u'Delilah', u'Brussels')
+	(u'Delilah', u'Francois Hollande')
+	(u'Delilah', u'Charles de Gaulle')
+	(u'Delilah', u'France')
+	(u'Delilah', u'Belgium')
+	(u'Delilah', u'Paris')
+Cluster: 167
+cluster size: 3
+indices in cluster:  [548, 1458, 1965]
+	(u'Ramon Calderon', u'Carlo Ancelotti')
+	(u'Florentino Perez', u'Carlo Ancelotti')
+	(u'Marca', u'Carlo Ancelotti')
+Cluster: 168
+cluster size: 4
+indices in cluster:  [553, 2797, 3031, 3577]
+	(u'Noemi Letizia', u'Italy')
+	(u'Veronica Lario', u'Rome')
+	(u'Veronica Lario', u'Italy')
+	(u'Noemi Letizia', u'Rome')
+Cluster: 169
+cluster size: 12
+indices in cluster:  [554, 808, 1306, 2113, 2333, 2505, 3171, 3346, 3473, 4136, 4313, 4370]
+	(u'Facebook', u'Africa')
+	(u'Sergey Brin', u'Omar al-Bashir')
+	(u'Wikipedia', u'Kenya')
+	(u'Google', u'Omar al-Bashir')
+	(u'Google', u'Sudan')
+	(u'Wikipedia', u'Africa')
+	(u'Google', u'Kenya')
+	(u'Sergey Brin', u'Khartoum')
+	(u'Google', u'Khartoum')
+	(u'Sergey Brin', u'Sudan')
+	(u'Facebook', u'Kenya')
+	(u'Google', u'Africa')
+Cluster: 170
+cluster size: 10
+indices in cluster:  [256, 555, 1620, 1780, 1948, 2141, 2694, 2700, 3430, 3570]
+	(u'Iran', u'Associated Press')
+	(u'Macedonia', u'Associated Press')
+	(u'Turkey', u'Associated Press')
+	(u'Slovenia', u'Associated Press')
+	(u'Syria', u'Associated Press')
+	(u'Croatia', u'Associated Press')
+	(u'Serbia', u'Associated Press')
+	(u'Balkans', u'Associated Press')
+	(u'Iraq', u'Associated Press')
+	(u'Afghanistan', u'Associated Press')
+Cluster: 171
+cluster size: 6
+indices in cluster:  [568, 719, 1435, 1532, 1719, 2876]
+	(u'New Zealand', u'Elephant Island')
+	(u'New Zealand', u'Shackleton')
+	(u'New Zealand', u'Frank Hurley')
+	(u'New Zealand', u'Weddell Sea')
+	(u'New Zealand', u'Ernest Shackleton')
+	(u'New Zealand', u'Antarctica')
+Cluster: 172
+cluster size: 4
+indices in cluster:  [569, 1310, 1656, 1945]
+	(u'Dublin', u'Pfizer')
+	(u'Dublin', u'Ian Read')
+	(u'Dublin', u'Allergan')
+	(u'Dublin', u'AstraZeneca')
+Cluster: 173
+cluster size: 3
+indices in cluster:  [579, 2312, 3779]
+	(u'George Lucas', u'Jobs')
+	(u'Pixar', u'Jobs')
+	(u'Star Wars', u'Jobs')
+Cluster: 174
+cluster size: 26
+indices in cluster:  [440, 583, 729, 787, 906, 933, 1169, 1194, 1307, 1393, 1743, 2371, 2404, 2530, 2534, 2660, 2787, 2840, 3078, 3255, 3848, 3977, 4137, 4163, 4275, 4542]
+	(u'Europe', u'London')
+	(u'Austria', u'Edinburgh')
+	(u'Brussels', u'London')
+	(u'Christian Democrats', u'London')
+	(u'Berlin', u'London')
+	(u'Brussels', u'Edinburgh')
+	(u'European Union', u'London')
+	(u'Belgium', u'London')
+	(u'Angela Merkel', u'Edinburgh')
+	(u'Bavaria', u'Edinburgh')
+	(u'Hamburg', u'Edinburgh')
+	(u'Christian Democrats', u'Edinburgh')
+	(u'Germany', u'London')
+	(u'European Union', u'Edinburgh')
+	(u'Helmut Kohl', u'Edinburgh')
+	(u'Helmut Kohl', u'London')
+	(u'Hamburg', u'London')
+	(u'Austria', u'London')
+	(u'Belgium', u'Edinburgh')
+	(u'Berlin', u'Edinburgh')
+	(u'Europe', u'Edinburgh')
+	(u'Angela Merkel', u'London')
+	(u'Germany', u'Edinburgh')
+	(u'Bavaria', u'London')
+	(u'Horst Seehofer', u'London')
+	(u'Horst Seehofer', u'Edinburgh')
+Cluster: 175
+cluster size: 3
+indices in cluster:  [593, 1022, 1425]
+	(u'Sudan', u'Ahmed Mohamed')
+	(u'Khartoum', u'Ahmed Mohamed')
+	(u'Omar al-Bashir', u'Ahmed Mohamed')
+Cluster: 176
+cluster size: 10
+indices in cluster:  [598, 655, 919, 1005, 2267, 2526, 2755, 2830, 3075, 4527]
+	(u'Ronaldo', u'Eibar')
+	(u'Marca', u'Eibar')
+	(u'Carlo Ancelotti', u'Eibar')
+	(u'Gareth Bale', u'Eibar')
+	(u'Karim Benzema', u'Eibar')
+	(u'La Liga', u'Eibar')
+	(u'Ramon Calderon', u'Eibar')
+	(u'Florentino Perez', u'Eibar')
+	(u'Cristiano Ronaldo', u'Eibar')
+	(u'Zinedine Zidane', u'Eibar')
+Cluster: 177
+cluster size: 3
+indices in cluster:  [601, 790, 3446]
+	(u'New Jersey', u'CNN')
+	(u'Paterson', u'CNN')
+	(u'Jersey City', u'CNN')
+Cluster: 178
+cluster size: 3
+indices in cluster:  [607, 2430, 3656]
+	(u'Graham Hunter', u'BBC Radio')
+	(u'Graham Hunter', u'BBC Sport')
+	(u'Graham Hunter', u'BBC')
+Cluster: 179
+cluster size: 6
+indices in cluster:  [611, 850, 2182, 2779, 3044, 4593]
+	(u'India', u'Mike Markkula')
+	(u'India', u'Microsoft')
+	(u'India', u'Bill Gates')
+	(u'India', u'Steve Jobs')
+	(u'India', u'Steve Wozniak')
+	(u'India', u'Macbook Air')
+Cluster: 180
+cluster size: 6
+indices in cluster:  [624, 1178, 1525, 4261, 4483, 4528]
+	(u'Nestor Kirchner', u'Argentina')
+	(u'Cristina Fernandez de Kirchner', u'Argentina')
+	(u'Nestor Kirchner', u'Paraguay')
+	(u'Cristina Fernandez de Kirchner', u'Uruguay')
+	(u'Cristina Fernandez de Kirchner', u'Paraguay')
+	(u'Nestor Kirchner', u'Uruguay')
+Cluster: 181
+cluster size: 4
+indices in cluster:  [626, 1834, 3297, 3343]
+	(u'Portugal', u'European Commission')
+	(u'Italy', u'European Commission')
+	(u'Spain', u'European Commission')
+	(u'Greece', u'European Commission')
+Cluster: 182
+cluster size: 8
+indices in cluster:  [629, 1176, 3042, 3306, 3767, 4196, 4355, 4558]
+	(u'Malibu', u'Noel Gallagher')
+	(u'Los Angeles', u'Coldplay')
+	(u'Los Angeles', u'Chris Martin')
+	(u'Malibu', u'Beyonce')
+	(u'Los Angeles', u'Noel Gallagher')
+	(u'Los Angeles', u'Beyonce')
+	(u'Malibu', u'Chris Martin')
+	(u'Malibu', u'Coldplay')
+Cluster: 183
+cluster size: 14
+indices in cluster:  [631, 739, 1728, 1785, 2127, 2273, 2331, 3278, 3442, 3508, 3575, 3729, 4475, 4476]
+	(u'Alan Johnston', u'Enrico Letta')
+	(u'Alan Johnston', u'Rome')
+	(u'Alan Johnston', u'Silvio Berlusconi')
+	(u'Alan Johnston', u'AC Milan')
+	(u'Alan Johnston', u'Romano Prodi')
+	(u'Alan Johnston', u'Forza Italia')
+	(u'Alan Johnston', u'Fininvest')
+	(u'Alan Johnston', u'Veronica Lario')
+	(u'Alan Johnston', u'Mediaset')
+	(u'Alan Johnston', u'Il Giornale')
+	(u'Alan Johnston', u'People of Freedom')
+	(u'Alan Johnston', u'Mario Monti')
+	(u'Alan Johnston', u'Noemi Letizia')
+	(u'Alan Johnston', u'Italy')
+Cluster: 184
+cluster size: 3
+indices in cluster:  [632, 3761, 3925]
+	(u'BBC Sport', u'Graham Hunter')
+	(u'BBC', u'Graham Hunter')
+	(u'BBC Radio', u'Graham Hunter')
+Cluster: 185
+cluster size: 4
+indices in cluster:  [633, 738, 1015, 3150]
+	(u'London', u'Beyonce')
+	(u'London', u'Chris Martin')
+	(u'London', u'Noel Gallagher')
+	(u'London', u'Coldplay')
+Cluster: 186
+cluster size: 5
+indices in cluster:  [573, 637, 2327, 2336, 3478]
+	(u'Germany', u'Stockholm')
+	(u'Portugal', u'Stockholm')
+	(u'Spain', u'Stockholm')
+	(u'Greece', u'Stockholm')
+	(u'Italy', u'Stockholm')
+Cluster: 187
+cluster size: 4
+indices in cluster:  [642, 2469, 3445, 3935]
+	(u'Harry Potter', u'Coldplay')
+	(u'Harry Potter', u'Chris Martin')
+	(u'Harry Potter', u'Noel Gallagher')
+	(u'Harry Potter', u'Beyonce')
+Cluster: 188
+cluster size: 10
+indices in cluster:  [481, 645, 1376, 2306, 2566, 2748, 3095, 3182, 3674, 3748]
+	(u'Atletico Madrid', u'La Liga')
+	(u'Atletico Madrid', u'Ronaldo')
+	(u'Atletico Madrid', u'Carlo Ancelotti')
+	(u'Atletico Madrid', u'Cristiano Ronaldo')
+	(u'Atletico Madrid', u'Florentino Perez')
+	(u'Atletico Madrid', u'Zinedine Zidane')
+	(u'Atletico Madrid', u'Karim Benzema')
+	(u'Atletico Madrid', u'Marca')
+	(u'Atletico Madrid', u'Gareth Bale')
+	(u'Atletico Madrid', u'Ramon Calderon')
+Cluster: 189
+cluster size: 3
+indices in cluster:  [646, 1902, 4619]
+	(u'BBC Sport', u'Perez')
+	(u'BBC', u'Perez')
+	(u'BBC Radio', u'Perez')
+Cluster: 190
+cluster size: 4
+indices in cluster:  [653, 2545, 3100, 4063]
+	(u'Italy', u'Noemi Letizia')
+	(u'Rome', u'Noemi Letizia')
+	(u'Rome', u'Veronica Lario')
+	(u'Italy', u'Veronica Lario')
+Cluster: 191
+cluster size: 3
+indices in cluster:  [660, 2853, 3507]
+	(u'George Lucas', u'Buddhist')
+	(u'Star Wars', u'Buddhist')
+	(u'Pixar', u'Buddhist')
+Cluster: 192
+cluster size: 3
+indices in cluster:  [663, 734, 4267]
+	(u'Castilla', u'BBC Sport')
+	(u'Castilla', u'BBC')
+	(u'Castilla', u'BBC Radio')
+Cluster: 193
+cluster size: 10
+indices in cluster:  [672, 1097, 2105, 2708, 2895, 3166, 3231, 4015, 4017, 4622]
+	(u'Gareth Bale', u'Graham Hunter')
+	(u'Zinedine Zidane', u'Graham Hunter')
+	(u'La Liga', u'Graham Hunter')
+	(u'Florentino Perez', u'Graham Hunter')
+	(u'Ramon Calderon', u'Graham Hunter')
+	(u'Carlo Ancelotti', u'Graham Hunter')
+	(u'Ronaldo', u'Graham Hunter')
+	(u'Marca', u'Graham Hunter')
+	(u'Karim Benzema', u'Graham Hunter')
+	(u'Cristiano Ronaldo', u'Graham Hunter')
+Cluster: 194
+cluster size: 3
+indices in cluster:  [674, 3283, 3921]
+	(u'Il Giornale', u'Romano Prodi')
+	(u'Il Giornale', u'Mario Monti')
+	(u'Il Giornale', u'Silvio Berlusconi')
+Cluster: 195
+cluster size: 8
+indices in cluster:  [678, 1049, 1369, 1652, 1852, 1891, 2742, 4379]
+	(u'Greece', u'Johansson')
+	(u'Germany', u'Johansson')
+	(u'Italy', u'Johansson')
+	(u'Balkans', u'Johansson')
+	(u'Spain', u'Johansson')
+	(u'Europe', u'Johansson')
+	(u'Eastern Europe', u'Johansson')
+	(u'Portugal', u'Johansson')
+Cluster: 196
+cluster size: 6
+indices in cluster:  [683, 1562, 1659, 1960, 2695, 3376]
+	(u'Buddhist', u'Steve Wozniak')
+	(u'Buddhist', u'Microsoft')
+	(u'Buddhist', u'Steve Jobs')
+	(u'Buddhist', u'Bill Gates')
+	(u'Buddhist', u'Macbook Air')
+	(u'Buddhist', u'Mike Markkula')
+Cluster: 197
+cluster size: 6
+indices in cluster:  [684, 751, 779, 783, 2703, 3697]
+	(u'Texas', u'Omar al-Bashir')
+	(u'Texas', u'Sudan')
+	(u'Texas', u'Khartoum')
+	(u'Irving', u'Khartoum')
+	(u'Irving', u'Omar al-Bashir')
+	(u'Irving', u'Sudan')
+Cluster: 198
+cluster size: 5
+indices in cluster:  [697, 2419, 3514, 3678, 4179]
+	(u'Serbia', u'Bangladesh')
+	(u'Macedonia', u'Bangladesh')
+	(u'Balkans', u'Bangladesh')
+	(u'Croatia', u'Bangladesh')
+	(u'Slovenia', u'Bangladesh')
+Cluster: 199
+cluster size: 6
+indices in cluster:  [709, 870, 1650, 2584, 3667, 3820]
+	(u'Ernest Shackleton', u'New Zealand')
+	(u'Antarctica', u'New Zealand')
+	(u'Weddell Sea', u'New Zealand')
+	(u'Shackleton', u'New Zealand')
+	(u'Elephant Island', u'New Zealand')
+	(u'Frank Hurley', u'New Zealand')
+Cluster: 200
+cluster size: 15
+indices in cluster:  [712, 911, 1121, 1251, 1420, 1557, 1939, 2537, 2873, 3065, 3112, 3795, 3832, 4050, 4059]
+	(u'Balkans', u'Italy')
+	(u'Europe', u'Greece')
+	(u'Europe', u'Italy')
+	(u'Eastern Europe', u'Italy')
+	(u'Balkans', u'Spain')
+	(u'Europe', u'Portugal')
+	(u'Eastern Europe', u'Portugal')
+	(u'Eastern Europe', u'Spain')
+	(u'Balkans', u'Greece')
+	(u'Eastern Europe', u'Greece')
+	(u'Serbia', u'Greece')
+	(u'Slovenia', u'Greece')
+	(u'Croatia', u'Greece')
+	(u'Balkans', u'Portugal')
+	(u'Europe', u'Spain')
+Cluster: 201
+cluster size: 8
+indices in cluster:  [716, 1657, 1951, 2280, 2992, 3947, 4340, 4501]
+	(u'Noel Gallagher', u'BBC')
+	(u'Noel Gallagher', u'BBC Radio')
+	(u'Beyonce', u'BBC')
+	(u'Beyonce', u'BBC Radio')
+	(u'Coldplay', u'BBC Radio')
+	(u'Coldplay', u'BBC')
+	(u'Chris Martin', u'BBC Radio')
+	(u'Chris Martin', u'BBC')
+Cluster: 202
+cluster size: 11
+indices in cluster:  [728, 1038, 1158, 1397, 2790, 2866, 3397, 3533, 3562, 3760, 4027]
+	(u'Castilla', u'Carlo Ancelotti')
+	(u'Castilla', u'Marca')
+	(u'Castilla', u'Karim Benzema')
+	(u'Castilla', u'Florentino Perez')
+	(u'Castilla', u'Ronaldo')
+	(u'Castilla', u'La Liga')
+	(u'Castilla', u'Cristiano Ronaldo')
+	(u'Castilla', u'Zinedine Zidane')
+	(u'Castilla', u'Eibar')
+	(u'Castilla', u'Ramon Calderon')
+	(u'Castilla', u'Gareth Bale')
+Cluster: 203
+cluster size: 3
+indices in cluster:  [733, 3160, 3603]
+	(u'Daniel Scioli', u'Uruguay')
+	(u'Daniel Scioli', u'Paraguay')
+	(u'Daniel Scioli', u'Argentina')
+Cluster: 204
+cluster size: 3
+indices in cluster:  [744, 4539, 4608]
+	(u'Ahmed Mohamed', u'Khartoum')
+	(u'Ahmed Mohamed', u'Omar al-Bashir')
+	(u'Ahmed Mohamed', u'Sudan')
+Cluster: 205
+cluster size: 5
+indices in cluster:  [749, 1061, 2412, 3425, 4211]
+	(u'EU', u'Iraq')
+	(u'EU', u'Iran')
+	(u'EU', u'Turkey')
+	(u'EU', u'Syria')
+	(u'EU', u'Afghanistan')
+Cluster: 206
+cluster size: 3
+indices in cluster:  [752, 2265, 2908]
+	(u'New Jersey', u'Paris')
+	(u'Jersey City', u'Paris')
+	(u'Paterson', u'Paris')
+Cluster: 207
+cluster size: 3
+indices in cluster:  [758, 2088, 2253]
+	(u'BBC Sport', u'Andy West')
+	(u'BBC Radio', u'Andy West')
+	(u'BBC', u'Andy West')
+Cluster: 208
+cluster size: 3
+indices in cluster:  [766, 1500, 1908]
+	(u'Palo Alto', u'Greenpeace')
+	(u'Silicon Valley', u'Greenpeace')
+	(u'San Francisco', u'Greenpeace')
+Cluster: 209
+cluster size: 16
+indices in cluster:  [768, 1114, 1448, 1512, 2021, 2203, 2365, 2416, 2463, 2652, 3338, 3576, 3635, 3641, 3968, 4005]
+	(u'Germany', u'David Cameron')
+	(u'France', u'David Cameron')
+	(u'Horst Seehofer', u'David Cameron')
+	(u'Hamburg', u'David Cameron')
+	(u'Europe', u'David Cameron')
+	(u'Paris', u'David Cameron')
+	(u'Brussels', u'David Cameron')
+	(u'Charles de Gaulle', u'David Cameron')
+	(u'Angela Merkel', u'David Cameron')
+	(u'Berlin', u'David Cameron')
+	(u'Bavaria', u'David Cameron')
+	(u'Christian Democrats', u'David Cameron')
+	(u'European Union', u'David Cameron')
+	(u'Austria', u'David Cameron')
+	(u'Helmut Kohl', u'David Cameron')
+	(u'Belgium', u'David Cameron')
+Cluster: 210
+cluster size: 3
+indices in cluster:  [769, 943, 4233]
+	(u'Abdulfattah Jandali', u'George Lucas')
+	(u'Abdulfattah Jandali', u'Star Wars')
+	(u'Abdulfattah Jandali', u'Pixar')
+Cluster: 211
+cluster size: 3
+indices in cluster:  [773, 2889, 4153]
+	(u'European Central Bank', u'Williamson')
+	(u'Central Bank', u'Williamson')
+	(u'Mario Draghi', u'Williamson')
+Cluster: 212
+cluster size: 5
+indices in cluster:  [777, 2309, 2559, 2932, 3800]
+	(u'Macedonia', u'Katya Adler')
+	(u'Balkans', u'Katya Adler')
+	(u'Slovenia', u'Katya Adler')
+	(u'Serbia', u'Katya Adler')
+	(u'Croatia', u'Katya Adler')
+Cluster: 213
+cluster size: 12
+indices in cluster:  [781, 995, 1063, 1505, 1981, 2237, 2301, 2377, 2507, 3553, 3838, 4373]
+	(u'Liberia', u'World Health Organization')
+	(u'Liberia', u'Margaret Chan')
+	(u'West Africa', u'World Health Organization')
+	(u'Sierra Leone', u'Peter Piot')
+	(u'West Africa', u'Margaret Chan')
+	(u'Guinea', u'Peter Piot')
+	(u'Sierra Leone', u'Margaret Chan')
+	(u'West Africa', u'Peter Piot')
+	(u'Guinea', u'World Health Organization')
+	(u'Liberia', u'Peter Piot')
+	(u'Guinea', u'Margaret Chan')
+	(u'Sierra Leone', u'World Health Organization')
+Cluster: 214
+cluster size: 6
+indices in cluster:  [742, 792, 1243, 1262, 2444, 3555]
+	(u'Manila', u'Asia-Pacific')
+	(u'Bulacan', u'Europe')
+	(u'Luzon', u'Europe')
+	(u'Loren Legarda', u'Europe')
+	(u'Philippines', u'Europe')
+	(u'Philippines', u'Asia-Pacific')
+Cluster: 215
+cluster size: 6
+indices in cluster:  [797, 967, 2236, 2565, 4226, 4467]
+	(u'Elephant Island', u'London')
+	(u'Weddell Sea', u'London')
+	(u'Frank Hurley', u'London')
+	(u'Antarctica', u'London')
+	(u'Shackleton', u'London')
+	(u'Ernest Shackleton', u'London')
+Cluster: 216
+cluster size: 4
+indices in cluster:  [801, 1215, 3591, 3788]
+	(u'Pfizer', u'Bernie Sanders')
+	(u'Allergan', u'Bernie Sanders')
+	(u'Ian Read', u'Bernie Sanders')
+	(u'AstraZeneca', u'Bernie Sanders')
+Cluster: 217
+cluster size: 6
+indices in cluster:  [803, 1095, 3860, 4251, 4598, 4605]
+	(u'Texas', u'Turkey')
+	(u'Texas', u'Qatar')
+	(u'Irving', u'Jordan')
+	(u'Irving', u'Qatar')
+	(u'Texas', u'Jordan')
+	(u'Irving', u'Turkey')
+Cluster: 218
+cluster size: 4
+indices in cluster:  [805, 942, 3889, 4212]
+	(u'Zane Lowe', u'BBC Radio')
+	(u'Zane Lowe', u'BBC')
+	(u'Nick Grimshaw', u'BBC')
+	(u'Nick Grimshaw', u'BBC Radio')
+Cluster: 219
+cluster size: 4
+indices in cluster:  [809, 2055, 2061, 3527]
+	(u'Los Angeles', u'Nick Grimshaw')
+	(u'Los Angeles', u'Zane Lowe')
+	(u'Malibu', u'Zane Lowe')
+	(u'Malibu', u'Nick Grimshaw')
+Cluster: 220
+cluster size: 3
+indices in cluster:  [813, 2417, 3373]
+	(u'Omar al-Bashir', u'Qatar')
+	(u'Khartoum', u'Qatar')
+	(u'Sudan', u'Qatar')
+Cluster: 221
+cluster size: 3
+indices in cluster:  [820, 999, 4626]
+	(u'Syria', u'Bangladesh')
+	(u'Iran', u'Bangladesh')
+	(u'Turkey', u'Bangladesh')
+Cluster: 222
+cluster size: 8
+indices in cluster:  [836, 1441, 2086, 2564, 3128, 3214, 3318, 3898]
+	(u'Ostermalm', u'Spain')
+	(u'Ostermalm', u'Greece')
+	(u'Ostermalm', u'Germany')
+	(u'Ostermalm', u'Portugal')
+	(u'Ostermalm', u'Balkans')
+	(u'Ostermalm', u'Eastern Europe')
+	(u'Ostermalm', u'Italy')
+	(u'Ostermalm', u'Europe')
+Cluster: 223
+cluster size: 4
+indices in cluster:  [842, 974, 2724, 3013]
+	(u'Glastonbury', u'Chris Martin')
+	(u'Glastonbury', u'Coldplay')
+	(u'Glastonbury', u'Noel Gallagher')
+	(u'Glastonbury', u'Beyonce')
+Cluster: 224
+cluster size: 3
+indices in cluster:  [843, 3701, 3895]
+	(u'US', u'Jersey City')
+	(u'US', u'New Jersey')
+	(u'US', u'Paterson')
+Cluster: 225
+cluster size: 3
+indices in cluster:  [853, 2627, 3094]
+	(u'Buddhist', u'San Francisco')
+	(u'Buddhist', u'Silicon Valley')
+	(u'Buddhist', u'Palo Alto')
+Cluster: 226
+cluster size: 3
+indices in cluster:  [859, 1179, 4484]
+	(u'Paterson', u'Christie')
+	(u'Jersey City', u'Christie')
+	(u'New Jersey', u'Christie')
+Cluster: 227
+cluster size: 8
+indices in cluster:  [861, 1237, 2342, 2647, 3017, 3288, 4020, 4581]
+	(u'Gareth Bale', u'Ramon Calderon')
+	(u'Gareth Bale', u'Florentino Perez')
+	(u'Gareth Bale', u'Ronaldo')
+	(u'Gareth Bale', u'Marca')
+	(u'Gareth Bale', u'Karim Benzema')
+	(u'Gareth Bale', u'Zinedine Zidane')
+	(u'Gareth Bale', u'Cristiano Ronaldo')
+	(u'Gareth Bale', u'La Liga')
+Cluster: 228
+cluster size: 3
+indices in cluster:  [878, 1246, 2999]
+	(u'SpaceX', u'LA')
+	(u'Elon Musk', u'LA')
+	(u'Nasa', u'LA')
+Cluster: 229
+cluster size: 3
+indices in cluster:  [880, 3103, 3347]
+	(u'Rome', u'Mario Monti')
+	(u'Rome', u'Silvio Berlusconi')
+	(u'Rome', u'Romano Prodi')
+Cluster: 230
+cluster size: 5
+indices in cluster:  [881, 1624, 1881, 2521, 2688]
+	(u'China', u'Loren Legarda')
+	(u'China', u'Bulacan')
+	(u'China', u'Philippines')
+	(u'China', u'Luzon')
+	(u'China', u'Manila')
+Cluster: 231
+cluster size: 6
+indices in cluster:  [882, 1883, 1889, 2035, 4500, 4594]
+	(u'World Health Organization', u'WHO')
+	(u'The Lancet', u'WHO')
+	(u'London School of Hygiene & Tropical Medicine', u'WHO')
+	(u'Wellcome Trust', u'WHO')
+	(u'Margaret Chan', u'WHO')
+	(u'Peter Piot', u'WHO')
+Cluster: 232
+cluster size: 4
+indices in cluster:  [883, 913, 2864, 3073]
+	(u'Manila', u'South China Sea')
+	(u'Manila', u'Spratly Islands')
+	(u'Philippines', u'South China Sea')
+	(u'Philippines', u'Spratly Islands')
+Cluster: 233
+cluster size: 3
+indices in cluster:  [891, 1186, 2298]
+	(u'Irving Independent School District', u'Jordan')
+	(u'Irving Independent School District', u'Turkey')
+	(u'Irving Independent School District', u'Qatar')
+Cluster: 234
+cluster size: 8
+indices in cluster:  [895, 1240, 1268, 1694, 2092, 2093, 2217, 2359]
+	(u'Noel Gallagher', u'Malibu')
+	(u'Chris Martin', u'Los Angeles')
+	(u'Coldplay', u'Los Angeles')
+	(u'Noel Gallagher', u'Los Angeles')
+	(u'Chris Martin', u'Malibu')
+	(u'Beyonce', u'Malibu')
+	(u'Coldplay', u'Malibu')
+	(u'Beyonce', u'Los Angeles')
+Cluster: 235
+cluster size: 4
+indices in cluster:  [406, 898, 1688, 3859]
+	(u'Malaysia', u'Japan')
+	(u'Kuala Lumpur', u'Japan')
+	(u'Kuala Lumpur', u'South Korea')
+	(u'Malaysia', u'South Korea')
+Cluster: 236
+cluster size: 6
+indices in cluster:  [900, 2196, 3036, 3333, 3391, 4169]
+	(u'Noemi Letizia', u'Silvio Berlusconi')
+	(u'Veronica Lario', u'Silvio Berlusconi')
+	(u'Veronica Lario', u'Mario Monti')
+	(u'Noemi Letizia', u'Romano Prodi')
+	(u'Veronica Lario', u'Romano Prodi')
+	(u'Noemi Letizia', u'Mario Monti')
+Cluster: 237
+cluster size: 3
+indices in cluster:  [902, 2157, 2952]
+	(u'Fininvest', u'Romano Prodi')
+	(u'Fininvest', u'Mario Monti')
+	(u'Fininvest', u'Silvio Berlusconi')
+Cluster: 238
+cluster size: 3
+indices in cluster:  [605, 918, 963]
+	(u'Gavin Hewitt', u'Turkey')
+	(u'Gavin Hewitt', u'Syria')
+	(u'Gavin Hewitt', u'Iran')
+Cluster: 239
+cluster size: 6
+indices in cluster:  [921, 1283, 1449, 2029, 2079, 2665]
+	(u'Europe', u'Philippines')
+	(u'Europe', u'Bulacan')
+	(u'Asia-Pacific', u'Philippines')
+	(u'Europe', u'Loren Legarda')
+	(u'Asia-Pacific', u'Manila')
+	(u'Europe', u'Luzon')
+Cluster: 240
+cluster size: 3
+indices in cluster:  [923, 1446, 2729]
+	(u'Uruguay', u'Daniel Scioli')
+	(u'Paraguay', u'Daniel Scioli')
+	(u'Argentina', u'Daniel Scioli')
+Cluster: 241
+cluster size: 6
+indices in cluster:  [932, 1239, 1934, 2320, 3061, 3470]
+	(u'Ernest Shackleton', u'UK')
+	(u'Weddell Sea', u'UK')
+	(u'Elephant Island', u'UK')
+	(u'Frank Hurley', u'UK')
+	(u'Shackleton', u'UK')
+	(u'Antarctica', u'UK')
+Cluster: 242
+cluster size: 5
+indices in cluster:  [946, 2153, 3082, 3589, 4100]
+	(u'Croatia', u'Morocco')
+	(u'Slovenia', u'Morocco')
+	(u'Balkans', u'Morocco')
+	(u'Macedonia', u'Morocco')
+	(u'Serbia', u'Morocco')
+Cluster: 243
+cluster size: 5
+indices in cluster:  [962, 1057, 1690, 2091, 3039]
+	(u'India', u'Loren Legarda')
+	(u'India', u'Bulacan')
+	(u'India', u'Luzon')
+	(u'India', u'Manila')
+	(u'India', u'Philippines')
+Cluster: 244
+cluster size: 3
+indices in cluster:  [977, 3772, 4496]
+	(u'Europe', u'European Commission')
+	(u'Eastern Europe', u'European Commission')
+	(u'Europe', u'European Union')
+Cluster: 245
+cluster size: 6
+indices in cluster:  [980, 1362, 1858, 3960, 4274, 4624]
+	(u'Russia', u'Reuters')
+	(u'Crimea', u'Reuters')
+	(u'Ukraine', u'Reuters')
+	(u'Moscow', u'Reuters')
+	(u'Arseniy Yatsenyuk', u'Reuters')
+	(u'Sevastopol', u'Reuters')
+Cluster: 246
+cluster size: 3
+indices in cluster:  [1004, 1691, 3931]
+	(u'Greenpeace', u'Palo Alto')
+	(u'Greenpeace', u'San Francisco')
+	(u'Greenpeace', u'Silicon Valley')
+Cluster: 247
+cluster size: 3
+indices in cluster:  [1008, 3052, 3212]
+	(u'Jobs', u'San Francisco')
+	(u'Jobs', u'Palo Alto')
+	(u'Jobs', u'Silicon Valley')
+Cluster: 248
+cluster size: 3
+indices in cluster:  [1016, 2004, 2190]
+	(u'Syria', u'Islamic State')
+	(u'Turkey', u'Islamic State')
+	(u'Iran', u'Islamic State')
+Cluster: 249
+cluster size: 3
+indices in cluster:  [333, 1029, 2450]
+	(u'Steve Jobs', u'Apple')
+	(u'Steve Wozniak', u'Apple')
+	(u'Mike Markkula', u'Apple')
+Cluster: 250
+cluster size: 3
+indices in cluster:  [1039, 1913, 4635]
+	(u'Silicon Valley', u'Jobs')
+	(u'San Francisco', u'Jobs')
+	(u'Palo Alto', u'Jobs')
+Cluster: 251
+cluster size: 6
+indices in cluster:  [190, 1040, 2077, 2212, 3501, 4356]
+	(u'Daniel Scioli', u'Leopoldo Lopez')
+	(u'Paraguay', u'Leopoldo Lopez')
+	(u'Nestor Kirchner', u'Leopoldo Lopez')
+	(u'Argentina', u'Leopoldo Lopez')
+	(u'Cristina Fernandez de Kirchner', u'Leopoldo Lopez')
+	(u'Uruguay', u'Leopoldo Lopez')
+Cluster: 252
+cluster size: 6
+indices in cluster:  [987, 1000, 1048, 1375, 3566, 4165]
+	(u'Asia Pacific', u'Kuala Lumpur')
+	(u'Asia Pacific', u'Manila')
+	(u'Asia Pacific', u'South China Sea')
+	(u'Asia Pacific', u'Spratly Islands')
+	(u'Asia Pacific', u'Philippines')
+	(u'Asia Pacific', u'Malaysia')
+Cluster: 253
+cluster size: 3
+indices in cluster:  [1050, 3587, 4047]
+	(u'Silvio Berlusconi', u'Enrico Letta')
+	(u'Mario Monti', u'Enrico Letta')
+	(u'Romano Prodi', u'Enrico Letta')
+Cluster: 254
+cluster size: 4
+indices in cluster:  [1056, 2394, 3823, 4432]
+	(u'Washington', u'Philippines')
+	(u'Washington', u'Manila')
+	(u'Washington', u'South China Sea')
+	(u'Washington', u'Spratly Islands')
+Cluster: 255
+cluster size: 6
+indices in cluster:  [1058, 2705, 2917, 3880, 4292, 4486]
+	(u'Star Wars', u'Microsoft')
+	(u'Star Wars', u'Bill Gates')
+	(u'Pixar', u'Microsoft')
+	(u'Pixar', u'Bill Gates')
+	(u'George Lucas', u'Microsoft')
+	(u'George Lucas', u'Bill Gates')
+Cluster: 256
+cluster size: 3
+indices in cluster:  [1075, 3395, 4426]
+	(u'Jordan', u'Irving Independent School District')
+	(u'Qatar', u'Irving Independent School District')
+	(u'Turkey', u'Irving Independent School District')
+Cluster: 257
+cluster size: 9
+indices in cluster:  [818, 979, 1080, 1317, 1816, 2762, 2763, 3897, 4028]
+	(u'Silicon Valley', u'Mike Markkula')
+	(u'Silicon Valley', u'Steve Jobs')
+	(u'Palo Alto', u'Steve Wozniak')
+	(u'Palo Alto', u'Steve Jobs')
+	(u'Palo Alto', u'Mike Markkula')
+	(u'Silicon Valley', u'Steve Wozniak')
+	(u'San Francisco', u'Mike Markkula')
+	(u'San Francisco', u'Steve Jobs')
+	(u'San Francisco', u'Steve Wozniak')
+Cluster: 258
+cluster size: 4
+indices in cluster:  [651, 1085, 1895, 3455]
+	(u'Royal Geographical Society', u'Weddell Sea')
+	(u'Royal Geographical Society', u'Elephant Island')
+	(u'Royal Geographical Society', u'Ernest Shackleton')
+	(u'Royal Geographical Society', u'Antarctica')
+Cluster: 259
+cluster size: 11
+indices in cluster:  [1096, 1293, 1311, 1395, 1552, 2001, 2151, 3024, 3686, 3718, 3985]
+	(u'Central Bank', u'France')
+	(u'Central Bank', u'Germany')
+	(u'Central Bank', u'Europe')
+	(u'Mario Draghi', u'France')
+	(u'Greece', u'Paris')
+	(u'Mario Draghi', u'Paris')
+	(u'European Central Bank', u'Germany')
+	(u'European Central Bank', u'Paris')
+	(u'Central Bank', u'Paris')
+	(u'Mario Draghi', u'Germany')
+	(u'European Central Bank', u'France')
+Cluster: 260
+cluster size: 4
+indices in cluster:  [1098, 1980, 2189, 3401]
+	(u'Spratly Islands', u'Washington')
+	(u'South China Sea', u'Washington')
+	(u'Philippines', u'Washington')
+	(u'Manila', u'Washington')
+Cluster: 261
+cluster size: 3
+indices in cluster:  [1111, 2683, 4166]
+	(u'Turkey', u'Omar al-Bashir')
+	(u'Turkey', u'Sudan')
+	(u'Turkey', u'Khartoum')
+Cluster: 262
+cluster size: 4
+indices in cluster:  [366, 1115, 2520, 3883]
+	(u'New York', u'Ian Read')
+	(u'New York', u'Allergan')
+	(u'New York', u'Pfizer')
+	(u'New York', u'AstraZeneca')
+Cluster: 263
+cluster size: 3
+indices in cluster:  [1116, 1519, 2888]
+	(u'Forza Italia', u'Mario Monti')
+	(u'Forza Italia', u'Silvio Berlusconi')
+	(u'Forza Italia', u'Romano Prodi')
+Cluster: 264
+cluster size: 4
+indices in cluster:  [184, 1120, 2045, 3546]
+	(u'Weddell Sea', u'Royal Geographical Society')
+	(u'Elephant Island', u'Royal Geographical Society')
+	(u'Antarctica', u'Royal Geographical Society')
+	(u'Ernest Shackleton', u'Royal Geographical Society')
+Cluster: 265
+cluster size: 3
+indices in cluster:  [1127, 3439, 4342]
+	(u'Argentina', u'Mauricio Macri')
+	(u'Paraguay', u'Mauricio Macri')
+	(u'Uruguay', u'Mauricio Macri')
+Cluster: 266
+cluster size: 4
+indices in cluster:  [1132, 1209, 1236, 1837]
+	(u'Manila', u'Kuala Lumpur')
+	(u'Philippines', u'Kuala Lumpur')
+	(u'Philippines', u'Malaysia')
+	(u'Manila', u'Malaysia')
+Cluster: 267
+cluster size: 3
+indices in cluster:  [1140, 1827, 3982]
+	(u'BBC', u'UK')
+	(u'BBC', u'US')
+	(u'BBC Radio', u'UK')
+Cluster: 268
+cluster size: 3
+indices in cluster:  [1143, 4069, 4186]
+	(u'Sudan', u'US')
+	(u'Khartoum', u'US')
+	(u'Omar al-Bashir', u'US')
+Cluster: 269
+cluster size: 4
+indices in cluster:  [1146, 1265, 1405, 1563]
+	(u'Luzon', u'Lando')
+	(u'Philippines', u'Lando')
+	(u'Loren Legarda', u'Lando')
+	(u'Bulacan', u'Lando')
+Cluster: 270
+cluster size: 3
+indices in cluster:  [1150, 1961, 3444]
+	(u'Romano Prodi', u'Rome')
+	(u'Mario Monti', u'Rome')
+	(u'Silvio Berlusconi', u'Rome')
+Cluster: 271
+cluster size: 10
+indices in cluster:  [725, 1168, 1188, 1585, 1884, 2282, 2531, 3093, 3926, 4182]
+	(u'Associated Press', u'Afghanistan')
+	(u'Associated Press', u'Slovenia')
+	(u'Associated Press', u'Serbia')
+	(u'Associated Press', u'Macedonia')
+	(u'Associated Press', u'Iraq')
+	(u'Associated Press', u'Syria')
+	(u'Associated Press', u'Croatia')
+	(u'Associated Press', u'Turkey')
+	(u'Associated Press', u'Iran')
+	(u'Associated Press', u'Balkans')
+Cluster: 272
+cluster size: 5
+indices in cluster:  [1183, 1639, 1794, 2390, 4649]
+	(u'Bangladesh', u'Serbia')
+	(u'Bangladesh', u'Balkans')
+	(u'Bangladesh', u'Croatia')
+	(u'Bangladesh', u'Macedonia')
+	(u'Bangladesh', u'Slovenia')
+Cluster: 273
+cluster size: 6
+indices in cluster:  [1184, 1264, 1997, 2201, 2675, 4409]
+	(u'Steve Jobs', u'George Lucas')
+	(u'Steve Jobs', u'Star Wars')
+	(u'Steve Wozniak', u'George Lucas')
+	(u'Steve Wozniak', u'Star Wars')
+	(u'Mike Markkula', u'Star Wars')
+	(u'Mike Markkula', u'George Lucas')
+Cluster: 274
+cluster size: 4
+indices in cluster:  [1203, 1514, 3777, 4287]
+	(u'Beyonce', u'Glastonbury')
+	(u'Noel Gallagher', u'Glastonbury')
+	(u'Coldplay', u'Glastonbury')
+	(u'Chris Martin', u'Glastonbury')
+Cluster: 275
+cluster size: 5
+indices in cluster:  [1248, 2396, 3060, 3118, 3728]
+	(u'Katya Adler', u'Balkans')
+	(u'Katya Adler', u'Slovenia')
+	(u'Katya Adler', u'Serbia')
+	(u'Katya Adler', u'Croatia')
+	(u'Katya Adler', u'Macedonia')
+Cluster: 276
+cluster size: 4
+indices in cluster:  [1253, 1648, 1820, 4156]
+	(u'Financial Times', u'Germany')
+	(u'Financial Times', u'Europe')
+	(u'Financial Times', u'Paris')
+	(u'Financial Times', u'France')
+Cluster: 277
+cluster size: 4
+indices in cluster:  [1263, 2213, 2658, 3148]
+	(u'Sergey Brin', u'Irving')
+	(u'Sergey Brin', u'Texas')
+	(u'Google', u'Irving')
+	(u'Google', u'Texas')
+Cluster: 278
+cluster size: 3
+indices in cluster:  [1275, 1541, 4404]
+	(u'New Jersey', u'Alabama')
+	(u'Jersey City', u'Alabama')
+	(u'Paterson', u'Alabama')
+Cluster: 279
+cluster size: 3
+indices in cluster:  [1280, 1469, 2348]
+	(u'Paris', u'Jersey City')
+	(u'Paris', u'New Jersey')
+	(u'Paris', u'Paterson')
+Cluster: 280
+cluster size: 6
+indices in cluster:  [1298, 1998, 2347, 2833, 3789, 4391]
+	(u'Paris', u'Montrouge')
+	(u'France', u'Montrouge')
+	(u'Belgium', u'Montrouge')
+	(u'Brussels', u'Montrouge')
+	(u'Francois Hollande', u'Montrouge')
+	(u'Elysee Palace', u'Montrouge')
+Cluster: 281
+cluster size: 4
+indices in cluster:  [41, 1321, 1703, 3813]
+	(u'Macbook Air', u'Greenpeace')
+	(u'Steve Jobs', u'Greenpeace')
+	(u'Steve Wozniak', u'Greenpeace')
+	(u'Mike Markkula', u'Greenpeace')
+Cluster: 282
+cluster size: 4
+indices in cluster:  [1323, 2733, 3855, 4472]
+	(u'Noel Gallagher', u'Martin')
+	(u'Beyonce', u'Martin')
+	(u'Chris Martin', u'Martin')
+	(u'Coldplay', u'Martin')
+Cluster: 283
+cluster size: 9
+indices in cluster:  [140, 198, 1325, 2408, 2563, 2955, 3121, 3461, 3684]
+	(u'Mike Markkula', u'Silicon Valley')
+	(u'Steve Wozniak', u'Silicon Valley')
+	(u'Steve Wozniak', u'Palo Alto')
+	(u'Mike Markkula', u'San Francisco')
+	(u'Mike Markkula', u'Palo Alto')
+	(u'Steve Jobs', u'Silicon Valley')
+	(u'Steve Wozniak', u'San Francisco')
+	(u'Steve Jobs', u'San Francisco')
+	(u'Steve Jobs', u'Palo Alto')
+Cluster: 284
+cluster size: 6
+indices in cluster:  [1329, 2504, 3265, 3451, 3787, 3990]
+	(u'UK', u'Beyonce')
+	(u'UK', u'Coldplay')
+	(u'UK', u'Nick Grimshaw')
+	(u'UK', u'Chris Martin')
+	(u'UK', u'Zane Lowe')
+	(u'UK', u'Noel Gallagher')
+Cluster: 285
+cluster size: 6
+indices in cluster:  [1341, 1699, 1790, 3003, 3015, 3259]
+	(u'WHO', u'Wellcome Trust')
+	(u'WHO', u'World Health Organization')
+	(u'WHO', u'Margaret Chan')
+	(u'WHO', u'London School of Hygiene & Tropical Medicine')
+	(u'WHO', u'Peter Piot')
+	(u'WHO', u'The Lancet')
+Cluster: 286
+cluster size: 3
+indices in cluster:  [1347, 3274, 3515]
+	(u'Mauricio Macri', u'Paraguay')
+	(u'Mauricio Macri', u'Argentina')
+	(u'Mauricio Macri', u'Uruguay')
+Cluster: 287
+cluster size: 3
+indices in cluster:  [1385, 3184, 4152]
+	(u'La Liga', u'Ronaldo')
+	(u'La Liga', u'Zinedine Zidane')
+	(u'La Liga', u'Cristiano Ronaldo')
+Cluster: 288
+cluster size: 3
+indices in cluster:  [1401, 1675, 1977]
+	(u'San Francisco', u'Macbook Air')
+	(u'Palo Alto', u'Macbook Air')
+	(u'Silicon Valley', u'Macbook Air')
+Cluster: 289
+cluster size: 5
+indices in cluster:  [349, 1412, 2420, 2995, 3919]
+	(u'Turkey', u'EU')
+	(u'Syria', u'EU')
+	(u'Iraq', u'EU')
+	(u'Afghanistan', u'EU')
+	(u'Iran', u'EU')
+Cluster: 290
+cluster size: 4
+indices in cluster:  [1421, 2434, 3247, 3804]
+	(u'UN', u'Bulacan')
+	(u'UN', u'Loren Legarda')
+	(u'UN', u'Luzon')
+	(u'UN', u'Philippines')
+Cluster: 291
+cluster size: 9
+indices in cluster:  [647, 1444, 1745, 1966, 2046, 3230, 3412, 3471, 3879]
+	(u'India', u'US')
+	(u'Malaysia', u'US')
+	(u'Manila', u'US')
+	(u'Spratly Islands', u'US')
+	(u'Philippines', u'US')
+	(u'South China Sea', u'US')
+	(u'Kuala Lumpur', u'US')
+	(u'Vietnam', u'UK')
+	(u'Vietnam', u'US')
+Cluster: 292
+cluster size: 3
+indices in cluster:  [1493, 2411, 2461]
+	(u'Paraguay', u'Michelle Bachelet')
+	(u'Argentina', u'Michelle Bachelet')
+	(u'Uruguay', u'Michelle Bachelet')
+Cluster: 293
+cluster size: 3
+indices in cluster:  [1497, 3008, 4071]
+	(u'Alabama', u'New Jersey')
+	(u'Alabama', u'Jersey City')
+	(u'Alabama', u'Paterson')
+Cluster: 294
+cluster size: 12
+indices in cluster:  [291, 474, 1312, 1504, 1560, 2188, 2764, 3034, 3615, 4317, 4488, 4506]
+	(u'Fininvest', u'Milan')
+	(u'Rome', u'Milan')
+	(u'Il Giornale', u'Milan')
+	(u'Mediaset', u'Milan')
+	(u'Italy', u'Milan')
+	(u'Mario Monti', u'Milan')
+	(u'Veronica Lario', u'Milan')
+	(u'People of Freedom', u'Milan')
+	(u'Noemi Letizia', u'Milan')
+	(u'Forza Italia', u'Milan')
+	(u'Silvio Berlusconi', u'Milan')
+	(u'Romano Prodi', u'Milan')
+Cluster: 295
+cluster size: 3
+indices in cluster:  [251, 1523, 3336]
+	(u'Tesla', u'Nasa')
+	(u'Tesla', u'SpaceX')
+	(u'Tesla', u'Elon Musk')
+Cluster: 296
+cluster size: 4
+indices in cluster:  [1527, 2849, 3488, 3644]
+	(u'Luzon', u'Paris')
+	(u'Bulacan', u'Paris')
+	(u'Loren Legarda', u'Paris')
+	(u'Philippines', u'Paris')
+Cluster: 297
+cluster size: 3
+indices in cluster:  [1528, 1577, 1849]
+	(u'Mediaset', u'Romano Prodi')
+	(u'Mediaset', u'Silvio Berlusconi')
+	(u'Mediaset', u'Mario Monti')
+Cluster: 298
+cluster size: 4
+indices in cluster:  [1534, 1993, 2617, 4307]
+	(u'Guinea', u'WHO')
+	(u'West Africa', u'WHO')
+	(u'Sierra Leone', u'WHO')
+	(u'Liberia', u'WHO')
+Cluster: 299
+cluster size: 4
+indices in cluster:  [1538, 3781, 4280, 4365]
+	(u'Allergan', u'Donald Trump')
+	(u'Pfizer', u'Donald Trump')
+	(u'Ian Read', u'Donald Trump')
+	(u'AstraZeneca', u'Donald Trump')
+Cluster: 300
+cluster size: 8
+indices in cluster:  [1547, 1942, 2978, 3294, 3741, 4205, 4249, 4394]
+	(u'Vietnam', u'Portugal')
+	(u'Vietnam', u'Germany')
+	(u'Vietnam', u'Balkans')
+	(u'Vietnam', u'Eastern Europe')
+	(u'Vietnam', u'Europe')
+	(u'Vietnam', u'Greece')
+	(u'Vietnam', u'Spain')
+	(u'Vietnam', u'Italy')
+Cluster: 301
+cluster size: 3
+indices in cluster:  [1567, 3903, 4225]
+	(u'Romano Prodi', u'Forza Italia')
+	(u'Silvio Berlusconi', u'Forza Italia')
+	(u'Mario Monti', u'Forza Italia')
+Cluster: 302
+cluster size: 3
+indices in cluster:  [1583, 2062, 3220]
+	(u'Paraguay', u'Venezuela')
+	(u'Argentina', u'Venezuela')
+	(u'Uruguay', u'Venezuela')
+Cluster: 303
+cluster size: 3
+indices in cluster:  [397, 1575, 1594]
+	(u'Pixar', u'Apple')
+	(u'Star Wars', u'Apple')
+	(u'George Lucas', u'Apple')
+Cluster: 304
+cluster size: 3
+indices in cluster:  [901, 1597, 2449]
+	(u'Elon Musk', u'Tesla')
+	(u'SpaceX', u'Tesla')
+	(u'Nasa', u'Tesla')
+Cluster: 305
+cluster size: 6
+indices in cluster:  [1598, 2561, 3415, 4201, 4514, 4616]
+	(u'Reuters', u'Sevastopol')
+	(u'Reuters', u'Russia')
+	(u'Reuters', u'Arseniy Yatsenyuk')
+	(u'Reuters', u'Crimea')
+	(u'Reuters', u'Moscow')
+	(u'Reuters', u'Ukraine')
+Cluster: 306
+cluster size: 3
+indices in cluster:  [1599, 1760, 4164]
+	(u'Andy West', u'BBC')
+	(u'Andy West', u'BBC Sport')
+	(u'Andy West', u'BBC Radio')
+Cluster: 307
+cluster size: 3
+indices in cluster:  [1355, 1609, 2863]
+	(u'Belgium', u'Hamburg')
+	(u'Belgium', u'Berlin')
+	(u'Belgium', u'Germany')
+Cluster: 308
+cluster size: 4
+indices in cluster:  [1612, 3143, 4024, 4145]
+	(u'Dublin', u'UK')
+	(u'Ireland', u'US')
+	(u'Dublin', u'US')
+	(u'Ireland', u'UK')
+Cluster: 309
+cluster size: 4
+indices in cluster:  [509, 1629, 1947, 3972]
+	(u'Philippines', u'Japan')
+	(u'Manila', u'Japan')
+	(u'Philippines', u'South Korea')
+	(u'Manila', u'South Korea')
+Cluster: 310
+cluster size: 8
+indices in cluster:  [1632, 2338, 2427, 2476, 2687, 2776, 2923, 4154]
+	(u'BBC Radio', u'Beyonce')
+	(u'BBC Radio', u'Coldplay')
+	(u'BBC', u'Chris Martin')
+	(u'BBC', u'Beyonce')
+	(u'BBC', u'Coldplay')
+	(u'BBC', u'Noel Gallagher')
+	(u'BBC Radio', u'Noel Gallagher')
+	(u'BBC Radio', u'Chris Martin')
+Cluster: 311
+cluster size: 4
+indices in cluster:  [1324, 1642, 1812, 3396]
+	(u'Paris', u'Joe Kaeser')
+	(u'Germany', u'Joe Kaeser')
+	(u'Europe', u'Joe Kaeser')
+	(u'France', u'Joe Kaeser')
+Cluster: 312
+cluster size: 3
+indices in cluster:  [1643, 3257, 3915]
+	(u'Mario Monti', u'Il Giornale')
+	(u'Silvio Berlusconi', u'Il Giornale')
+	(u'Romano Prodi', u'Il Giornale')
+Cluster: 313
+cluster size: 3
+indices in cluster:  [1663, 2842, 3598]
+	(u'Christie', u'New Jersey')
+	(u'Christie', u'Paterson')
+	(u'Christie', u'Jersey City')
+Cluster: 314
+cluster size: 4
+indices in cluster:  [338, 1679, 3449, 3511]
+	(u'Joe Kaeser', u'Paris')
+	(u'Joe Kaeser', u'Europe')
+	(u'Joe Kaeser', u'Germany')
+	(u'Joe Kaeser', u'France')
+Cluster: 315
+cluster size: 3
+indices in cluster:  [1685, 2487, 3307]
+	(u'Russia', u'Arseniy Yatsenyuk')
+	(u'Moscow', u'Arseniy Yatsenyuk')
+	(u'Ukraine', u'Arseniy Yatsenyuk')
+Cluster: 316
+cluster size: 8
+indices in cluster:  [1381, 1695, 2731, 2857, 3405, 3630, 4195, 4375]
+	(u'Balkans', u'Vietnam')
+	(u'Portugal', u'Vietnam')
+	(u'Germany', u'Vietnam')
+	(u'Spain', u'Vietnam')
+	(u'Italy', u'Vietnam')
+	(u'Europe', u'Vietnam')
+	(u'Greece', u'Vietnam')
+	(u'Eastern Europe', u'Vietnam')
+Cluster: 317
+cluster size: 3
+indices in cluster:  [1386, 1697, 4041]
+	(u'Arseniy Yatsenyuk', u'Moscow')
+	(u'Arseniy Yatsenyuk', u'Russia')
+	(u'Arseniy Yatsenyuk', u'Ukraine')
+Cluster: 318
+cluster size: 4
+indices in cluster:  [1708, 1869, 4364, 4642]
+	(u'China', u'Asia Pacific')
+	(u'South Korea', u'Asia Pacific')
+	(u'Xi Jinping', u'Asia Pacific')
+	(u'Japan', u'Asia Pacific')
+Cluster: 319
+cluster size: 4
+indices in cluster:  [1721, 1796, 1861, 2805]
+	(u'Loren Legarda', u'BBC')
+	(u'Bulacan', u'BBC')
+	(u'Philippines', u'BBC')
+	(u'Luzon', u'BBC')
+Cluster: 320
+cluster size: 4
+indices in cluster:  [782, 1724, 3387, 4207]
+	(u'Asia Pacific', u'Xi Jinping')
+	(u'Asia Pacific', u'South Korea')
+	(u'Asia Pacific', u'Japan')
+	(u'Asia Pacific', u'China')
+Cluster: 321
+cluster size: 3
+indices in cluster:  [1729, 2798, 3000]
+	(u'BBC', u'Barcelona')
+	(u'BBC Sport', u'Barcelona')
+	(u'BBC Radio', u'Barcelona')
+Cluster: 322
+cluster size: 3
+indices in cluster:  [120, 1377, 1733]
+	(u'BBC', u'Iran')
+	(u'BBC', u'Turkey')
+	(u'BBC', u'Syria')
+Cluster: 323
+cluster size: 3
+indices in cluster:  [1746, 2435, 2619]
+	(u'Romano Prodi', u'People of Freedom')
+	(u'Mario Monti', u'People of Freedom')
+	(u'Silvio Berlusconi', u'People of Freedom')
+Cluster: 324
+cluster size: 3
+indices in cluster:  [1747, 3293, 4499]
+	(u'Jobs', u'Pixar')
+	(u'Jobs', u'Star Wars')
+	(u'Jobs', u'George Lucas')
+Cluster: 325
+cluster size: 6
+indices in cluster:  [1756, 2128, 2472, 2621, 2715, 3067]
+	(u'Cristiano Ronaldo', u'Florentino Perez')
+	(u'Karim Benzema', u'Florentino Perez')
+	(u'Ronaldo', u'Ramon Calderon')
+	(u'Karim Benzema', u'Ramon Calderon')
+	(u'Cristiano Ronaldo', u'Ramon Calderon')
+	(u'Ronaldo', u'Florentino Perez')
+Cluster: 326
+cluster size: 5
+indices in cluster:  [1771, 2880, 3731, 4380, 4648]
+	(u'Serbia', u'Gavin Hewitt')
+	(u'Croatia', u'Gavin Hewitt')
+	(u'Macedonia', u'Gavin Hewitt')
+	(u'Balkans', u'Gavin Hewitt')
+	(u'Slovenia', u'Gavin Hewitt')
+Cluster: 327
+cluster size: 3
+indices in cluster:  [1777, 2032, 4143]
+	(u'Trump', u'Paterson')
+	(u'Trump', u'New Jersey')
+	(u'Trump', u'Jersey City')
+Cluster: 328
+cluster size: 3
+indices in cluster:  [1791, 2491, 2553]
+	(u'People of Freedom', u'Mario Monti')
+	(u'People of Freedom', u'Romano Prodi')
+	(u'People of Freedom', u'Silvio Berlusconi')
+Cluster: 329
+cluster size: 3
+indices in cluster:  [1807, 3337, 4285]
+	(u'San Francisco', u'Buddhist')
+	(u'Palo Alto', u'Buddhist')
+	(u'Silicon Valley', u'Buddhist')
+Cluster: 330
+cluster size: 3
+indices in cluster:  [1832, 1853, 3666]
+	(u'Sudan', u'Irving Independent School District')
+	(u'Omar al-Bashir', u'Irving Independent School District')
+	(u'Khartoum', u'Irving Independent School District')
+Cluster: 331
+cluster size: 3
+indices in cluster:  [1404, 1846, 4574]
+	(u'Richard Branson', u'Nasa')
+	(u'Richard Branson', u'SpaceX')
+	(u'Richard Branson', u'Elon Musk')
+Cluster: 332
+cluster size: 4
+indices in cluster:  [1856, 2786, 3599, 3679]
+	(u'WHO', u'Guinea')
+	(u'WHO', u'West Africa')
+	(u'WHO', u'Liberia')
+	(u'WHO', u'Sierra Leone')
+Cluster: 333
+cluster size: 4
+indices in cluster:  [1862, 1866, 3263, 4555]
+	(u'Paris', u'Loren Legarda')
+	(u'Paris', u'Bulacan')
+	(u'Paris', u'Philippines')
+	(u'Paris', u'Luzon')
+Cluster: 334
+cluster size: 4
+indices in cluster:  [1452, 1870, 1954, 3014]
+	(u'Ian Read', u'Washington')
+	(u'Allergan', u'Washington')
+	(u'AstraZeneca', u'Washington')
+	(u'Pfizer', u'Washington')
+Cluster: 335
+cluster size: 3
+indices in cluster:  [570, 1885, 4359]
+	(u'Nasa', u'Google')
+	(u'SpaceX', u'Google')
+	(u'Elon Musk', u'Google')
+Cluster: 336
+cluster size: 3
+indices in cluster:  [1590, 1893, 4607]
+	(u'UK', u'Nasa')
+	(u'UK', u'SpaceX')
+	(u'UK', u'Elon Musk')
+Cluster: 337
+cluster size: 3
+indices in cluster:  [1915, 2245, 3918]
+	(u'Silicon Valley', u'India')
+	(u'Palo Alto', u'India')
+	(u'San Francisco', u'India')
+Cluster: 338
+cluster size: 10
+indices in cluster:  [49, 1969, 2165, 3319, 3496, 3584, 3669, 4228, 4244, 4595]
+	(u'Il Giornale', u'Telemilano')
+	(u'Veronica Lario', u'Telemilano')
+	(u'Italy', u'Telemilano')
+	(u'Rome', u'Telemilano')
+	(u'Silvio Berlusconi', u'Telemilano')
+	(u'Forza Italia', u'Telemilano')
+	(u'Romano Prodi', u'Telemilano')
+	(u'Mario Monti', u'Telemilano')
+	(u'People of Freedom', u'Telemilano')
+	(u'Noemi Letizia', u'Telemilano')
+Cluster: 339
+cluster size: 4
+indices in cluster:  [935, 1971, 3037, 3498]
+	(u'Donald Trump', u'Ian Read')
+	(u'Donald Trump', u'Pfizer')
+	(u'Donald Trump', u'AstraZeneca')
+	(u'Donald Trump', u'Allergan')
+Cluster: 340
+cluster size: 3
+indices in cluster:  [1510, 1976, 4526]
+	(u'Buddhist', u'Pixar')
+	(u'Buddhist', u'George Lucas')
+	(u'Buddhist', u'Star Wars')
+Cluster: 341
+cluster size: 3
+indices in cluster:  [375, 1978, 4031]
+	(u'Montrouge', u'Syria')
+	(u'Montrouge', u'Iraq')
+	(u'Montrouge', u'Islamic State')
+Cluster: 342
+cluster size: 3
+indices in cluster:  [2003, 2456, 3945]
+	(u'Perez', u'BBC Sport')
+	(u'Perez', u'BBC')
+	(u'Perez', u'BBC Radio')
+Cluster: 343
+cluster size: 3
+indices in cluster:  [2030, 2562, 3487]
+	(u'CNN', u'Paterson')
+	(u'CNN', u'Jersey City')
+	(u'CNN', u'New Jersey')
+Cluster: 344
+cluster size: 6
+indices in cluster:  [2039, 2316, 2499, 2529, 3830, 3986]
+	(u'Nasa', u'California')
+	(u'SpaceX', u'San Francisco')
+	(u'Elon Musk', u'California')
+	(u'Nasa', u'San Francisco')
+	(u'SpaceX', u'California')
+	(u'Elon Musk', u'San Francisco')
+Cluster: 345
+cluster size: 3
+indices in cluster:  [650, 1595, 2040]
+	(u'UK', u'Bernie Sanders')
+	(u'US', u'Senate')
+	(u'US', u'Bernie Sanders')
+Cluster: 346
+cluster size: 3
+indices in cluster:  [2050, 3723, 4312]
+	(u'Silicon Valley', u'Abdulfattah Jandali')
+	(u'San Francisco', u'Abdulfattah Jandali')
+	(u'Palo Alto', u'Abdulfattah Jandali')
+Cluster: 347
+cluster size: 6
+indices in cluster:  [636, 2083, 2256, 3881, 3923, 4260]
+	(u'Shackleton', u'Hooper')
+	(u'Ernest Shackleton', u'Hooper')
+	(u'Elephant Island', u'Hooper')
+	(u'Antarctica', u'Hooper')
+	(u'Weddell Sea', u'Hooper')
+	(u'Frank Hurley', u'Hooper')
+Cluster: 348
+cluster size: 3
+indices in cluster:  [920, 2095, 2244]
+	(u'Siemens', u'Mario Draghi')
+	(u'Siemens', u'European Central Bank')
+	(u'Siemens', u'Central Bank')
+Cluster: 349
+cluster size: 3
+indices in cluster:  [2104, 3329, 4248]
+	(u'Mario Monti', u'Mediaset')
+	(u'Silvio Berlusconi', u'Mediaset')
+	(u'Romano Prodi', u'Mediaset')
+Cluster: 350
+cluster size: 3
+indices in cluster:  [1568, 2110, 4497]
+	(u'Marca', u'Zinedine Zidane')
+	(u'Ramon Calderon', u'Zinedine Zidane')
+	(u'Florentino Perez', u'Zinedine Zidane')
+Cluster: 351
+cluster size: 3
+indices in cluster:  [2132, 2146, 2912]
+	(u'Michelle Bachelet', u'Uruguay')
+	(u'Michelle Bachelet', u'Argentina')
+	(u'Michelle Bachelet', u'Paraguay')
+Cluster: 352
+cluster size: 4
+indices in cluster:  [565, 2160, 3311, 4184]
+	(u'Noel Gallagher', u'London')
+	(u'Chris Martin', u'London')
+	(u'Beyonce', u'London')
+	(u'Coldplay', u'London')
+Cluster: 353
+cluster size: 3
+indices in cluster:  [2174, 2193, 4172]
+	(u'BBC Sport', u'Manchester United')
+	(u'BBC', u'Manchester United')
+	(u'BBC Radio', u'Manchester United')
+Cluster: 354
+cluster size: 3
+indices in cluster:  [2191, 2438, 3194]
+	(u'Paterson', u'White House')
+	(u'Jersey City', u'White House')
+	(u'New Jersey', u'White House')
+Cluster: 355
+cluster size: 3
+indices in cluster:  [1867, 2279, 4318]
+	(u'Bangladesh', u'Turkey')
+	(u'Bangladesh', u'Syria')
+	(u'Bangladesh', u'Iran')
+Cluster: 356
+cluster size: 4
+indices in cluster:  [1413, 2300, 2806, 3155]
+	(u'Bangladesh', u'Germany')
+	(u'Bangladesh', u'Europe')
+	(u'Bangladesh', u'Greece')
+	(u'India', u'Europe')
+Cluster: 357
+cluster size: 4
+indices in cluster:  [563, 2308, 3165, 4068]
+	(u'South Korea', u'Malaysia')
+	(u'South Korea', u'Kuala Lumpur')
+	(u'Japan', u'Kuala Lumpur')
+	(u'Japan', u'Malaysia')
+Cluster: 358
+cluster size: 4
+indices in cluster:  [1894, 2349, 3579, 4538]
+	(u'Williamson', u'Paris')
+	(u'Williamson', u'Germany')
+	(u'Williamson', u'France')
+	(u'Williamson', u'Europe')
+Cluster: 359
+cluster size: 3
+indices in cluster:  [215, 2352, 2973]
+	(u'Star Wars', u'Abdulfattah Jandali')
+	(u'George Lucas', u'Abdulfattah Jandali')
+	(u'Pixar', u'Abdulfattah Jandali')
+Cluster: 360
+cluster size: 3
+indices in cluster:  [929, 2431, 4644]
+	(u'Jersey City', u'Steven Fulop')
+	(u'New Jersey', u'Steven Fulop')
+	(u'Paterson', u'Steven Fulop')
+Cluster: 361
+cluster size: 3
+indices in cluster:  [2441, 3825, 4140]
+	(u'Qatar', u'Khartoum')
+	(u'Qatar', u'Omar al-Bashir')
+	(u'Qatar', u'Sudan')
+Cluster: 362
+cluster size: 3
+indices in cluster:  [1874, 2459, 4082]
+	(u'Liverpool', u'BBC')
+	(u'Liverpool', u'BBC Radio')
+	(u'Liverpool', u'BBC Sport')
+Cluster: 363
+cluster size: 3
+indices in cluster:  [264, 2464, 3364]
+	(u'Facebook', u'Google')
+	(u'Facebook', u'Larry Page')
+	(u'Facebook', u'Sergey Brin')
+Cluster: 364
+cluster size: 3
+indices in cluster:  [1346, 2509, 3930]
+	(u'Central Bank', u'Siemens')
+	(u'European Central Bank', u'Siemens')
+	(u'Mario Draghi', u'Siemens')
+Cluster: 365
+cluster size: 3
+indices in cluster:  [196, 344, 2532]
+	(u'Imperial College London', u'Elon Musk')
+	(u'Imperial College London', u'Nasa')
+	(u'Imperial College London', u'SpaceX')
+Cluster: 366
+cluster size: 3
+indices in cluster:  [951, 2572, 4229]
+	(u'Senate', u'US')
+	(u'Bernie Sanders', u'US')
+	(u'Bernie Sanders', u'UK')
+Cluster: 367
+cluster size: 4
+indices in cluster:  [2575, 3794, 4368, 4392]
+	(u'Syria', u'Merkel')
+	(u'Syria', u'Cameron')
+	(u'Sudan', u'Merkel')
+	(u'Iraq', u'Cameron')
+Cluster: 368
+cluster size: 3
+indices in cluster:  [2622, 2785, 4478]
+	(u'Apple', u'Palo Alto')
+	(u'Apple', u'San Francisco')
+	(u'Apple', u'Silicon Valley')
+Cluster: 369
+cluster size: 3
+indices in cluster:  [759, 2706, 3491]
+	(u'Hamburg', u'Belgium')
+	(u'Berlin', u'Belgium')
+	(u'Germany', u'Belgium')
+Cluster: 370
+cluster size: 3
+indices in cluster:  [2714, 3554, 3714]
+	(u'BBC Sport', u'Castilla')
+	(u'BBC', u'Castilla')
+	(u'BBC Radio', u'Castilla')
+Cluster: 371
+cluster size: 3
+indices in cluster:  [2380, 2745, 3167]
+	(u'Macbook Air', u'Pixar')
+	(u'Macbook Air', u'George Lucas')
+	(u'Macbook Air', u'Star Wars')
+Cluster: 372
+cluster size: 3
+indices in cluster:  [2747, 3033, 4176]
+	(u'AC Milan', u'Mario Monti')
+	(u'AC Milan', u'Silvio Berlusconi')
+	(u'AC Milan', u'Romano Prodi')
+Cluster: 373
+cluster size: 3
+indices in cluster:  [2773, 3348, 4002]
+	(u'Abdulfattah Jandali', u'Palo Alto')
+	(u'Abdulfattah Jandali', u'San Francisco')
+	(u'Abdulfattah Jandali', u'Silicon Valley')
+Cluster: 374
+cluster size: 3
+indices in cluster:  [1912, 2789, 4647]
+	(u'Google', u'Elon Musk')
+	(u'Google', u'SpaceX')
+	(u'Google', u'Nasa')
+Cluster: 375
+cluster size: 4
+indices in cluster:  [478, 505, 2807, 3032]
+	(u'Obama', u'Manila')
+	(u'Obama', u'Kuala Lumpur')
+	(u'Obama', u'Philippines')
+	(u'Obama', u'Malaysia')
+Cluster: 376
+cluster size: 3
+indices in cluster:  [152, 2831, 4238]
+	(u'Zinedine Zidane', u'Marca')
+	(u'Zinedine Zidane', u'Ramon Calderon')
+	(u'Zinedine Zidane', u'Florentino Perez')
+Cluster: 377
+cluster size: 3
+indices in cluster:  [2832, 2966, 4617]
+	(u'Williamson', u'European Central Bank')
+	(u'Williamson', u'Mario Draghi')
+	(u'Williamson', u'Central Bank')
+Cluster: 378
+cluster size: 3
+indices in cluster:  [203, 2827, 2856]
+	(u'Germany', u'Associated Press')
+	(u'Greece', u'Associated Press')
+	(u'Europe', u'Associated Press')
+Cluster: 379
+cluster size: 3
+indices in cluster:  [2893, 4170, 4633]
+	(u'PayPal', u'SpaceX')
+	(u'PayPal', u'Elon Musk')
+	(u'PayPal', u'Nasa')
+Cluster: 380
+cluster size: 4
+indices in cluster:  [958, 2911, 4013, 4116]
+	(u'European Commission', u'Greece')
+	(u'European Commission', u'Portugal')
+	(u'European Commission', u'Italy')
+	(u'European Commission', u'Spain')
+Cluster: 381
+cluster size: 3
+indices in cluster:  [2961, 3876, 4305]
+	(u'Enrico Letta', u'Romano Prodi')
+	(u'Enrico Letta', u'Mario Monti')
+	(u'Enrico Letta', u'Silvio Berlusconi')
+Cluster: 382
+cluster size: 4
+indices in cluster:  [399, 1318, 2964, 3866]
+	(u'Kuala Lumpur', u'Obama')
+	(u'Manila', u'Obama')
+	(u'Malaysia', u'Obama')
+	(u'Philippines', u'Obama')
+Cluster: 383
+cluster size: 3
+indices in cluster:  [2968, 4056, 4639]
+	(u'Paterson', u'Manhattan')
+	(u'New Jersey', u'Manhattan')
+	(u'Jersey City', u'Manhattan')
+Cluster: 384
+cluster size: 3
+indices in cluster:  [2969, 4376, 4438]
+	(u'Donald Trump', u'US')
+	(u'Trump', u'US')
+	(u'Donald Trump', u'UK')
+Cluster: 385
+cluster size: 3
+indices in cluster:  [1374, 2593, 3043]
+	(u'Stockholm', u'Europe')
+	(u'Stockholm', u'Balkans')
+	(u'Stockholm', u'Eastern Europe')
+Cluster: 386
+cluster size: 4
+indices in cluster:  [1992, 3059, 3463, 3688]
+	(u'Manila', u'Russia')
+	(u'Philippines', u'Russia')
+	(u'Kuala Lumpur', u'Russia')
+	(u'Malaysia', u'Russia')
+Cluster: 387
+cluster size: 3
+indices in cluster:  [3098, 3388, 3958]
+	(u'India', u'George Lucas')
+	(u'India', u'Pixar')
+	(u'India', u'Star Wars')
+Cluster: 388
+cluster size: 3
+indices in cluster:  [3102, 3510, 3904]
+	(u'Star Wars', u'US')
+	(u'Pixar', u'US')
+	(u'George Lucas', u'US')
+Cluster: 389
+cluster size: 4
+indices in cluster:  [3106, 4266, 4300, 4523]
+	(u'South China Sea', u'Philippines')
+	(u'Spratly Islands', u'Philippines')
+	(u'South China Sea', u'Manila')
+	(u'Spratly Islands', u'Manila')
+Cluster: 390
+cluster size: 3
+indices in cluster:  [3130, 4180, 4209]
+	(u'SpaceX', u'UK')
+	(u'Elon Musk', u'UK')
+	(u'Nasa', u'UK')
+Cluster: 391
+cluster size: 5
+indices in cluster:  [3168, 3710, 4173, 4516, 4533]
+	(u'Serbia', u'Paris')
+	(u'Slovenia', u'Paris')
+	(u'Croatia', u'Paris')
+	(u'Balkans', u'Paris')
+	(u'Macedonia', u'Paris')
+Cluster: 392
+cluster size: 3
+indices in cluster:  [1009, 1854, 3187]
+	(u'Nasa', u'Musk')
+	(u'Elon Musk', u'Musk')
+	(u'SpaceX', u'Musk')
+Cluster: 393
+cluster size: 3
+indices in cluster:  [456, 3210, 4461]
+	(u'Abdulfattah Jandali', u'Mike Markkula')
+	(u'Abdulfattah Jandali', u'Steve Wozniak')
+	(u'Abdulfattah Jandali', u'Steve Jobs')
+Cluster: 394
+cluster size: 3
+indices in cluster:  [3240, 3328, 4326]
+	(u'New Jersey', u'US')
+	(u'Paterson', u'US')
+	(u'Jersey City', u'US')
+Cluster: 395
+cluster size: 3
+indices in cluster:  [940, 3267, 3281]
+	(u'Turkey', u'BBC')
+	(u'Iran', u'BBC')
+	(u'Syria', u'BBC')
+Cluster: 396
+cluster size: 4
+indices in cluster:  [704, 846, 3308, 3917]
+	(u'Europe', u'Financial Times')
+	(u'Paris', u'Financial Times')
+	(u'Germany', u'Financial Times')
+	(u'France', u'Financial Times')
+Cluster: 397
+cluster size: 3
+indices in cluster:  [1389, 3360, 3474]
+	(u'Musk', u'Elon Musk')
+	(u'Musk', u'SpaceX')
+	(u'Musk', u'Nasa')
+Cluster: 398
+cluster size: 4
+indices in cluster:  [2173, 3363, 3563, 4296]
+	(u'Merkel', u'Sudan')
+	(u'Cameron', u'Syria')
+	(u'Merkel', u'Syria')
+	(u'Cameron', u'Iraq')
+Cluster: 399
+cluster size: 3
+indices in cluster:  [1516, 3447, 4362]
+	(u'BBC Sport', u'Liverpool')
+	(u'BBC Radio', u'Liverpool')
+	(u'BBC', u'Liverpool')
+Cluster: 400
+cluster size: 3
+indices in cluster:  [884, 1411, 3509]
+	(u'Nasa', u'Richard Branson')
+	(u'Elon Musk', u'Richard Branson')
+	(u'SpaceX', u'Richard Branson')
+Cluster: 401
+cluster size: 3
+indices in cluster:  [317, 2861, 3541]
+	(u'Germany', u'Spain')
+	(u'Germany', u'Greece')
+	(u'Germany', u'Portugal')
+Cluster: 402
+cluster size: 4
+indices in cluster:  [3565, 3785, 4144, 4398]
+	(u'US', u'China')
+	(u'US', u'Xi Jinping')
+	(u'US', u'Japan')
+	(u'US', u'South Korea')
+Cluster: 403
+cluster size: 4
+indices in cluster:  [1319, 2332, 3658, 4189]
+	(u'Greece', u'Bangladesh')
+	(u'Europe', u'India')
+	(u'Europe', u'Bangladesh')
+	(u'Germany', u'Bangladesh')
+Cluster: 404
+cluster size: 3
+indices in cluster:  [1382, 3783, 4012]
+	(u'Steven Fulop', u'Paterson')
+	(u'Steven Fulop', u'New Jersey')
+	(u'Steven Fulop', u'Jersey City')
+Cluster: 405
+cluster size: 3
+indices in cluster:  [2980, 3233, 3798]
+	(u'Marca', u'Karim Benzema')
+	(u'Marca', u'Ronaldo')
+	(u'Marca', u'Cristiano Ronaldo')
+Cluster: 406
+cluster size: 3
+indices in cluster:  [3092, 3845, 4019]
+	(u'Elon Musk', u'PayPal')
+	(u'SpaceX', u'PayPal')
+	(u'Nasa', u'PayPal')
+Cluster: 407
+cluster size: 3
+indices in cluster:  [1487, 1572, 3850]
+	(u'Islamic State', u'Iran')
+	(u'Islamic State', u'Turkey')
+	(u'Islamic State', u'Syria')
+Cluster: 408
+cluster size: 3
+indices in cluster:  [3208, 3916, 4347]
+	(u'Apple', u'Steve Jobs')
+	(u'Apple', u'Steve Wozniak')
+	(u'Apple', u'Mike Markkula')
+Cluster: 409
+cluster size: 3
+indices in cluster:  [1220, 3643, 3936]
+	(u'Star Wars', u'Macbook Air')
+	(u'Pixar', u'Macbook Air')
+	(u'George Lucas', u'Macbook Air')
+Cluster: 410
+cluster size: 3
+indices in cluster:  [2757, 3406, 3943]
+	(u'Mike Markkula', u'Abdulfattah Jandali')
+	(u'Steve Jobs', u'Abdulfattah Jandali')
+	(u'Steve Wozniak', u'Abdulfattah Jandali')
+Cluster: 411
+cluster size: 3
+indices in cluster:  [887, 1539, 3984]
+	(u'Associated Press', u'Greece')
+	(u'Associated Press', u'Germany')
+	(u'Associated Press', u'Europe')
+Cluster: 412
+cluster size: 3
+indices in cluster:  [3459, 4036, 4599]
+	(u'Ronaldo', u'Marca')
+	(u'Cristiano Ronaldo', u'Marca')
+	(u'Karim Benzema', u'Marca')
+Cluster: 413
+cluster size: 3
+indices in cluster:  [654, 735, 4039]
+	(u'Greenpeace', u'Pixar')
+	(u'Greenpeace', u'Star Wars')
+	(u'Greenpeace', u'George Lucas')
+Cluster: 414
+cluster size: 3
+indices in cluster:  [1701, 3068, 4109]
+	(u'European Commission', u'Eastern Europe')
+	(u'European Union', u'Europe')
+	(u'European Commission', u'Europe')
+Cluster: 415
+cluster size: 3
+indices in cluster:  [959, 1964, 4113]
+	(u'Google', u'Facebook')
+	(u'Sergey Brin', u'Facebook')
+	(u'Larry Page', u'Facebook')
+Cluster: 416
+cluster size: 3
+indices in cluster:  [888, 4255, 4265]
+	(u'Ronaldo', u'Carlo Ancelotti')
+	(u'Karim Benzema', u'Carlo Ancelotti')
+	(u'Cristiano Ronaldo', u'Carlo Ancelotti')
+Cluster: 417
+cluster size: 3
+indices in cluster:  [4335, 4489, 4597]
+	(u'Tabare Vazquez', u'Uruguay')
+	(u'Tabare Vazquez', u'Argentina')
+	(u'Tabare Vazquez', u'Paraguay')
+Cluster: 418
+cluster size: 3
+indices in cluster:  [998, 4188, 4366]
+	(u'Apple', u'Pixar')
+	(u'Apple', u'Star Wars')
+	(u'Apple', u'George Lucas')
+Cluster: 419
+cluster size: 3
+indices in cluster:  [2080, 4053, 4491]
+	(u'Carlo Ancelotti', u'Florentino Perez')
+	(u'Carlo Ancelotti', u'Marca')
+	(u'Carlo Ancelotti', u'Ramon Calderon')
+Cluster: 420
+cluster size: 3
+indices in cluster:  [2586, 3833, 4513]
+	(u'Carlo Ancelotti', u'Ronaldo')
+	(u'Carlo Ancelotti', u'Karim Benzema')
+	(u'Carlo Ancelotti', u'Cristiano Ronaldo')
+Cluster: 421
+cluster size: 3
+indices in cluster:  [798, 3258, 4549]
+	(u'Slovenia', u'Macedonia')
+	(u'Serbia', u'Macedonia')
+	(u'Croatia', u'Macedonia')
