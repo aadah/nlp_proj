@@ -67,8 +67,8 @@ def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
         
     # grid search over c and gamma
     print "beginning cross-validation"
-    c_exp_range = range(-2,9) #range(-5,16,2)
-    gamma_exp_range = range(-8,3) #range(-15,4,2)
+    c_exp_range = range(2,5) #range(-2,9) #range(-5,16,2)
+    gamma_exp_range = range(-2,1) #range(-8,3) #range(-15,4,2)
     results = np.zeros((len(c_exp_range),len(gamma_exp_range)))
     c_iter = 0
     gamma_iter = 0
@@ -94,11 +94,11 @@ def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
     return best_c, best_gamma
 
 
-def make_and_save_svm(exp_name):
+def make_and_save_svm(exp_name, train=0.9, cv=0.1, test=0.0):
 
     train_set, train_labels, \
         cv_set, cv_labels, \
-        test_set, test_labels = get_data(0.9,0.1,0.0)
+        test_set, test_labels = get_data(train,cv,test)
 
 ##    print "train_set shape:", train_set.shape, \
 ##          "train_labels shape:", train_labels.shape, \
@@ -112,7 +112,10 @@ def make_and_save_svm(exp_name):
 
     my_svc = create_svm(best_c, best_gamma)
     my_svc.fit(train_set, train_labels)
-    
+    if train_set.shape[0] > 0:
+        score = my_svc.score(test_set, test_labels)
+        print "FINAL SCORE:", score
+        
     joblib.dump(my_svc, config.SVM_RESULTS_DIR+exp_name+"_svm_model.pkl")
 
 def load_svm(filename):
@@ -124,4 +127,16 @@ def fit_svm(test_data, filename):
     return labels
 
 if __name__ == "__main__":
-    make_and_save_svm(sys.argv[1])
+    if len(sys.argv) < 2:
+        print "No action specified."
+    elif sys.argv[1] == "cv":
+        if len(sys.argv) == 6:
+            make_and_save_svm(sys.argv[2], float(sys.argv[3]),
+                              float(sys.argv[4]), float(sys.argv[5]))
+        elif len(sys.argv) == 3:
+            make_and_save_svm(sys.argv[2])
+        else:
+            print "Wrong number of arguments."
+            print "Required arguments: experiment_name train_fraction cv_fraction test_fraction"        
+    else:
+        print "Command '"+sys.argv[1]+"' not recognized. Recognized commands: cv"
