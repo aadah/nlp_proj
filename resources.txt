@@ -16,3 +16,8 @@ nlp_resoures/
 	# Download and unzip: http://nlp.stanford.edu/software/stanford-ner-2014-08-27.zip
 	stanford-ner-2014-08-27/
 		[A BUNCH OF STUFF]
+	
+	# Download and unzip:
+      http://nlp.stanford.edu/software/stanford-parser-full-2015-04-20.zip
+	stanford-parser-full-2015-04-20/
+		[A BUNCH OF STUFF]
