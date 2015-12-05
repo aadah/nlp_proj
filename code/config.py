@@ -29,6 +29,10 @@ STANFORD_3CLASS = '%s/english.all.3class.distsim.crf.ser.gz' % STANFORD_NER_MODE
 STANFORD_4CLASS = '%s/english.conll.4class.distsim.crf.ser.gz' % STANFORD_NER_MODELS_DIR
 STANFORD_7CLASS = '%s/english.muc.7class.distsim.crf.ser.gz' % STANFORD_NER_MODELS_DIR
 
+STANFORD_PARSER_DIR = "%s/stanford-parser-full-2015-04-20" % RESOURCES
+STANFORD_PARSER_JAR = "%s/stanford-parser.jar" % STANFORD_PARSER_DIR
+STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_DIR
+
 # wikidata
 WIKIDATA_ENDPOINT = 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
 WIKIDATA_QUERY_TEMPLATE = 'https://www.wikidata.org/w/index.php?search=%s&search=%s&title=Special%%3ASearch&go=Go'
@@ -164,6 +168,7 @@ TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
 
 # neural net
 TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
+TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
 
 # parameters
 NER_MODE = 'stanford'
