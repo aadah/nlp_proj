@@ -30,7 +30,11 @@ def get_entity_pairs(text):
     if config.PARSER == 'stanford_dep_parser':
         parser = DepParser()
         pair_set = parser.get_entity_pairs(text)
-        return pair_set
+        filtered_pair_set = set()
+        for pair in pair_set:
+            if pair[0] in VM and pair[1] in VM:
+                filtered_pair_set.add(pair)
+        return filtered_pair_set
     entity_set = get_entity_set(text)
     pair_set = set()
     for entity1 in entity_set:
