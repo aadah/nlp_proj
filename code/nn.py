@@ -47,11 +47,11 @@ class AutoEncoderNN(object):
 
 
     def save_params(self, filename):
-        self.graph.save_weights(filename, overwrite=True)
+        self.model.save_weights(filename, overwrite=True)
 
     
     def load_params(self, filename):
-        self.graph.load_weights(filename)
+        self.model.load_weights(filename)
 
 
 class TrainNN2(object):
@@ -307,7 +307,7 @@ def main3():
     _, DD = data.shape
     D = DD / 2
     X = data[:,:D]
-    Y = data[:,D:]
+    Y = data[:,D:]*100 # scale to emphasize differences
 
     _, D = X.shape
 
