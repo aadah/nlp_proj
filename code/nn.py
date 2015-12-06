@@ -19,11 +19,11 @@ class AutoEncoderNN(object):
 
         hidden_dim = input_dim / 2
         
-        model.add(Dense(hidden_dim,
+        model.add(Dense(output_dim=hidden_dim,
                         input_dim=input_dim,
                         activation='sigmoid'))
 
-        model.add(Dense(input_dim,
+        model.add(Dense(output_dim=input_dim,
                         input_dim=hidden_dim,
                         activation='linear'))
 
