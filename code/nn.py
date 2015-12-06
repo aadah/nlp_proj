@@ -316,7 +316,7 @@ def main3():
     n.compile()
 
     print 'training . . .'
-    n.train(X, Y, epochs=100)
+    n.train(X, Y, epochs=15)
 
     print 'saving model params . . .'
     n.save_params(config.AUTOENCODER_PARAMS)
