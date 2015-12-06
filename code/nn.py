@@ -305,8 +305,9 @@ def main3():
 
     data = np.load(config.AUTOENCODER_DATA)
     _, DD = data.shape
-    X = data[:,:DD]
-    Y = data[:,DD:]
+    D = DD / 2
+    X = data[:,:D]
+    Y = data[:,D:]
 
     _, D = X.shape
 
