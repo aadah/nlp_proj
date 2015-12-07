@@ -22,7 +22,7 @@ class AutoEncoderNN(object):
         
         model.add(Dense(output_dim=hidden_dim,
                         input_dim=input_dim,
-                        activation='sigmoid'))
+                        activation='linear'))
 
         model.add(Dense(output_dim=input_dim,
                         input_dim=hidden_dim,
@@ -67,7 +67,7 @@ class AutoEncoderRelations(object):
         model.add(Dense(output_dim=hidden_dim,
                         input_dim=input_dim,
                         weights=hidden_weights,
-                        activation='sigmoid'))
+                        activation='linear'))
 
         self.vm = vector.VectorModel()
         self.model = model
