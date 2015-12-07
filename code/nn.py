@@ -3,6 +3,7 @@ from keras.layers.core import Dense
 from keras.optimizers import SGD
 import numpy as np
 
+import vector
 import config
 
 
@@ -58,7 +59,7 @@ class AutoEncoderRelations(object):
     def __init__(self, input_dim=2000):
         n = AutoEncoderNN(input_dim)
         n.load_params(config.AUTOENCODER_PARAMS)
-        hidden_weights = model.layers[0].get_weights
+        hidden_weights = n.layers[0].get_weights
 
         model = Sequential()
         hidden_dim = input_dim / 2
@@ -68,6 +69,7 @@ class AutoEncoderRelations(object):
                         weights=hidden_weights,
                         activation='sigmoid'))
 
+        self.vm = vector.VectorModel()
         self.model = model
 
         del n
@@ -81,6 +83,17 @@ class AutoEncoderRelations(object):
         Y_pred = self.model.predict(X)
 
         return Y_pred
+
+
+    def rel_vector(self, ent1, ent2):
+        if ent1 in self.vm and ent2 in self.vm:
+            return np.hstack(self.vm[ent1], self.vm[ent2])
+
+        return None
+
+    
+    def close(self):
+        self.vm.close()
 
 
 class TrainNN2(object):
