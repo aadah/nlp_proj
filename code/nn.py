@@ -54,6 +54,35 @@ class AutoEncoderNN(object):
         self.model.load_weights(filename)
 
 
+class AutoEncoderRelations(object):
+    def __init__(self, input_dim=2000):
+        n = AutoEncoderNN(input_dim)
+        n.load_params(config.AUTOENCODER_PARAMS)
+        hidden_weights = model.layers[0].get_weights
+
+        model = Sequential()
+        hidden_dim = input_dim / 2
+        
+        model.add(Dense(output_dim=hidden_dim,
+                        input_dim=input_dim,
+                        weights=hidden_weights,
+                        activation='sigmoid'))
+
+        self.model = model
+
+        del n
+
+
+    def compile(self):
+        self.model.compile(optimizer='sgd', loss='mse')
+
+
+    def predict(self, X):
+        Y_pred = self.model.predict(X)
+
+        return Y_pred
+
+
 class TrainNN2(object):
     def __init__(self, input_dim=4000):
         graph = Graph()
