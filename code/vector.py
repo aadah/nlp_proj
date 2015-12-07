@@ -99,7 +99,7 @@ class MIDVectorModel:
 
 class GensimVectorModel:
     def __init__(self):
-        self.f = Word2Vec(config.FREEBASE_GZ_FILE)
+        self.f = Word2Vec(config.FREEBASE_GZ_FILE, binary=True)
         
         with open(config.ENTITIES_FILE) as f:
             self.entities = [ent.strip() for ent in f.readlines()]
