@@ -59,7 +59,7 @@ class AutoEncoderRelations(object):
     def __init__(self, input_dim=2000):
         n = AutoEncoderNN(input_dim)
         n.load_params(config.AUTOENCODER_PARAMS)
-        hidden_weights = n.model.layers[0].get_weights
+        hidden_weights = n.model.layers[0].get_weights()
 
         model = Sequential()
         hidden_dim = input_dim / 2
