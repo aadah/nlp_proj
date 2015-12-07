@@ -87,7 +87,7 @@ class AutoEncoderRelations(object):
 
     def rel_vector(self, ent1, ent2):
         if ent1 in self.vm and ent2 in self.vm:
-            return np.hstack(self.vm[ent1], self.vm[ent2])
+            return np.hstack([self.vm[ent1], self.vm[ent2]])
 
         return None
 
