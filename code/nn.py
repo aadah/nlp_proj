@@ -363,7 +363,7 @@ def main3():
     n.compile()
 
     print 'training . . .'
-    n.train(X, Y, epochs=15)
+    n.train(X, Y, epochs=100)
 
     print 'saving model params . . .'
     n.save_params(config.AUTOENCODER_PARAMS)
