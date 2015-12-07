@@ -8,6 +8,7 @@ RESOURCES = "%s/nlp_resources" % DOCUMENTS
 WORD2VEC_DIR = "%s/word2vec" % RESOURCES
 ENTITIES_FILE = "%s/entities" % WORD2VEC_DIR
 MAPPINGS_FILE = "%s/mappings" % WORD2VEC_DIR
+GOOGLE_NEWS_GZ_FILE = "%s/GoogleNews-vectors-negative300.bin.gz" % WORD2VEC_DIR
 FREEBASE_GZ_FILE = "%s/freebase-vectors-skipgram1000-en.bin.gz" % WORD2VEC_DIR
 FREEBASE_FILE = "%s/freebase-vectors-skipgram1000-en.bin.hdf5" % WORD2VEC_DIR
 MID_FREEBASE_FILE = "%s/freebase-vectors-skipgram1000.bin.hdf5" % WORD2VEC_DIR
