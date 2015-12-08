@@ -347,7 +347,7 @@ def main2():
     print 'Done!'
 
 
-def main3():
+def main3(cont=False):
     #return
 
     data = np.load(config.AUTOENCODER_DATA)
@@ -360,10 +360,14 @@ def main3():
 
     print 'building/compiling model . . .'
     n = AutoEncoderNN(D)
+    
+    if cont:
+        n.load_params(config.AUTOENCODER_PARAMS)
+
     n.compile()
 
     print 'training . . .'
-    n.train(X, Y, epochs=100)
+    n.train(X, Y, epochs=500)
 
     print 'saving model params . . .'
     n.save_params(config.AUTOENCODER_PARAMS)
@@ -374,4 +378,4 @@ def main3():
 if __name__ == '__main__':
     #main()
     #main2()
-    main3()
+    main3(True)
