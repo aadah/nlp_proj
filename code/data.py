@@ -76,10 +76,10 @@ class DataManager:
     def save_to(self, filename):
         data = np.hstack([self.X, self.Y])
 
-        print 'saving to', filename,
+        print 'saving to', filename
         print 'dim is', data.shape
 
-        np.save(data, filename)
+        np.save(filename, data)
         self.X = None
 
 
