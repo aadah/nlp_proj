@@ -37,10 +37,13 @@ STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_
 # data
 TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
 TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
+AUTOENCODER_FILE = '%s/autoencoder.txt' % RESOURCES
+AUTOENCODER_DATA = '%s/autoencoder.npy' % RESOURCES
 
 # neural net
 TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
 TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
+AUTOENCODER_PARAMS = '%s/autoencoder_params.hdf5' % RESOURCES
 
 # parameters
 NER_MODE = 'stanford'
