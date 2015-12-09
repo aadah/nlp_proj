@@ -60,6 +60,7 @@ class DataManager:
         _, D = X.shape
 
         ae = nn.AutoEncoderRelations(D/2)
+        ae.compile()
 
         X1 = X[:,:D/2]
         X2 = X[:,D/2:]
