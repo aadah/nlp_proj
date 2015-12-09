@@ -99,3 +99,7 @@ def main():
     dm.save_to(config.SUBTRACT_DATA_TEST)
     dm.transform('autoencode')
     dm.save_to(config.AUTOENCODE_DATA_TEST)
+
+
+if __name__ == '__main__':
+    main()
