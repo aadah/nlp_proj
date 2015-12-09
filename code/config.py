@@ -43,6 +43,8 @@ AUTOENCODER_DATA = '%s/autoencoder.npy' % RESOURCES
 # neural net
 TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
 TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
+SUBTRACT_TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
+AUTOENCODE_TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
 AUTOENCODER_PARAMS = '%s/autoencoder_params.hdf5' % RESOURCES
 
 # parameters
