@@ -35,7 +35,7 @@ class AutoEncoderNN(object):
         self.model.compile(optimizer='sgd', loss='mse')
 
 
-    def train(self, X, Y, epochs=1000):        
+    def train(self, X, Y, epochs=1000):
         self.model.fit(X, Y,
                        nb_epoch=epochs,
                        validation_split=0.05)
@@ -126,7 +126,7 @@ class TrainNN2(object):
 
 
     def train(self, X, y, epochs=1000):        
-        self.graph.fit({'X': X, 'out': y}, nb_epoch=epochs)
+        self.graph.fit({'X': X, 'out': y}, nb_epoch=epochs, validation_split=0.1)
 
 
     def predict_probs(self, X):
@@ -375,7 +375,34 @@ def main3(cont=False):
     print 'Done!'
 
 
+def main4():
+    return
+
+    train_data = np.load('/home/emily/Documents/nlp_resources/split_train_95.npy')
+    test_data = np.load('/home/emily/Documents/nlp_resources/split_test_95.npy')
+    X_train = train_data[:,:-1]
+    y_train = train_data[:,-1]
+    X_test = test_data[:,:-1]
+    y_test = test_data[:,-1]
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    print 'saving model params . . .'
+    n.save_params(config.TWO_INSTANCE_PARAMS_CONNECT)
+
+    print 'Error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
 if __name__ == '__main__':
     #main()
     #main2()
-    main3(True)
+    #main3(True)
+    main4()
