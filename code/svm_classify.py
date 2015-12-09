@@ -53,6 +53,34 @@ def get_data(train_frac=0.8, cv_frac=0.1, test_frac=0.1):
     return all_data[:train_size,:], all_labels[:train_size], \
            all_data[train_size:train_size+cv_size,:], all_labels[train_size:train_size+cv_size], \
            all_data[train_size+cv_size:,:], all_labels[train_size+cv_size:]
+
+def get_split_data(train_frac=0.9):
+    
+    train_data_with_labels = np.load(config.DATA_TRAIN)
+    test_data_with_labels = np.load(config.DATA_TEST)
+
+    print "train data size:", train_data_with_labels.shape[0]
+    print "test data size:", test_data_with_labels.shape[0]
+
+    all_train_data_size = train_data_with_labels.shape[0]
+    train_size = math.floor(all_train_data_size*train_frac)
+
+    print "train fraction:", train_frac, "out of", all_train_data_size
+
+    all_train_data = train_data_with_labels[:,:-1]
+    all_train_labels = train_data_with_labels[:,-1:]
+    all_train_labels[all_train_labels == 0] = -1
+    all_train_labels = all_train_labels.ravel()
+
+    test_data = test_data_with_labels[:,:-1]
+    test_labels = test_data_with_labels[:,-1:]
+    test_labels[test_labels == 0] = -1
+    test_labels = test_labels.ravel()
+
+
+    return all_train_data[:train_size,:], all_train_labels[:train_size], \
+           all_train_data[train_size:,:], all_train_labels[train_size:], \
+           test_data, test_labels
     
 
 def create_svm(my_c, my_gamma):
@@ -98,7 +126,7 @@ def make_and_save_svm(exp_name, train=0.9, cv=0.1, test=0.0):
 
     train_set, train_labels, \
         cv_set, cv_labels, \
-        test_set, test_labels = get_data(train,cv,test)
+        test_set, test_labels = get_split_data(train) #get_data(train,cv,test)
 
 ##    print "train_set shape:", train_set.shape, \
 ##          "train_labels shape:", train_labels.shape, \
@@ -114,6 +142,8 @@ def make_and_save_svm(exp_name, train=0.9, cv=0.1, test=0.0):
     my_svc.fit(train_set, train_labels)
     if train_set.shape[0] > 0:
         score = my_svc.score(test_set, test_labels)
+        labels = my_svc.predict(test_set)
+        np.save(config.SVM_RESULTS_DIR+exp_name+"_test_pred.npy", labels)
         print "FINAL SCORE:", score
         
     joblib.dump(my_svc, config.SVM_RESULTS_DIR+exp_name+"_svm_model.pkl")

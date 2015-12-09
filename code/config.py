@@ -8,8 +8,6 @@ RESOURCES = "%s/nlp_resources" % DOCUMENTS
 WORD2VEC_DIR = "%s/word2vec" % RESOURCES
 ENTITIES_FILE = "%s/entities" % WORD2VEC_DIR
 MAPPINGS_FILE = "%s/mappings" % WORD2VEC_DIR
-GOOGLE_NEWS_GZ_FILE = "%s/GoogleNews-vectors-negative300.bin.gz" % WORD2VEC_DIR
-FREEBASE_GZ_FILE = "%s/freebase-vectors-skipgram1000-en.bin.gz" % WORD2VEC_DIR
 FREEBASE_FILE = "%s/freebase-vectors-skipgram1000-en.bin.hdf5" % WORD2VEC_DIR
 MID_FREEBASE_FILE = "%s/freebase-vectors-skipgram1000.bin.hdf5" % WORD2VEC_DIR
 
@@ -63,6 +61,11 @@ CLUSTER_ALGO = 'ball_tree'
 
 # SVM results directory
 SVM_RESULTS_DIR = '%s/svm_results/' % RESOURCES
+
+# Split data files
+DATA_TRAIN = '%s/split_train_95.npy' % RESOURCES
+DATA_TEST  = '%s/split_test_95.npy' % RESOURCES
+
 
 # wikidata
 WIKIDATA_ENDPOINT = 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
@@ -192,32 +195,3 @@ WIKIDATA_PROPERTIES = [
     'P397', # astronomical body
     'P398' # child astronomical body
 ]
-
-# data
-TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
-TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
-AUTOENCODER_FILE = '%s/autoencoder.txt' % RESOURCES
-AUTOENCODER_DATA = '%s/autoencoder.npy' % RESOURCES
-
-# neural net
-TWO_INSTANCE_PARAMS = '%s/two_instance_params.hdf5' % RESOURCES
-TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
-AUTOENCODER_PARAMS = '%s/autoencoder_params.hdf5' % RESOURCES
-
-# parameters
-NER_MODE = 'stanford'
-ARTICLE_SOURCE = 'bbc' # can be 'reuters'
-######## Change this to produce new pairs if you update bbc_links.txt
-READ_FROM_PAIRS = False
-########
-STANFORD_MODEL_NUM = 3
-PAIR_OUTPUT_FILE = BBC_PAIRS
-PAIR_INPUT_FILE = BBC_PAIRS
-
-CLUSTER_EPS = 0.7
-CLUSTER_MIN_SAMPLES = 3
-CLUSTER_METRIC = 'euclidean'
-CLUSTER_ALGO = 'ball_tree'
-
-# SVM results directory
-SVM_RESULTS_DIR = '%s/svm_results/' % RESOURCES
