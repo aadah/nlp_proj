@@ -21,8 +21,13 @@ print "Test size:", all_data_with_labels.shape[0]-train_size
 train = all_data_with_labels[:train_size,:]
 test = all_data_with_labels[train_size:,:]
 
-train_filename = '%s/split_train.npy' % config.RESOURCES
-test_filename = '%s/split_test.npy' % config.RESOURCES
+if len(sys.argv) >= 3:
+    name = sys.argv[2]
+else:
+    name = ""
+
+train_filename = config.RESOURCES+'/split_train_'+name+'.npy'
+test_filename = config.RESOURCES+'/split_test_'+name+'.npy'
 
 np.save(train_filename, train)
 np.save(test_filename, test)
