@@ -376,8 +376,6 @@ def main3(cont=False):
 
 
 def main4():
-    return
-
     train_data = np.load('/home/emily/Documents/nlp_resources/split_train_95.npy')
     test_data = np.load('/home/emily/Documents/nlp_resources/split_test_95.npy')
     X_train = train_data[:,:-1]
