@@ -2,6 +2,7 @@ import re
 import h5py
 import scipy.spatial as sps
 import numpy as np
+from gensim.models.word2vec import Word2Vec
 
 import config
 
@@ -94,6 +95,59 @@ class MIDVectorModel:
 
     def __contains__(self, string):
         return string in self.f
+
+
+class GensimVectorModel:
+    def __init__(self):
+        self.f = Word2Vec.load_word2vec_format(config.GOOGLE_NEWS_GZ_FILE, binary=True)
+        
+        with open(config.ENTITIES_FILE) as f:
+            self.entities = [ent.strip() for ent in f.readlines()]
+
+
+    def vector(self, string):
+        return self._vector(self._format_string(string))
+
+
+    def _vector(self, string):
+        return self.f[string]
+
+
+    def similarity(self, s1, s2):
+        u = self._format_string(s1)
+        v = self._format_string(s2)
+        
+        return self.f.similarity(u, v)
+
+
+    def _similarity(self, u, v):
+        return self.f.similarity(u, v)
+
+
+    def most_similar(self, string, k=1):
+        u = self._format_string(string)
+
+        return self._most_similar(u, k=k)
+
+
+    def _most_similar(self, u, k=1):
+        best = self.f.most_similar(positive=[u], negative=[], topn=k)
+
+        return best
+
+
+    def _format_string(self, string):
+        string = format_string(string)
+        
+        return string
+
+
+    def __getitem__(self, string):
+        return self.vector(string)
+
+
+    def __contains__(self, string):
+        return self._format_string(string) in self.f
 
 
 class VectorModel:
