@@ -395,7 +395,7 @@ def main4():
     n.compile()
 
     print 'training . . .'
-    n.train(X_train, y_train, epochs=1000)
+    n.train(X_train, y_train, epochs=100)
 
     print 'saving model params . . .'
     n.save_params(config.TWO_INSTANCE_PARAMS_CONNECT)
@@ -405,8 +405,59 @@ def main4():
     print 'Done!'
 
 
+def main5():
+    train_data = np.load(config.SUBTRACT_DATA_TRAIN)
+    test_data = np.load(config.SUBTRACT_DATA_TEST)
+    X_train = train_data[:,:-1]
+    y_train = train_data[:,-1]
+    X_test = test_data[:,:-1]
+    y_test = test_data[:,-1]
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    print 'saving model params . . .'
+    n.save_params(config.SUBTRACT_TWO_INSTANCE_PARAMS_CONNECT)
+
+    print 'Subtract error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
+def main6():
+    train_data = np.load(config.AUTOENCODE_DATA_TRAIN)
+    test_data = np.load(config.AUTOENCODE_DATA_TEST)
+    X_train = train_data[:,:-1]
+    y_train = train_data[:,-1]
+    X_test = test_data[:,:-1]
+    y_test = test_data[:,-1]
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    print 'saving model params . . .'
+    n.save_params(config.AUTOENCODE_TWO_INSTANCE_PARAMS_CONNECT)
+
+    print 'Autoencode error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
 if __name__ == '__main__':
     #main()
     #main2()
     #main3(True)
-    main4()
+
+    #main4() # concat
+    main5() # sub
+    #main6() # auto
