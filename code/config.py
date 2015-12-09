@@ -65,7 +65,10 @@ SVM_RESULTS_DIR = '%s/svm_results/' % RESOURCES
 # Split data files
 DATA_TRAIN = '%s/split_train_95.npy' % RESOURCES
 DATA_TEST  = '%s/split_test_95.npy' % RESOURCES
-
+SUBTRACT_DATA_TRAIN = '%s/subtract_split_train_95.npy' % RESOURCES
+SUBTRACT_DATA_TEST  = '%s/subtract_split_test_95.npy' % RESOURCES
+AUTOENCODE_DATA_TRAIN = '%s/autoencode_split_train_95.npy' % RESOURCES
+AUTOENCODE_DATA_TEST  = '%s/autoencode_split_test_95.npy' % RESOURCES
 
 # wikidata
 WIKIDATA_ENDPOINT = 'https://query.wikidata.org/bigdata/namespace/wdq/sparql'
