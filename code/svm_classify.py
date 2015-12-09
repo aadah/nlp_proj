@@ -56,8 +56,8 @@ def get_data(train_frac=0.8, cv_frac=0.1, test_frac=0.1):
 
 def get_split_data(train_frac=0.9):
     
-    train_data_with_labels = np.load(config.DATA_TRAIN)
-    test_data_with_labels = np.load(config.DATA_TEST)
+    train_data_with_labels = np.load(config.SUBTRACT_DATA_TRAIN)
+    test_data_with_labels = np.load(config.SUBTRACT_DATA_TEST)
 
     print "train data size:", train_data_with_labels.shape[0]
     print "test data size:", test_data_with_labels.shape[0]
@@ -95,8 +95,8 @@ def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
         
     # grid search over c and gamma
     print "beginning cross-validation"
-    c_exp_range = range(2,5) #range(-2,9) #range(-5,16,2)
-    gamma_exp_range = range(-2,1) #range(-8,3) #range(-15,4,2)
+    c_exp_range = range(-8,9) #range(2,5) #range(-2,9) #range(-5,16,2)
+    gamma_exp_range = range(-8,9) #range(-2,1) #range(-8,3) #range(-15,4,2)
     results = np.zeros((len(c_exp_range),len(gamma_exp_range)))
     c_iter = 0
     gamma_iter = 0
