@@ -22,6 +22,7 @@ class RelationCluster():
         self.cluster = DBSCAN(eps=eps, min_samples=min_samples, metric=metric, algorithm=algorithm)
         self.entity_pairs = entity_pairs
         self.X, self.relation_index = self.get_relation_vecs()
+        print self.X.shape
         self.cluster.fit(self.X)
         self.labels = self.cluster.labels_
 
@@ -166,7 +167,30 @@ if __name__=="__main__":
                    'korea','seoul',
                    'abe','japan','tokyo'
                    ]
-    rc = RelationCluster(entityWords)
+    entityPairs = [('barack obama','america'),
+                   ('stephen harper','canada'),
+                   ('vladimir putin','russia'),
+                   ('francois hollande','france'),
+                   ('angela merkel','germany'),
+                   ('enrique pena nieto','mexico'),
+                   ('spain','madrid'),
+                   ('belgium','brussels'),
+                   ('taiwan','taipei'),
+                   ('korea','seoul'),
+                   ('japan','tokyo'),
+                   ('america','barack obama'),
+                   ('canada','stephen harper'),
+                   ('russia','vladimir putin'),
+                   ('france','francois hollande'),
+                   ('germany','angela merkel'),
+                   ('mexico','enrique pena nieto'),
+                   ('madrid','spain'),
+                   ('brussels','belgium'),
+                   ('taipei','taiwan'),
+                   ('seoul','korea'),
+                   ('tokyo','japan')
+                   ]
+    rc = RelationCluster(entityPairs, eps=0.9, min_samples=2, metric='euclidean', algorithm='ball_tree')
     print rc.get_num_clusters()
     print rc.get_unique_labels()
     rc.print_clusters()
