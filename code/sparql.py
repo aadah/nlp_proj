@@ -129,6 +129,39 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
         return '%s\n\n%s' % (self.prefixes, query)
 
 
+def load_relation_dict_from_file():
+    wd = WikiDataClient()
+    relation_dict = {}
+
+    with open(config.TWO_INSTANCE_FILE) as f:
+        tuples = map(eval, f.readlines())
+
+    for p1, p2, _ in tuples:
+        mids1 = (p1[1],p1[3])
+        mids2 = (p2[1],p2[3])
+
+        rel1 = wd._relations(mids1)
+        rel2 = wd._relations(mids2)
+
+        if len(rel1) > 0:
+            rel1 = rel1[0]
+            
+            if rel1 in relation_dict:
+                relation_dict[rel1].add(mids1)
+            else:
+                relation_dict[rel1] = set([mids1])
+
+        if len(rel2) > 0:
+            rel2 = rel2[0]
+            
+            if rel2 in relation_dict:
+                relation_dict[rel2].add(mids2)
+            else:
+                relation_dict[rel2] = set([mids2])
+
+        return relation_dict
+
+
 def get_familial_relations(wd, num_per_rel):
     person_properties = [
         'P22', # father
