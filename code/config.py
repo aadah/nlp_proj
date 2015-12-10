@@ -35,6 +35,10 @@ STANFORD_PARSER_JAR = "%s/stanford-parser.jar" % STANFORD_PARSER_DIR
 STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_DIR
 
 # data
+RELATIONS_DICT = '%s/relations_dictionary.txt' % RESOURCES
+SINGLE_INSTANCE_TRAIN = '%s/single_instance_train.npy' % RESOURCES
+SINGLE_INSTANCE_TEST = '%s/single_instance_test.npy' % RESOURCES
+
 TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
 TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
 AUTOENCODER_FILE = '%s/autoencoder.txt' % RESOURCES

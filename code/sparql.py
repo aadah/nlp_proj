@@ -128,6 +128,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
     def _format_query(self, query):
         return '%s\n\n%s' % (self.prefixes, query)
 
+#########################################################
 
 def load_relation_dict_from_file():
     wd = WikiDataClient()
@@ -161,6 +162,55 @@ def load_relation_dict_from_file():
 
     return relation_dict
 
+
+def convert_rel_dict_to_matricies():
+    vm = vector.MIDVectorModel()
+    
+    with open(config.RELATIONS_DICT) as f:
+        relations_dict = eval(f.read())
+        
+    relations = relations_dict.keys()
+    mapping = {r: i for (i, r) in enumerate(relations)}
+    split = 0.05
+    train = []
+    test = []
+    
+    for relation in relations:
+        instances = relations_dict[relation]
+        instances = map(lambda inst: (inst['subjMID'], inst['objMID']), instances)
+        instances = filter(lambda mid1, mid2: mid1 in vm and mid2 in vm, instances)
+
+        l = len(instances)
+        i = int(l*(1-split))
+
+        train.append((instances[:i], mapping[relation]))
+        test.append((instances[i:], mapping[relation]))
+
+    train_vecs = []
+    test_vecs = []
+
+    # create training data
+    for instances, label in train:
+        for mid1, mid2 in instances:
+            vec = np.hstack([vm[mid1], vm[mid2], np.array([label])])
+            train_vecs.append(vec)
+
+    # create testing data
+    for instances, label in test:
+        for mid1, mid2 in instances:
+            vec = np.hstack([vm[mid1], vm[mid2], np.array([label])])
+            test_vecs.append(vec)
+
+    train_matrix = np.vstack(train_vecs)
+    test_matrix = np.vstack(test_vecs)
+
+    np.save(config.SINGLE_INSTANCE_TRAIN, train_matrix)
+    np.save(config.SINGLE_INSTANCE_TEST, test_matrix)
+
+    vm.close()
+
+
+#########################################################
 
 def get_familial_relations(wd, num_per_rel):
     person_properties = [
