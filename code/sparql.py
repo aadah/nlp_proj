@@ -159,7 +159,7 @@ def load_relation_dict_from_file():
             else:
                 relation_dict[rel2] = set([mids2])
 
-        return relation_dict
+    return relation_dict
 
 
 def get_familial_relations(wd, num_per_rel):
