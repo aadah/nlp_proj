@@ -1,3 +1,4 @@
+import sys
 import os.path
 import config
 import collections
@@ -82,15 +83,16 @@ class KNN:
         print '# clusters:', len(set(self.clusters.values()))
         self.entity_pairs = self.XY_train[:,:-1]
         self.entity_pair_labels = self.XY_train[:,-1]
+        sys.stdout.flush()
         
     def make_test(self):
         N_test, D = self.XY_test.shape
-        new_test = np.empty((N_test*(N_test-1)/2, 2*D-1))
+        new_test = np.empty((200, 2*D-1))
         count = 0
         pos = 0
         neg = 0
         for i in xrange(N_test):
-            for j in xrange(i+1,N_test):                
+            for j in xrange(i+1,N_test):
                 new_example = np.empty((1,2*D-1))
                 new_example[0,:(D-1)] = self.XY_test[i,:-1]
                 new_example[0,(D-1):-1] = self.XY_test[j,:-1]
@@ -106,9 +108,13 @@ class KNN:
                     neg += 1
                     count += 1
                     new_example[0,-1] = 0
+                if count >= 200:
+                    continue
                 new_test[count] = new_example
         self.XY_test = new_test
+        print self.XY_test.shape
         print 'count: %d (pos: %d, neg: %d)' %(count, pos, neg)
+        sys.stdout.flush()
 
     def test(self):
         self.make_test()
@@ -134,6 +140,7 @@ class KNN:
         print 'FN:',FN
         print 'TN:',TN
         print 'Accuracy:',float(np.sum(res))/N
+        sys.stdout.flush()
 
     def classify(self):
         self.build_top_indices()
@@ -156,17 +163,23 @@ class KNN:
             d, _ = self.entity_pairs.shape
             N_test, D = self.XY_test.shape
             self.distances = np.empty((2*N_test,d))
+            print N_test
             for i in xrange(N_test):
+                print 'row',i 
                 x1 = self.XY_test[i,:(D-1)/2]
                 x2 = self.XY_test[i,(D-1)/2:-1]
                 self.distances[2*i] = np.array([self._distance(x1,self.entity_pairs[j]) for j in xrange(d)])
-                self.distances[2*i-1] = np.array([self._distance(x2,self.entity_pairs[j]) for j in xrange(d)])
+                self.distances[2*i-1] = np.array([self._distance(x2,self.entity_pairs[j]) for j in xrange(d)])            
             np.save(fname, self.distances)
+        print 'distances: ',self.distances.shape
+        sys.stdout.flush()
             
     def build_top_indices(self):
         if os.path.isfile('top_indices_%s.npy' %self.rep):
             print 'loading top_indices . . .'
             self.top_indices = np.load('top_indices_%s.npy' %self.rep)
+            sys.stdout.flush()
+            return
         print 'creating top_indices . . .'
         self.build_dist_matrix()
         N_test, N_train = self.distances.shape
@@ -178,6 +191,7 @@ class KNN:
             self.top_indices[j] = np.array([d[1] for d in tagged_row])
         #print 'top_indices',self.top_indices.shape
         np.save('top_indices_%s.npy' %self.rep, self.top_indices)
+        sys.stdout.flush()
         
     def _vec2str(self, arr):
         return str(list(arr))
