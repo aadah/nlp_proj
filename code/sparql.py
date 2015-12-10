@@ -190,13 +190,13 @@ def convert_rel_dict_to_matricies():
     train_vecs = []
     test_vecs = []
 
-    # create training data
+    print 'create training data'
     for instances, label in train:
         for mid1, mid2 in instances:
             vec = np.hstack([vm[mid1], vm[mid2], np.array([label])])
             train_vecs.append(vec)
 
-    # create testing data
+    print 'create testing data'
     for instances, label in test:
         for mid1, mid2 in instances:
             vec = np.hstack([vm[mid1], vm[mid2], np.array([label])])

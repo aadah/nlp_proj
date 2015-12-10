@@ -27,6 +27,40 @@ class DataManager:
         self.Y = Y
 
 
+    def transform_single(self, typ): # 'subtract' or 'autoencode'
+        if typ == 'subtract':
+            self._transform_substact_single()
+        elif typ == 'autoencode':
+            self._transform_autoencode_single()
+
+
+    def _transform_substact_single(self):
+        X = self.X_original
+
+        _, D = X.shape
+
+        Xa = X[:,:D/2]
+        Xb = X[:,D/2:]
+
+        new_X = Xb - Xa
+
+        self.X = new_X
+
+
+    def _transform_autoencode_single(self):
+        X = self.X_original
+
+        _, D = X.shape
+
+        ae = nn.AutoEncoderRelations(D)
+        ae.compile()
+
+        new_X = ae.autoencode(X)
+        ae.close()
+
+        self.X = new_X
+
+
     def transform(self, typ): # 'subtract' or 'autoencode'
         if typ == 'subtract':
             self._transform_substact()
@@ -102,5 +136,24 @@ def main():
     dm.save_to(config.AUTOENCODE_DATA_TEST)
 
 
+def main2():
+    dm = DataManager(config.SINGLE_INSTANCE_TRAIN, config.SINGLE_INSTANCE_TEST)
+
+    dm.load_data('train')
+
+    dm.transform_single('subtract')
+    dm.save_to(config.SUBTRACT_SINGLE_INSTANCE_TRAIN)
+    dm.transform_single('autoencode')
+    dm.save_to(config.AUTOENCODE_SINGLE_INSTANCE_TRAIN)
+
+    dm.load_data('test')
+
+    dm.transform_single('subtract')
+    dm.save_to(config.SUBTRACT_SINGLE_INSTANCE_TEST)
+    dm.transform_single('autoencode')
+    dm.save_to(config.AUTOENCODE_SINGLE_INSTANCE_TEST)
+
+
 if __name__ == '__main__':
-    main()
+    #main()
+    main2()

@@ -38,6 +38,10 @@ STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_
 RELATIONS_DICT = '%s/relations_dictionary.txt' % RESOURCES
 SINGLE_INSTANCE_TRAIN = '%s/single_instance_train.npy' % RESOURCES
 SINGLE_INSTANCE_TEST = '%s/single_instance_test.npy' % RESOURCES
+SUBTRACT_SINGLE_INSTANCE_TRAIN = '%s/subtract_single_instance_train.npy' % RESOURCES
+SUBTRACT_SINGLE_INSTANCE_TEST = '%s/subtract_single_instance_test.npy' % RESOURCES
+AUTOENCODE_SINGLE_INSTANCE_TRAIN = '%s/autoencode_single_instance_train.npy' % RESOURCES
+AUTOENCODE_SINGLE_INSTANCE_TEST = '%s/autoencode_single_instance_test.npy' % RESOURCES
 
 TWO_INSTANCE_FILE = '%s/two_instance.txt' % RESOURCES
 TWO_INSTANCE_DATA = '%s/two_instance.npy' % RESOURCES
