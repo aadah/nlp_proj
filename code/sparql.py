@@ -3,6 +3,7 @@ import urllib2
 import re
 import collections
 from SPARQLWrapper import SPARQLWrapper, JSON
+import numpy as np
 
 import mappings
 import vector
