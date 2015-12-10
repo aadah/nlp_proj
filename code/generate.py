@@ -144,6 +144,67 @@ def generate_instance_instance():
             f.write(str(instance_pair) + '\n')
 
 
+def generate_instance_instance():
+    np.random.seed(100)
+
+    wd = sparql.WikiDataClient()
+
+    num_per_query = 10000
+    num_per_instance = 50
+
+    print 'retrieving instances from wikidata . . .'
+    results = wd.get_instances(config.WIKIDATA_PROPERTIES, num_per_query)
+
+    instance_pairs = []
+    
+    print 'generating positive examples . . .'
+    for relation in results:
+        partial_results = results[relation]
+        num = len(partial_results)
+        
+        for _ in xrange(num_per_instance):
+            instance_i, instance_j = np.random.choice(partial_results, 2).tolist()
+
+            first = (instance_i['subjLabel'],
+                     instance_i['subjMID'],
+                     instance_i['objLabel'],
+                     instance_i['objMID'])
+            
+            second = (instance_j['subjLabel'],
+                      instance_j['subjMID'],
+                      instance_j['objLabel'],
+                      instance_j['objMID'])
+                
+            instance_pairs.append((first, second, 1)) # one for positive
+
+    print 'generating negative examples . . .'
+    num_pos = len(instance_pairs)
+    num_neg = 0
+
+    while num_pos > num_neg:
+        rel_i, rel_j = np.random.choice(results.keys(), 2).tolist()
+
+        instance_i = np.random.choice(results[rel_i])
+        instance_j = np.random.choice(results[rel_j])
+
+        first = (instance_i['subjLabel'],
+                 instance_i['subjMID'],
+                 instance_i['objLabel'],
+                 instance_i['objMID'])
+        second = (instance_j['subjLabel'],
+                  instance_j['subjMID'],
+                  instance_j['objLabel'],
+                  instance_j['objMID'])
+                
+        instance_pairs.append((first, second, 0)) # zero for negative
+        num_neg += 1
+
+    print 'saving to a file . . .'
+    with open(config.TWO_INSTANCE_FILE, 'w') as f:
+        for instance_pair in instance_pairs:
+            f.write(str(instance_pair) + '\n')
+
+
 def generate_instance_instance_matrix():
     vm = vector.MIDVectorModel()
 
