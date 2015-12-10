@@ -178,7 +178,7 @@ def convert_rel_dict_to_matricies():
     for relation in relations:
         instances = relations_dict[relation]
         instances = map(lambda inst: (inst['subjMID'], inst['objMID']), instances)
-        instances = filter(lambda mid1, mid2: mid1 in vm and mid2 in vm, instances)
+        instances = filter(lambda inst: inst[0] in vm and inst[1] in vm, instances)
 
         l = len(instances)
         i = int(l*(1-split))
