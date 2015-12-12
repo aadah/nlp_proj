@@ -35,6 +35,9 @@ STANFORD_PARSER_JAR = "%s/stanford-parser.jar" % STANFORD_PARSER_DIR
 STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_DIR
 
 # data
+RAW_DATA_TXT = '%s/raw_data.txt' % RESOURCES
+NEW_DATA_TXT = '%s/new_data.txt' % RESOURCES
+
 RELATIONS_DICT = '%s/relations_dictionary.txt' % RESOURCES
 SINGLE_INSTANCE_TRAIN = '%s/single_instance_train.npy' % RESOURCES
 SINGLE_INSTANCE_TEST = '%s/single_instance_test.npy' % RESOURCES
@@ -54,6 +57,7 @@ TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
 SUBTRACT_TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
 AUTOENCODE_TWO_INSTANCE_PARAMS_CONNECT = '%s/two_instance_params_connect.hdf5' % RESOURCES
 AUTOENCODER_PARAMS = '%s/autoencoder_params.hdf5' % RESOURCES
+SIMPLE_AUTOENCODER_PARAMS = '%s/simple_autoencoder_params.hdf5' % RESOURCES
 
 # parameters
 NER_MODE = 'stanford'

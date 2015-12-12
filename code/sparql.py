@@ -47,9 +47,37 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
 
     def get_instances(self, relations, number_per_relation):
         results_dict = {}
+        try_later = []
+        try_again_later = []
 
         for relation in relations:
-            results = self.get_instance(relation, number_per_relation)
+            try:
+                results = self.get_instance(relation, number_per_relation)
+            except Exception:
+                print relation, '.'
+                try_later.append(relation)
+                continue
+
+            if len(results) > 1:
+                results_dict[relation] = results
+
+        for relation in try_later:
+            try:
+                results = self.get_instance(relation, number_per_relation)
+            except Exception:
+                print relation, '. .'
+                try_again_later.append(relation)
+                continue
+
+            if len(results) > 1:
+                results_dict[relation] = results
+
+        for relation in try_again_later:
+            try:
+                results = self.get_instance(relation, number_per_relation)
+            except Exception:
+                print relation, '. . .'
+                continue
 
             if len(results) > 1:
                 results_dict[relation] = results
@@ -121,7 +149,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
         self.client.setQuery(query)
         self.client.setReturnFormat(JSON)
         
-        results = self.client.query().convert()
+        q = self.client.query()
+        results = q.convert()
         
         return results
 

@@ -1,9 +1,81 @@
+import os.path
 import numpy as np
+from pprint import pprint
 
 import vector
 import sparql
 import config
 
+
+def make_instance_instance_txt():
+    np.random.seed(1000)
+
+    wd = sparql.WikiDataClient()
+    vm = vector.MIDVectorModel()
+
+    print 'fetching . . .'
+
+    if os.path.isfile(config.RAW_DATA_TXT):
+        with open(config.RAW_DATA_TXT) as f:
+            relations_dict = eval(f.read())
+    else:
+        query_limit = 10000
+        relations_dict = wd.get_instances(config.WIKIDATA_PROPERTIES, query_limit)
+        with open(config.RAW_DATA_TXT, 'w') as f:
+            pprint(relations_dict, stream=f)
+
+    relations = relations_dict.keys()
+
+    num_pos = 4000
+    num_relations = len(relations)
+    num_per_relation = num_pos / num_relations
+
+    pos = []
+    neg = []    
+
+    print 'making positive . . .'
+    for relation in relations:
+        results = relations_dict[relation]
+        results = map(lambda r: (r['subjLabel'],
+                                 r['subjMID'],
+                                 r['objLabel'],
+                                 r['objMID']),
+                      results)
+        results = filter(lambda r: r[1] in vm and r[3] in vm,
+                         results)
+
+        print relation, len(results)
+
+        relations_dict[relation] = results
+        results_ids = range(len(results))
+
+        for _ in xrange(num_per_relation):
+            i, j = np.random.choice(results_ids, 2).tolist()
+            pos_ex = (results[i], results[j], int(relation[1:]), int(relation[1:]))
+            pos.append(pos_ex)
+
+    num_neg = len(pos)
+
+    print 'making negative . . .'
+    for _ in xrange(num_neg):
+        rel_i, rel_j = np.random.choice(relations, 2).tolist()
+        i = np.random.randint(len(relations_dict[rel_i]))
+        j = np.random.randint(len(relations_dict[rel_j]))
+        neg_ex = (relations_dict[rel_i][i],
+                  relations_dict[rel_j][j],
+                  int(rel_i[1:]),
+                  int(rel_j[1:]))
+        neg.append(neg_ex)
+
+    examples = pos_ex + neg_ex
+
+    with open(config.NEW_DATA_TXT, 'w') as f:
+        pprint(examples, stream=f)
+
+    vm.close()
+
+
+###########################################################
 
 # generates list of instance-instance for auto encoder
 def generate_instance_to_instance():
@@ -247,6 +319,11 @@ def main2():
     generate_instance_to_instance_matrix()
 
 
+def main3():
+    make_instance_instance_txt()
+
+
 if __name__ == '__main__':
     #main()
-    main2()
+    #main2()
+    main3()

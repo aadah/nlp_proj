@@ -55,6 +55,45 @@ class AutoEncoderNN(object):
         self.model.load_weights(filename)
 
 
+class AutoEncoderNN2(object):
+    def __init__(self, input_dim=2000, hidden_dim):
+        model = Sequential()
+        
+        model.add(Dense(output_dim=hidden_dim,
+                        input_dim=input_dim,
+                        activation='linear'))
+
+        model.add(Dense(output_dim=input_dim,
+                        input_dim=hidden_dim,
+                        activation='linear'))
+
+        self.model = model
+
+
+    def compile(self):
+        self.model.compile(optimizer='sgd', loss='mse')
+
+
+    def train(self, X, Y, epochs=1000):
+        self.model.fit(X, Y,
+                       nb_epoch=epochs,
+                       validation_split=0.05)
+
+
+    def predict(self, X):
+        Y_pred = self.model.predict(X)
+
+        return Y_pred
+
+
+    def save_params(self, filename):
+        self.model.save_weights(filename, overwrite=True)
+
+    
+    def load_params(self, filename):
+        self.model.load_weights(filename)
+
+
 class AutoEncoderRelations(object):
     def __init__(self, input_dim=2000):
         n = AutoEncoderNN(input_dim)
@@ -63,6 +102,57 @@ class AutoEncoderRelations(object):
 
         model = Sequential()
         hidden_dim = input_dim / 2
+        
+        model.add(Dense(output_dim=hidden_dim,
+                        input_dim=input_dim,
+                        weights=hidden_weights,
+                        activation='linear'))
+
+        self.vm = vector.VectorModel()
+        self.model = model
+
+        del n
+
+
+    def compile(self):
+        self.model.compile(optimizer='sgd', loss='mse')
+
+
+    def predict(self, X):
+        Y_pred = self.model.predict(X)
+
+        return Y_pred
+
+
+    def autoencode(self, V):
+        H = self.predict(V)
+
+        return H
+
+
+    def rel_vector(self, ent1, ent2):
+        if ent1 in self.vm and ent2 in self.vm:
+            v = np.hstack([self.vm[ent1], self.vm[ent2]])
+            V = v.reshape((1, v.shape[0]))
+            H = self.predict(V)
+            h = H.reshape((H.shape[1],))
+
+            return h
+
+        return None
+
+    
+    def close(self):
+        self.vm.close()
+
+
+class AutoEncoderRelations2(object):
+    def __init__(self, input_dim=2000, hidden_dim=100):
+        n = AutoEncoderNN2(input_dim, hidden_dim)
+        n.load_params(config.SIMPLE_AUTOENCODER_PARAMS)
+        hidden_weights = n.model.layers[0].get_weights()
+
+        model = Sequential()
         
         model.add(Dense(output_dim=hidden_dim,
                         input_dim=input_dim,
@@ -453,11 +543,41 @@ def main6():
     print 'Done!'
 
 
+def main7(cont=False):
+    #return
+
+    data = np.load(config.AUTOENCODER_DATA)
+    _, DD = data.shape
+    D = DD / 2
+    X = data[:,:D]
+    Y = data[:,D:]*100 # scale to emphasize differences
+
+    _, D = X.shape
+    H = 100
+
+    print 'building/compiling model . . .'
+    n = AutoEncoderNN2(D, H)
+    
+    if cont:
+        n.load_params(config.SIMPLE_AUTOENCODER_PARAMS)
+
+    n.compile()
+
+    print 'training . . .'
+    n.train(X, Y, epochs=1000)
+
+    print 'saving model params . . .'
+    n.save_params(config.SIMPLE_AUTOENCODER_PARAMS)
+
+    print 'Done!'
+
+
 if __name__ == '__main__':
     #main()
     #main2()
     #main3(True)
+    main7()
 
     #main4() # concat
-    main5() # sub
+    #main5() # sub
     #main6() # auto
