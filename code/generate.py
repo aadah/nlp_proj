@@ -376,8 +376,8 @@ def main2():
 
 
 def main3():
-    make_instance_instance_txt()
-
+    #make_instance_instance_txt()
+    make_instance_instance_npy()
 
 if __name__ == '__main__':
     #main()
