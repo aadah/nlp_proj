@@ -95,65 +95,18 @@ class AutoEncoderNN2(object):
 
 
 class AutoEncoderRelations(object):
-    def __init__(self, input_dim=2000):
+    def __init__(self, input_dim=2000, simple_model=False):
         n = AutoEncoderNN(input_dim)
-        n.load_params(config.AUTOENCODER_PARAMS)
+
+        if simple_model:
+            n.load_params(config.SIMPLE_AUTOENCODER_PARAMS)
+        else:
+            n.load_params(config.AUTOENCODER_PARAMS)
+
         hidden_weights = n.model.layers[0].get_weights()
+        hidden_dim = hidden_weights[1].shape[0]
 
         model = Sequential()
-        hidden_dim = input_dim / 2
-        
-        model.add(Dense(output_dim=hidden_dim,
-                        input_dim=input_dim,
-                        weights=hidden_weights,
-                        activation='linear'))
-
-        self.vm = vector.VectorModel()
-        self.model = model
-
-        del n
-
-
-    def compile(self):
-        self.model.compile(optimizer='sgd', loss='mse')
-
-
-    def predict(self, X):
-        Y_pred = self.model.predict(X)
-
-        return Y_pred
-
-
-    def autoencode(self, V):
-        H = self.predict(V)
-
-        return H
-
-
-    def rel_vector(self, ent1, ent2):
-        if ent1 in self.vm and ent2 in self.vm:
-            v = np.hstack([self.vm[ent1], self.vm[ent2]])
-            V = v.reshape((1, v.shape[0]))
-            H = self.predict(V)
-            h = H.reshape((H.shape[1],))
-
-            return h
-
-        return None
-
-    
-    def close(self):
-        self.vm.close()
-
-
-class AutoEncoderRelations2(object):
-    def __init__(self, input_dim=2000, hidden_dim=100):
-        n = AutoEncoderNN2(input_dim, hidden_dim)
-        n.load_params(config.SIMPLE_AUTOENCODER_PARAMS)
-        hidden_weights = n.model.layers[0].get_weights()
-
-        model = Sequential()
-        
         model.add(Dense(output_dim=hidden_dim,
                         input_dim=input_dim,
                         weights=hidden_weights,
@@ -472,12 +425,16 @@ def main3(cont=False):
 
 
 def main4():
-    train_data = np.load('/home/emily/Documents/nlp_resources/split_train_95.npy')
-    test_data = np.load('/home/emily/Documents/nlp_resources/split_test_95.npy')
-    X_train = train_data[:,:-1]
-    y_train = train_data[:,-1]
-    X_test = test_data[:,:-1]
-    y_test = test_data[:,-1]
+    train_data = np.load(config.NEW_DATA_TRAIN_NPY)
+    test_data = np.load(config.NEW_DATA_TEST_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
     _, D = X_train.shape
 
     print 'building/compiling model . . .'
@@ -488,7 +445,7 @@ def main4():
     n.train(X_train, y_train, epochs=100)
 
     print 'saving model params . . .'
-    n.save_params(config.TWO_INSTANCE_PARAMS_CONNECT)
+    n.save_params(config.NEW_DATA_PARAMS)
 
     print 'Error rate:', n.error_rate(X_test, y_test)
 
@@ -496,12 +453,16 @@ def main4():
 
 
 def main5():
-    train_data = np.load(config.SUBTRACT_DATA_TRAIN)
-    test_data = np.load(config.SUBTRACT_DATA_TEST)
-    X_train = train_data[:,:-1]
-    y_train = train_data[:,-1]
-    X_test = test_data[:,:-1]
-    y_test = test_data[:,-1]
+    train_data = np.load(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
+    test_data = np.load(config.NEW_DATA_TEST_SUBTRACT_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
     _, D = X_train.shape
 
     print 'building/compiling model . . .'
@@ -512,7 +473,7 @@ def main5():
     n.train(X_train, y_train, epochs=1000)
 
     print 'saving model params . . .'
-    n.save_params(config.SUBTRACT_TWO_INSTANCE_PARAMS_CONNECT)
+    n.save_params(config.NEW_DATA_SUBTRACT_PARAMS)
 
     print 'Subtract error rate:', n.error_rate(X_test, y_test)
 
@@ -520,12 +481,16 @@ def main5():
 
 
 def main6():
-    train_data = np.load(config.AUTOENCODE_DATA_TRAIN)
-    test_data = np.load(config.AUTOENCODE_DATA_TEST)
-    X_train = train_data[:,:-1]
-    y_train = train_data[:,-1]
-    X_test = test_data[:,:-1]
-    y_test = test_data[:,-1]
+    train_data = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
+    test_data = np.load(config.NEW_DATA_TEST_AUTOENCODE_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
     _, D = X_train.shape
 
     print 'building/compiling model . . .'
@@ -536,7 +501,7 @@ def main6():
     n.train(X_train, y_train, epochs=1000)
 
     print 'saving model params . . .'
-    n.save_params(config.AUTOENCODE_TWO_INSTANCE_PARAMS_CONNECT)
+    n.save_params(config.NEW_DATA_AUTOENCODE_PARAMS)
 
     print 'Autoencode error rate:', n.error_rate(X_test, y_test)
 
@@ -578,6 +543,6 @@ if __name__ == '__main__':
     #main3(True)
     main7()
 
-    #main4() # concat
+    main4() # concat
     #main5() # sub
     #main6() # auto

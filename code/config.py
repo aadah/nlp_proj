@@ -39,6 +39,17 @@ RAW_DATA_TXT = '%s/raw_data.txt' % RESOURCES
 NEW_DATA_TXT = '%s/new_data.txt' % RESOURCES
 NEW_DATA_TRAIN_NPY = '%s/new_data_train.npy' % RESOURCES
 NEW_DATA_TEST_NPY = '%s/new_data_test.npy' % RESOURCES
+NEW_DATA_TRAIN_SUBTRACT_NPY = '%s/new_data_train_subtract.npy' % RESOURCES
+NEW_DATA_TEST_SUBTRACT_NPY = '%s/new_data_test_subtract.npy' % RESOURCES
+NEW_DATA_TRAIN_AUTOENCODE_NPY = '%s/new_data_train_autoencode.npy' % RESOURCES
+NEW_DATA_TEST_AUTOENCODE_NPY = '%s/new_data_test_autoencode.npy' % RESOURCES
+
+# params
+NEW_DATA_PARAMS = '%s/new_data.hd5f' % RESOURCES
+NEW_DATA_SUBTRACT_PARAMS = '%s/new_data_subtract.hd5f' % RESOURCES
+NEW_DATA_AUTOENCODE_PARAMS = '%s/new_data_autoencode.hd5f' % RESOURCES
+
+#####
 
 RELATIONS_DICT = '%s/relations_dictionary.txt' % RESOURCES
 SINGLE_INSTANCE_TRAIN = '%s/single_instance_train.npy' % RESOURCES

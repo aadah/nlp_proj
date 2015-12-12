@@ -14,14 +14,14 @@ class DataManager:
         self.Y = None
 
 
-    def load_data(self, dset='train'):
+    def load_data(self, dset='train', num_col=1):
         if dset == 'train':
             filename = self.train_filename
         elif dset == 'test':
             filename = self.test_filename
 
         data = np.load(filename)
-        X, Y = data[:,:-1], data[:,-1:]
+        X, Y = data[:,:-num_col], data[:,-num_col:]
         
         self.X_original = X
         self.Y = Y
@@ -61,11 +61,11 @@ class DataManager:
         self.X = new_X
 
 
-    def transform(self, typ): # 'subtract' or 'autoencode'
+    def transform(self, typ, simple_model=False): # 'subtract' or 'autoencode'
         if typ == 'subtract':
             self._transform_substact()
         elif typ == 'autoencode':
-            self._transform_autoencode()
+            self._transform_autoencode(simple_model=simple_model)
 
 
     def _transform_substact(self):
@@ -88,12 +88,12 @@ class DataManager:
         self.X = new_X
 
 
-    def _transform_autoencode(self):
+    def _transform_autoencode(self, simple_model=False):
         X = self.X_original
 
         _, D = X.shape
 
-        ae = nn.AutoEncoderRelations(D/2)
+        ae = nn.AutoEncoderRelations(D/2, simple_model=simple_model)
         ae.compile()
 
         X1 = X[:,:D/2]
@@ -154,6 +154,25 @@ def main2():
     dm.save_to(config.AUTOENCODE_SINGLE_INSTANCE_TEST)
 
 
+def main3():
+    dm = DataManager(config.NEW_DATA_TRAIN_NPY, config.NEW_DATA_TEST_NPY)
+
+    simple_model = True
+
+    dm.load_data('train')
+    dm.transform('subtract')
+    dm.save_to(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
+    #dm.transform('autoencode', simple_model=simple_model)
+    #dm.save_to(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
+
+    dm.load_data('test')
+    dm.transform('subtract')
+    dm.save_to(config.NEW_DATA_TEST_SUBTRACT_NPY)
+    #dm.transform('autoencode', simple_model=simple_model)
+    #dm.save_to(config.NEW_DATA_TEST_AUTOENCODE_NPY)
+
+
 if __name__ == '__main__':
     #main()
-    main2()
+    #main2()
+    main3()
