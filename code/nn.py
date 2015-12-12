@@ -56,7 +56,7 @@ class AutoEncoderNN(object):
 
 
 class AutoEncoderNN2(object):
-    def __init__(self, input_dim=2000, hidden_dim):
+    def __init__(self, input_dim, hidden_dim):
         model = Sequential()
         
         model.add(Dense(output_dim=hidden_dim,
