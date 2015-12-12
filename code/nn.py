@@ -541,8 +541,8 @@ if __name__ == '__main__':
     #main()
     #main2()
     #main3(True)
-    main7()
+    #main7()
 
-    main4() # concat
+    #main4() # concat
     #main5() # sub
-    #main6() # auto
+    main6() # auto
