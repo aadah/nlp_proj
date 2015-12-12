@@ -159,13 +159,13 @@ def main3():
 
     simple_model = True
 
-    dm.load_data('train')
+    dm.load_data('train', num_col=2)
     dm.transform('subtract')
     dm.save_to(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
     #dm.transform('autoencode', simple_model=simple_model)
     #dm.save_to(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
 
-    dm.load_data('test')
+    dm.load_data('test', num_col=2)
     dm.transform('subtract')
     dm.save_to(config.NEW_DATA_TEST_SUBTRACT_NPY)
     #dm.transform('autoencode', simple_model=simple_model)
