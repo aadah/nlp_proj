@@ -93,7 +93,7 @@ class DataManager:
 
         _, D = X.shape
 
-        ae = nn.AutoEncoderRelations(D/2, simple_model=simple_model)
+        ae = nn.AutoEncoderRelations(D/2, 100, simple_model=simple_model)
         ae.compile()
 
         X1 = X[:,:D/2]

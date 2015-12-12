@@ -469,7 +469,7 @@ def main5():
     n.compile()
 
     print 'training . . .'
-    n.train(X_train, y_train, epochs=1000)
+    n.train(X_train, y_train, epochs=100)
 
     print 'saving model params . . .'
     n.save_params(config.NEW_DATA_SUBTRACT_PARAMS)
@@ -543,5 +543,5 @@ if __name__ == '__main__':
     #main7()
 
     #main4() # concat
-    #main5() # sub
+    main5() # sub
     main6() # auto
