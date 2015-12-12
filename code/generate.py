@@ -111,8 +111,8 @@ def make_instance_instance_npy():
     print 'building . . .'
     num_pos = len(pos)
     num_neg = len(neg)
-    num_train_pos = num_pos*(1-split)
-    num_train_neg = num_neg*(1-split)
+    num_train_pos = int(num_pos*(1-split))
+    num_train_neg = int(num_neg*(1-split))
     
     train_pos = pos[:num_train_pos]
     train_neg = neg[:num_train_neg]
