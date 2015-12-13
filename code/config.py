@@ -45,6 +45,13 @@ NEW_DATA_TEST_SUBTRACT_NPY = '%s/new_data_test_subtract.npy' % RESOURCES
 NEW_DATA_TRAIN_AUTOENCODE_NPY = '%s/new_data_train_autoencode.npy' % RESOURCES
 NEW_DATA_TEST_AUTOENCODE_NPY = '%s/new_data_test_autoencode.npy' % RESOURCES
 
+PCA_DATA_TRAIN_NPY = '%s/pca_data_train.npy' % RESOURCES
+PCA_DATA_TEST_NPY = '%s/pca_data_test.npy' % RESOURCES
+PCA_DATA_TRAIN_SUBTRACT_NPY = '%s/pca_data_train_subtract.npy' % RESOURCES
+PCA_DATA_TEST_SUBTRACT_NPY = '%s/pca_data_test_subtract.npy' % RESOURCES
+PCA_DATA_TRAIN_AUTOENCODE_NPY = '%s/pca_data_train_autoencode.npy' % RESOURCES
+PCA_DATA_TEST_AUTOENCODE_NPY = '%s/pca_data_test_autoencode.npy' % RESOURCES
+
 # params
 NEW_DATA_PARAMS = '%s/new_data.hd5f' % RESOURCES
 NEW_DATA_SUBTRACT_PARAMS = '%s/new_data_subtract.hd5f' % RESOURCES
