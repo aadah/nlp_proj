@@ -31,7 +31,7 @@ class Compressor:
             self.f_train = '%s/pca_data_train_autoencode.npy' % config.RESOURCES
             self.f_test = '%s/pca_data_test_autoencode.npy' % config.RESOURCES
         else:
-            print "invalid representation input! Please choose '', 'subtract', or 'autoencode'!"
+            print "invalid representation input! Please choose '', 'subtract', or 'autoencode'"
     
     def compress(self, d):
         X_train, Y_train = self.separate_XY(self.XY_train)
@@ -218,8 +218,7 @@ def str2vec(str):
     return np.array(eval(str))
 
 def compress_all():    
-    #for rep in ['', 'subtract', 'autoencode']:        
-    for rep in ['autoencode']:
+    for rep in ['', 'subtract', 'autoencode']:        
         comp = Compressor(rep=rep)
         comp.compress(100)
 
