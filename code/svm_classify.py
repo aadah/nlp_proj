@@ -54,10 +54,12 @@ def get_data(train_frac=0.8, cv_frac=0.1, test_frac=0.1):
            all_data[train_size:train_size+cv_size,:], all_labels[train_size:train_size+cv_size], \
            all_data[train_size+cv_size:,:], all_labels[train_size+cv_size:]
 
-def get_split_data(train_frac=0.9):
+def get_split_data(train_frac=0.9,
+                   fn_train=config.NEW_DATA_TRAIN_NPY,
+                   fn_test=config.NEW_DATA_TEST_NPY):
     
-    train_data_with_labels = np.load(config.SUBTRACT_DATA_TRAIN)
-    test_data_with_labels = np.load(config.SUBTRACT_DATA_TEST)
+    train_data_with_labels = np.load(fn_train)
+    test_data_with_labels = np.load(fn_test)
 
     print "train data size:", train_data_with_labels.shape[0]
     print "test data size:", test_data_with_labels.shape[0]
@@ -67,14 +69,16 @@ def get_split_data(train_frac=0.9):
 
     print "train fraction:", train_frac, "out of", all_train_data_size
 
-    all_train_data = train_data_with_labels[:,:-1]
-    all_train_labels = train_data_with_labels[:,-1:]
-    all_train_labels[all_train_labels == 0] = -1
+    all_train_data = train_data_with_labels[:,:-2]
+    all_train_labels = train_data_with_labels[:,-2:]
+    #all_train_labels[all_train_labels == 0] = -1
+    all_train_labels = fix_labels(all_train_labels)
     all_train_labels = all_train_labels.ravel()
 
-    test_data = test_data_with_labels[:,:-1]
-    test_labels = test_data_with_labels[:,-1:]
-    test_labels[test_labels == 0] = -1
+    test_data = test_data_with_labels[:,:-2]
+    test_labels = test_data_with_labels[:,-2:]
+    #test_labels[test_labels == 0] = -1
+    test_labels = fix_labels(test_labels)
     test_labels = test_labels.ravel()
 
 
@@ -95,8 +99,8 @@ def cross_validate_svm(train_set, train_labels, cv_set, cv_labels, exp_name):
         
     # grid search over c and gamma
     print "beginning cross-validation"
-    c_exp_range = range(-8,9) #range(2,5) #range(-2,9) #range(-5,16,2)
-    gamma_exp_range = range(-8,9) #range(-2,1) #range(-8,3) #range(-15,4,2)
+    c_exp_range = range(-3,4) #range(-8,9) #range(2,5) #range(-2,9) #range(-5,16,2)
+    gamma_exp_range = range(-3,4) #range(-8,9) #range(-2,1) #range(-8,3) #range(-15,4,2)
     results = np.zeros((len(c_exp_range),len(gamma_exp_range)))
     c_iter = 0
     gamma_iter = 0
@@ -156,7 +160,49 @@ def fit_svm(test_data, filename):
     labels = svm.fit(test_data)
     return labels
 
+def do_shit():
+    # Get score on training data for concat SVM
+    train_set, train_labels, \
+        cv_set, cv_labels, \
+        test_set, test_labels = get_split_data(1.0, config.DATA_TRAIN, config.DATA_TEST)
+    my_svm = create_svm(100, 10000)
+    my_svm.fit(train_set, train_labels)
+    print "score for concat SVM:", my_svm.score(train_set, train_labels)
+
+    # Get score on training data for subtraction SVM
+    train_set, train_labels, \
+        cv_set, cv_labels, \
+        test_set, test_labels = get_split_data(1.0, config.SUBTRACT_DATA_TRAIN, config.SUBTRACT_DATA_TEST)
+    my_svm = create_svm(10, 1000)
+    my_svm.fit(train_set, train_labels)
+    print "score for subtract SVM:", my_svm.score(train_set, train_labels)
+
+##    # Get score on training data for autoencode SVM
+##    train_set, train_labels, \
+##        cv_set, cv_labels, \
+##        test_set, test_labels = get_split_data(1.0, config.AUTOENCODE_DATA_TRAIN, config.AUTOENCODE_DATA_TEST)
+##    my_svm = create_svm(100, 0.1)
+##    my_svm.train(train_set, train_labels)
+##    print "score for autoencode SVM:", my_svm.score(train_set, train_labels)
+
+def fix_labels(two_column_array):
+    if not two_column_array.shape[1] == 2:
+        error_string = "Must have two columns in array. This array's shape:", two_column_array.shape
+        raise ValueError(error_string)
+
+    fixed_bools = np.equal(two_column_array[:,0], two_column_array[:,1])
+    fixed = np.ones(fixed_bools.shape)
+
+    # Set all the 
+    #fixed[fixed == True] = 1
+    fixed[fixed_bools == False] = -1
+    fixed = fixed.ravel()
+    return fixed
+
+
 if __name__ == "__main__":
+    #do_shit()
+    #quit()
     if len(sys.argv) < 2:
         print "No action specified."
     elif sys.argv[1] == "cv":
