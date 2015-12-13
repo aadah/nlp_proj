@@ -153,7 +153,8 @@ class TrainNN2(object):
     def __init__(self, input_dim=4000):
         graph = Graph()
 
-        hidden_dim = input_dim / 2
+        #hidden_dim = input_dim / 2
+        hidden_dim = 2000
         
         graph.add_input(name='X', input_shape=(input_dim,))
 
@@ -655,11 +656,11 @@ if __name__ == '__main__':
     #main7()
 
     #main4() # concat
-    #main5() # sub
+    main5() # sub
     #main6() # auto
 
-    f = open(config.PCA_OUT, 'w')
-    main9(f) # concat pca
-    main10(f) # sub pca
-    main11(f) # auto pca
-    f.close()
+    #f = open(config.PCA_OUT, 'w')
+    #main9(f) # concat pca
+    #main10(f) # sub pca
+    #main11(f) # auto pca
+    #f.close()
