@@ -95,8 +95,8 @@ class AutoEncoderNN2(object):
 
 
 class AutoEncoderRelations(object):
-    def __init__(self, input_dim=2000, simple_model=False):
-        n = AutoEncoderNN(input_dim)
+    def __init__(self, input_dim=2000, hidden_dim=100, simple_model=False):
+        n = AutoEncoderNN2(input_dim, hidden_dim)
 
         if simple_model:
             n.load_params(config.SIMPLE_AUTOENCODER_PARAMS)
@@ -104,7 +104,6 @@ class AutoEncoderRelations(object):
             n.load_params(config.AUTOENCODER_PARAMS)
 
         hidden_weights = n.model.layers[0].get_weights()
-        hidden_dim = hidden_weights[1].shape[0]
 
         model = Sequential()
         model.add(Dense(output_dim=hidden_dim,
@@ -442,7 +441,7 @@ def main4():
     n.compile()
 
     print 'training . . .'
-    n.train(X_train, y_train, epochs=100)
+    n.train(X_train, y_train, epochs=1000)
 
     print 'saving model params . . .'
     n.save_params(config.NEW_DATA_PARAMS)
@@ -541,7 +540,7 @@ if __name__ == '__main__':
     #main()
     #main2()
     #main3(True)
-    main7()
+    #main7()
 
     main4() # concat
     #main5() # sub

@@ -37,6 +37,7 @@ STANFORD_PARSER_MODEL = "%s/stanford-parser-3.5.2-models.jar" % STANFORD_PARSER_
 # data
 RAW_DATA_TXT = '%s/raw_data.txt' % RESOURCES
 NEW_DATA_TXT = '%s/new_data.txt' % RESOURCES
+
 NEW_DATA_TRAIN_NPY = '%s/new_data_train.npy' % RESOURCES
 NEW_DATA_TEST_NPY = '%s/new_data_test.npy' % RESOURCES
 NEW_DATA_TRAIN_SUBTRACT_NPY = '%s/new_data_train_subtract.npy' % RESOURCES

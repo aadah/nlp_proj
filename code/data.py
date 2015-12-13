@@ -93,7 +93,7 @@ class DataManager:
 
         _, D = X.shape
 
-        ae = nn.AutoEncoderRelations(D/2, simple_model=simple_model)
+        ae = nn.AutoEncoderRelations(D/2, 100, simple_model=simple_model)
         ae.compile()
 
         X1 = X[:,:D/2]
@@ -160,16 +160,16 @@ def main3():
     simple_model = True
 
     dm.load_data('train', num_col=2)
-    dm.transform('subtract')
-    dm.save_to(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
-    #dm.transform('autoencode', simple_model=simple_model)
-    #dm.save_to(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
+    #dm.transform('subtract')
+    #dm.save_to(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
+    dm.transform('autoencode', simple_model=simple_model)
+    dm.save_to(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
 
     dm.load_data('test', num_col=2)
-    dm.transform('subtract')
-    dm.save_to(config.NEW_DATA_TEST_SUBTRACT_NPY)
-    #dm.transform('autoencode', simple_model=simple_model)
-    #dm.save_to(config.NEW_DATA_TEST_AUTOENCODE_NPY)
+    #dm.transform('subtract')
+    #dm.save_to(config.NEW_DATA_TEST_SUBTRACT_NPY)
+    dm.transform('autoencode', simple_model=simple_model)
+    dm.save_to(config.NEW_DATA_TEST_AUTOENCODE_NPY)
 
 
 if __name__ == '__main__':
