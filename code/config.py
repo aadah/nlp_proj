@@ -52,6 +52,8 @@ PCA_DATA_TEST_SUBTRACT_NPY = '%s/pca_data_test_subtract.npy' % RESOURCES
 PCA_DATA_TRAIN_AUTOENCODE_NPY = '%s/pca_data_train_autoencode.npy' % RESOURCES
 PCA_DATA_TEST_AUTOENCODE_NPY = '%s/pca_data_test_autoencode.npy' % RESOURCES
 
+PCA_OUT = '%s/pca_out.txt' % RESOURCES
+
 # params
 NEW_DATA_PARAMS = '%s/new_data.hd5f' % RESOURCES
 NEW_DATA_SUBTRACT_PARAMS = '%s/new_data_subtract.hd5f' % RESOURCES

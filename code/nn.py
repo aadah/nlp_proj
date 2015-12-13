@@ -536,12 +536,130 @@ def main7(cont=False):
     print 'Done!'
 
 
+def main8():
+    #train_data = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
+    #test_data = np.load(config.NEW_DATA_TEST_AUTOENCODE_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_AUTOENCODE_PARAMS)
+
+    print 'Autoencode error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
+def main9(f):
+    train_data = np.load(config.PCA_DATA_TRAIN_NPY)
+    test_data = np.load(config.PCA_DATA_TEST_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    #print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_PARAMS)
+
+    print >> f, 'Error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
+def main10(f):
+    train_data = np.load(config.PCA_DATA_TRAIN_SUBTRACT_NPY)
+    test_data = np.load(config.PCA_DATA_TEST_SUBTRACT_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    #print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_SUBTRACT_PARAMS)
+
+    print >> f, 'Subtract error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
+def main11(f):
+    train_data = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
+    test_data = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
+
+    X_train = train_data[:,:-2]
+    y_train = np.zeros(X_train.shape[0])
+    y_train[train_data[:,-2] == train_data[:,-1]] = 1
+    X_test = test_data[:,:-2]
+    y_test = np.zeros(X_test.shape[0])
+    y_test[test_data[:,-2] == test_data[:,-1]] = 1
+
+    _, D = X_train.shape
+
+    print 'building/compiling model . . .'
+    n = TrainNN2(D)
+    n.compile()
+
+    print 'training . . .'
+    n.train(X_train, y_train, epochs=1000)
+
+    #print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_AUTOENCODE_PARAMS)
+
+    print >> f, 'Autoencode error rate:', n.error_rate(X_test, y_test)
+
+    print 'Done!'
+
+
 if __name__ == '__main__':
     #main()
     #main2()
     #main3(True)
     #main7()
 
-    main4() # concat
+    #main4() # concat
     #main5() # sub
     #main6() # auto
+
+    f = open(config.PCA_OUT, 'w')
+    main9(f) # concat pca
+    main10(f) # sub pca
+    main11(f) # auto pca
+    f.close()
