@@ -7,6 +7,8 @@ import scipy.spatial as sps
 from scipy import stats
 from sklearn.cluster import DBSCAN
 
+np.random.seed(1)
+
 class KNN:
     def __init__(self, k, rep=''):
         self.k = k
@@ -14,14 +16,14 @@ class KNN:
         self.nodes = {}
         self.clusters = collections.defaultdict(set)
         if rep == '':
-            self.XY_train = np.load(config.SINGLE_INSTANCE_TRAIN)
-            self.XY_test = np.load(config.SINGLE_INSTANCE_TEST)
+            self.XY_train = np.load(config.NEW_DATA_TRAIN_NPY)
+            self.XY_test = np.load(config.NEW_DATA_TEST_NPY)
         elif rep == 'subtract':
-            self.XY_train = np.load(config.SUBTRACT_SINGLE_INSTANCE_TRAIN)
-            self.XY_test = np.load(config.SUBTRACT_SINGLE_INSTANCE_TEST)
+            self.XY_train = np.load(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
+            self.XY_test = np.load(config.NEW_DATA_TEST_SUBTRACT_NPY)
         elif rep == 'autoencode':
-            self.XY_train = np.load(config.AUTOENCODE_SINGLE_INSTANCE_TRAIN)
-            self.XY_test = np.load(config.AUTOENCODE_SINGLE_INSTANCE_TEST)
+            self.XY_train = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
+            self.XY_test = np.load(config.NEW_DATA_TEST_AUTOENCODE_NPY)
     
         
     def build_entity_pair_list(self):
@@ -72,7 +74,7 @@ class KNN:
         print '# clusters:',len(set(self.clusters.values()))
         self.build_entity_pair_list()
     '''
-
+    
     def train(self):
         print 'Training . . .'
         N, D = self.XY_train.shape
@@ -84,7 +86,7 @@ class KNN:
         self.entity_pairs = self.XY_train[:,:-1]
         self.entity_pair_labels = self.XY_train[:,-1]
         sys.stdout.flush()
-        
+    '''    
     def make_test(self):
         N_test, D = self.XY_test.shape
         new_test = np.empty((200, 2*D-1))
@@ -115,9 +117,37 @@ class KNN:
         print self.XY_test.shape
         print 'count: %d (pos: %d, neg: %d)' %(count, pos, neg)
         sys.stdout.flush()
+    '''
+    def make_test(self, n):
+        N_test, D = self.XY_test.shape
+        new_test = np.empty((n, 2*D-1))
+        count = 0
+        pos = 0
+        neg = 0
+        while count < n:
+            new_example = np.empty((1,2*D-1))
+            i = int(np.random.rand() * N_test)
+            j = int(np.random.rand() * N_test)
+            new_example[0,:(D-1)] = self.XY_test[i,:-1]
+            new_example[0,(D-1):-1] = self.XY_test[j,:-1]
+            if self.XY_test[i,-1] == self.XY_test[j,-1] and pos < n/2:
+                pos += 1                
+                new_example[0,-1] = 1
+                new_test[count] = new_example
+                count += 1
+            elif self.XY_test[i,-1] != self.XY_test[j,-1] and neg < n/2:
+                neg += 1
+                new_example[0,-1] = 0
+                new_test[count] = new_example
+                count += 1
+        self.XY_test = new_test
+        print self.XY_test.shape
+        print 'count: %d (pos: %d, neg: %d)' %(count, pos, neg)
+        sys.stdout.flush()
+
 
     def test(self):
-        self.make_test()
+        self.make_test(200)
         N, D = self.XY_test.shape
         Y = self.XY_test[:,-1]
         pred = self.classify()
@@ -229,9 +259,8 @@ def union(x, y):
         x_root.rank += 1
 
 if __name__=='__main__':
-    fname = 'knn_final_results.txt'
     for k in [5,10,15]:
-        for rep in ['autoencode','subtract','']:
+        for rep in ['','subtract','autoencode']:
             print 'k =',k
             print 'rep:',rep
             knn = KNN(k,rep)
