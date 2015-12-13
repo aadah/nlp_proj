@@ -24,147 +24,48 @@ class KNN:
         elif rep == 'autoencode':
             self.XY_train = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
             self.XY_test = np.load(config.NEW_DATA_TEST_AUTOENCODE_NPY)
-    
         
-    def build_entity_pair_list(self):
-        print 'Building entity pair list . . .'
-        keys = self.nodes.keys()
-        n = len(keys)
-        D = (self.XY_train.shape[1]-1)/2
-        self.entity_pairs = np.empty((n,D))
-        self.entity_pair_labels = []
-        for i in xrange(n):
-            self.entity_pairs[i] = self._str2vec(keys[i])
-            self.entity_pair_labels.append(self.clusters[keys[i]])
-
-    '''
     def train(self):
         print 'Training . . .'
         N, D = self.XY_train.shape
-        Y = self.XY_train[:,-1]
-        X1 = self.XY_train[:,:(D-1)/2]
-        X2 = self.XY_train[:,(D-1)/2:-1]
-        self.nodes = {}
-        print 'Clustering . . .'
-        
-        for i in xrange(N):
-            x1_str = self._vec2str(X1[i])
-            if x1_str in self.nodes:
-                x1 = self.nodes[x1_str]
-            else:
-                x1 = NodeSet(X1[i])
-                self.nodes[x1_str] = x1
-            x2_str = self._vec2str(X2[i])
-            if x2_str in self.nodes:
-                x2 = self.nodes[x2_str]
-            else:
-                x2 = NodeSet(X2[i])
-                self.nodes[x2_str] = x2
-            if Y[i] == 1:
-                union(x1,x2)
-        labels = {}
-        cluster_index = collections.defaultdict(list)
-        for node in self.nodes.values():
-            node_root = self._vec2str(find(node).arr)
-            if node_root not in labels:
-                labels[node_root] = len(labels)
-            self.clusters[self._vec2str(node.arr)] = int(labels[node_root])
-            cluster_index[labels[node_root]].append(node)
-        print '# unique relations:', len(self.nodes)
-        print '# clusters:',len(set(self.clusters.values()))
-        self.build_entity_pair_list()
-    '''
-    
-    def train(self):
-        print 'Training . . .'
-        N, D = self.XY_train.shape
-        X = self.XY_train[:,:-1]
-        Y = self.XY_train[:,-1]
-        for i in xrange(N):
-            self.clusters[self._vec2str(X[i])] = Y[i]
+        X = np.empty((2*N, (D-2)/2))
+        X[:N,:] = self.XY_train[:,:(D-2)/2]
+        X[N:,:] = self.XY_train[:,(D-1)/2:-2]
+        Y = np.empty((2*N,1))
+        Y[:N,0] = self.XY_train[:,-2]
+        Y[N:,0] = self.XY_train[:,-1]
+        for i in xrange(2*N):
+            self.clusters[self._vec2str(X[i])] = Y[i][0]
         print '# clusters:', len(set(self.clusters.values()))
-        self.entity_pairs = self.XY_train[:,:-1]
-        self.entity_pair_labels = self.XY_train[:,-1]
+        self.entity_pairs = np.empty((len(self.clusters),(D-2)/2))
+        self.entity_pair_labels = np.empty((len(self.clusters), 1))
+        i = 0
+        for x_str in self.clusters:
+            x = self._str2vec(x_str)
+            self.entity_pairs[i] = x
+            self.entity_pair_labels[i] = self.clusters[x_str]
+            i += 1
         sys.stdout.flush()
-    '''    
-    def make_test(self):
-        N_test, D = self.XY_test.shape
-        new_test = np.empty((200, 2*D-1))
-        count = 0
-        pos = 0
-        neg = 0
-        for i in xrange(N_test):
-            for j in xrange(i+1,N_test):
-                new_example = np.empty((1,2*D-1))
-                new_example[0,:(D-1)] = self.XY_test[i,:-1]
-                new_example[0,(D-1):-1] = self.XY_test[j,:-1]
-                if self.XY_test[i,-1] == self.XY_test[j,-1]:
-                    if pos >= 100:
-                        continue
-                    pos += 1
-                    count += 1
-                    new_example[0,-1] = 1
-                else:
-                    if neg >= 100:
-                       continue
-                    neg += 1
-                    count += 1
-                    new_example[0,-1] = 0
-                if count >= 200:
-                    continue
-                new_test[count] = new_example
-        self.XY_test = new_test
-        print self.XY_test.shape
-        print 'count: %d (pos: %d, neg: %d)' %(count, pos, neg)
-        sys.stdout.flush()
-    '''
-    def make_test(self, n):
-        N_test, D = self.XY_test.shape
-        new_test = np.empty((n, 2*D-1))
-        count = 0
-        pos = 0
-        neg = 0
-        while count < n:
-            new_example = np.empty((1,2*D-1))
-            i = int(np.random.rand() * N_test)
-            j = int(np.random.rand() * N_test)
-            new_example[0,:(D-1)] = self.XY_test[i,:-1]
-            new_example[0,(D-1):-1] = self.XY_test[j,:-1]
-            if self.XY_test[i,-1] == self.XY_test[j,-1] and pos < n/2:
-                pos += 1                
-                new_example[0,-1] = 1
-                new_test[count] = new_example
-                count += 1
-            elif self.XY_test[i,-1] != self.XY_test[j,-1] and neg < n/2:
-                neg += 1
-                new_example[0,-1] = 0
-                new_test[count] = new_example
-                count += 1
-        self.XY_test = new_test
-        print self.XY_test.shape
-        print 'count: %d (pos: %d, neg: %d)' %(count, pos, neg)
-        sys.stdout.flush()
-
 
     def test(self):
-        self.make_test(200)
+        #self.make_test(200)
         N, D = self.XY_test.shape
-        Y = self.XY_test[:,-1]
+        Y = self.XY_test[:,-2:]
         pred = self.classify()
         TP = FP = FN = TN = 0
         res = np.empty((N,))
         for i in xrange(N):
             l1 = pred[i*2]
             l2 = pred[i*2+1]
-            if l1 == l2 and Y[i] == 1:
+            if l1 == l2 and Y[i,0] == Y[i,1]:
                 TP += 1
-            elif l1 == l2 and Y[i] != 1:
+            elif l1 == l2 and Y[i,0] != Y[i,1]:
                 FP += 1
-            elif l1 != l2 and Y[i] == 1:
+            elif l1 != l2 and Y[i,0] == Y[i,1]:
                 FN += 1
-            elif l1 != l2 and Y[i] != 1:
+            elif l1 != l2 and Y[i,0] != Y[i,1]:
                 TN += 1
-            res[i] = np.bitwise_xor(int(np.sign(abs(l1-l2))),int(Y[i]))
+            res[i] = 1-np.bitwise_xor(int(np.sign(abs(l1-l2))),int(np.sign(abs(Y[i,0]-Y[i,1]))))
         print 'TP:',TP
         print 'FP:',FP
         print 'FN:',FN
@@ -196,8 +97,8 @@ class KNN:
             print N_test
             for i in xrange(N_test):
                 print 'row',i 
-                x1 = self.XY_test[i,:(D-1)/2]
-                x2 = self.XY_test[i,(D-1)/2:-1]
+                x1 = self.XY_test[i,:(D-2)/2]
+                x2 = self.XY_test[i,(D-2)/2:-2]
                 self.distances[2*i] = np.array([self._distance(x1,self.entity_pairs[j]) for j in xrange(d)])
                 self.distances[2*i-1] = np.array([self._distance(x2,self.entity_pairs[j]) for j in xrange(d)])            
             np.save(fname, self.distances)
@@ -213,7 +114,7 @@ class KNN:
         print 'creating top_indices . . .'
         self.build_dist_matrix()
         N_test, N_train = self.distances.shape
-        self.top_indices = np.empty((N_test, N_train))
+        self.top_indices = np.empty(self.distances.shape)
         for j in xrange(N_test):
             row = self.distances[j]
             tagged_row = [(row[i], i) for i in xrange(N_train)]
@@ -232,31 +133,6 @@ class KNN:
     def _distance(self, u, v):
         return sps.distance.euclidean(u,v)
     
-
-# Disjoint set related methods
-class NodeSet:
-    def __init__(self, arr):
-        self.parent = self
-        self.rank = 0
-        self.arr = arr
-        
-def find(x):
-    if x.parent != x:
-        x.parent = find(x.parent)
-    return x.parent
-
-def union(x, y):
-    x_root = find(x)
-    y_root = find(y)
-    if x_root == y_root:
-        return # already the same set
-    if x_root.rank < y_root.rank:
-        x_root.parent = y_root
-    elif x_root.rank > y_root.rank:
-        y_root.parent = x_root
-    else:
-        y_root.parent = x_root
-        x_root.rank += 1
 
 if __name__=='__main__':
     for k in [5,10,15]:
