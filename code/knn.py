@@ -24,6 +24,15 @@ class KNN:
         elif rep == 'autoencode':
             self.XY_train = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
             self.XY_test = np.load(config.NEW_DATA_TEST_AUTOENCODE_NPY)
+        elif rep == 'pca':
+            self.XY_train = np.load(config.PCA_DATA_TRAIN_NPY)
+            self.XY_test = np.load(config.PCA_DATA_TEST_NPY)
+        elif rep == 'pca_subtract':
+            self.XY_train = np.load(config.PCA_DATA_TRAIN_SUBTRACT_NPY)
+            self.XY_test = np.load(config.PCA_DATA_TEST_SUBTRACT_NPY)
+        elif rep == 'pca_autoencode':
+            self.XY_train = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
+            self.XY_test = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
         
     def train(self):
         print 'Training . . .'
@@ -48,7 +57,6 @@ class KNN:
         sys.stdout.flush()
 
     def test(self):
-        #self.make_test(200)
         N, D = self.XY_test.shape
         Y = self.XY_test[:,-2:]
         pred = self.classify()
@@ -135,8 +143,9 @@ class KNN:
     
 
 if __name__=='__main__':
-    for k in [5,10,15]:
-        for rep in ['','subtract','autoencode']:
+    for k in [5]:#,10,15,20,25,30,35,40,45,50,55,60]:
+        for rep in ['','subtract','autoencode','pca','pca_subtract','pca_autoencode']:
+        #for rep in ['autoencode']:
             print 'k =',k
             print 'rep:',rep
             knn = KNN(k,rep)
