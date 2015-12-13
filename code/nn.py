@@ -564,9 +564,9 @@ def main8():
     print 'Done!'
 
 
-def main9():
-    train_data = np.load(config.NEW_DATA_TRAIN_NPY)
-    test_data = np.load(config.NEW_DATA_TEST_NPY)
+def main9(f):
+    train_data = np.load(config.PCA_DATA_TRAIN_NPY)
+    test_data = np.load(config.PCA_DATA_TEST_NPY)
 
     X_train = train_data[:,:-2]
     y_train = np.zeros(X_train.shape[0])
@@ -584,17 +584,17 @@ def main9():
     print 'training . . .'
     n.train(X_train, y_train, epochs=1000)
 
-    print 'saving model params . . .'
-    n.save_params(config.NEW_DATA_PARAMS)
+    #print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_PARAMS)
 
-    print 'Error rate:', n.error_rate(X_test, y_test)
+    print >> f, 'Error rate:', n.error_rate(X_test, y_test)
 
     print 'Done!'
 
 
-def main10():
-    train_data = np.load(config.NEW_DATA_TRAIN_SUBTRACT_NPY)
-    test_data = np.load(config.NEW_DATA_TEST_SUBTRACT_NPY)
+def main10(f):
+    train_data = np.load(config.PCA_DATA_TRAIN_SUBTRACT_NPY)
+    test_data = np.load(config.PCA_DATA_TEST_SUBTRACT_NPY)
 
     X_train = train_data[:,:-2]
     y_train = np.zeros(X_train.shape[0])
@@ -612,17 +612,17 @@ def main10():
     print 'training . . .'
     n.train(X_train, y_train, epochs=1000)
 
-    print 'saving model params . . .'
-    n.save_params(config.NEW_DATA_SUBTRACT_PARAMS)
+    #print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_SUBTRACT_PARAMS)
 
-    print 'Subtract error rate:', n.error_rate(X_test, y_test)
+    print >> f, 'Subtract error rate:', n.error_rate(X_test, y_test)
 
     print 'Done!'
 
 
-def main11():
-    train_data = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
-    test_data = np.load(config.NEW_DATA_TEST_AUTOENCODE_NPY)
+def main11(f):
+    train_data = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
+    test_data = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
 
     X_train = train_data[:,:-2]
     y_train = np.zeros(X_train.shape[0])
@@ -640,10 +640,10 @@ def main11():
     print 'training . . .'
     n.train(X_train, y_train, epochs=1000)
 
-    print 'saving model params . . .'
-    n.save_params(config.NEW_DATA_AUTOENCODE_PARAMS)
+    #print 'saving model params . . .'
+    #n.save_params(config.NEW_DATA_AUTOENCODE_PARAMS)
 
-    print 'Autoencode error rate:', n.error_rate(X_test, y_test)
+    print >> f, 'Autoencode error rate:', n.error_rate(X_test, y_test)
 
     print 'Done!'
 
@@ -658,8 +658,8 @@ if __name__ == '__main__':
     #main5() # sub
     #main6() # auto
 
-    main9() # concat pca
-    #main10() # sub pca
-    #main11() # auto pca
-
-    
+    f = open(config.PCA_OUT, 'w')
+    main9(f) # concat pca
+    main10(f) # sub pca
+    main11(f) # auto pca
+    f.close()
