@@ -155,7 +155,7 @@ WIKIDATA_PROPERTIES = [
     'P44', # stepmother
     'P1038', # relative
     'P1290', # godparent
-    'P54', # member of sports term
+    'P54', # member of sports team
     'P241', # military branch
     'P410', # military rank
     'P598', # commander of
@@ -280,7 +280,7 @@ WIKIDATA_PROPERTIES_DICT = {
     44: 'stepmother',
     1038: 'relative',
     1290: 'godparent',
-    54: 'member of sports term',
+    54: 'member of sports team',
     241: 'military branch',
     410: 'military rank',
     598: 'commander of',
