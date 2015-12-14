@@ -655,8 +655,8 @@ if __name__ == '__main__':
     #main3(True)
     #main7()
 
-    #main4() # concat
-    main5() # sub
+    main4() # concat
+    #main5() # sub
     #main6() # auto
 
     #f = open(config.PCA_OUT, 'w')
