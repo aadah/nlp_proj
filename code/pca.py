@@ -105,11 +105,13 @@ class Visualizer:
         elif rep == 'autoencode':
             self.XY = np.load(config.NEW_DATA_TRAIN_AUTOENCODE_NPY)
         elif rep == 'pca':
-            self.rep = 'pca_concatenate'
+            self.rep = 'concatenate+pca'
             self.XY = np.load(config.PCA_DATA_TRAIN_NPY)
         elif rep == 'pca_subtract':
+            self.rep = 'subtract+pca'
             self.XY = np.load(config.PCA_DATA_TRAIN_SUBTRACT_NPY)
         elif rep == 'pca_autoencode':
+            self.rep = 'autoencode+pca'
             self.XY = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
         print self.rep
         self.X = self.XY[:,:-1]
@@ -166,49 +168,51 @@ class Visualizer:
 
     def plot_X(self, n_components, r1, r2, r3):
         self.PCA_transform(n_components)
-        
         fig = plt.figure()
         N, _ = self.XY_pca.shape
         y = self.XY_pca[:,-1]
         y = y.reshape((y.shape[0],)) # in order for boolean mask to work
         
         props = config.WIKIDATA_PROPERTIES_DICT
-        
+        colors = 'rgb'
         if n_components == 3:
-            ax = fig.add_subplot(111, projection='3d')
+            ax = plt.subplot(111, projection='3d')
             for c, i, target_name in zip("rgb", [r1,r2,r3], ['P%d'%r1,'P%d'%r2, 'P%d'%r3]):
-                ax.scatter(self.X_pca[y == i, 0], self.X_pca[y == i, 1], zs=self.X_pca[y == i, 2], c=c, label=target_name)
-            ax.set_title('PCA w/ %s - %s(%d) vs. %s(%d) vs. %s(%d)' % (self.rep, props[r1],r1, props[r2],r2, props[r3],r3))
+                ax.plot(self.X_pca[y == i, 0], self.X_pca[y == i, 1], self.X_pca[y == i, 2], 
+                        'o', color=c, label=target_name)
+            #ax.set_title('%s - %s(P%d) vs. %s(P%d) vs. %s(P%d)' % (self.rep, props[r1],r1, props[r2],r2, props[r3],r3))
+            plt.legend(loc='upper left')
+            ax.set_xlim([-5,5])
+            ax.set_ylim([-7,0])
+            ax.set_zlim([-2,1])
         else:
             for c, i, target_name in zip("rgb", [r1,r2,r3], ['P%d'%r1,'P%d'%r2, 'P%d'%r3]):
                 plt.scatter(self.X_pca[y==i, 0], self.X_pca[y==i, 1], c=c, label=target_name)
-            plt.title('PCA w/ %s - %s(%d) vs. %s(%d) vs. %s(%d)' % (self.rep, props[r1],r1, props[r2],r2, props[r3],r3))
-        plt.legend()
-        plt.show()
+            #plt.suptitle('%s - %s(%d) vs. %s(%d) vs. %s(%d)' % (self.rep, props[r1],r1, props[r2],r2, props[r3],r3))
+            plt.legend(loc='best', numpoints=1)
+        plt.suptitle('%s - %s(P%d) vs. %s(P%d) vs. %s(P%d)' % (self.rep, props[r1],r1, props[r2],r2, props[r3],r3), fontsize=14)
         
+
 def vec2str(arr):
     return str(list(arr))
     
 def str2vec(str):
     return np.array(eval(str))
 
-def compress_all():    
+def compress_all():
     for rep in ['', 'subtract', 'autoencode']:
         comp = Compressor(rep=rep)
         comp.compress(100)
 
 if __name__=="__main__":
     #compress_all()
-
-    for rep in ['', 'subtract', 'autoencode','pca','pca_subtract','pca_autoencode']:
+#    for rep in ['']:
+    #for rep in ['', 'subtract', 'autoencode','pca','pca_subtract','pca_autoencode']:
+    for rep in ['pca','pca_subtract', 'pca_autoencode']:
         vis = Visualizer(rep=rep)
-        #vis.plot_X(3, 26, 451, 36) # spouse vs. partner vs. capital
-        #vis.plot_X(2, 26, 451, 36) # spouse vs. partner vs. capital
-        #vis.plot_X(3, 22, 25, 38) # father vs. mother vs. currency
-        vis.plot_X(2, 22, 25, 38) # father vs. mother vs. currency
-        #vis.plot_X(3, 7, 9, 6) # brother vs. sister vs. head of gov't
-        #vis.plot_X(2, 7, 9, 6) # brother vs. sister vs. head of gov't
-        #vis.plot_X(3, 200, 201, 802) # lake inflow vs. lake outflow vs. student
+        vis.plot_X(3, 54, 7, 9)
+        #vis.plot_X(2, 54, 7, 9)        
+    plt.show()
     #vis.plot_X(2, 200, 201, 802) # lake inflow vs. lake outflow vs. student
     #vis.plot_X('earn', n_components=3)
     #vis.sanity_check()
