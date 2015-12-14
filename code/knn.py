@@ -40,16 +40,22 @@ class KNN:
             self.XY_train = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
             self.XY_test = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
         if validation > 0:
-            self.validation = validation
-            N, D = self.XY_train.shape
-            N_validate = int(validation*N)
-            new_train = self.XY_train[:-N_validate]
-            validate = self.XY_train[-N_validate:]
-            self.XY_train = new_train
-            self.XY_test = validate
-            print self.XY_train.shape
-            print self.XY_test.shape
+            self.split = validation
+            self.XY_train, self.XY_test = self.make_validation_set(self.XY_train, self.split)
         
+    def make_validation_set(self, XY_train, split):
+        N, D = XY_train.shape
+        N_validate = int(split*N)
+        N_train = N - N_validate
+        new_train = np.empty((N_train,D))
+        validate = np.empty((N_validate,D))
+        validate[:N_validate/2] = XY_train[:N_validate/2]
+        new_train[:N_train/2] = XY_train[N_validate/2:N/2]
+        new_train[N_train/2:] = XY_train[N/2:-N_validate/2]
+        validate[N_validate/2:] = XY_train[-N_validate/2:]
+        print new_train.shape, validate.shape
+        return new_train, validate
+
     def train(self):
         print 'Training . . .'
         N, D = self.XY_train.shape
@@ -142,7 +148,7 @@ class KNN:
         sys.stdout.flush()
             
     def build_top_indices(self):
-        fname = 'top_indices_%s.npy' %self.rep)
+        fname = 'top_indices_%s.npy' %self.rep
         if self.validation > 0:
             fname = 'validation_' + fname
         if os.path.isfile(fname):
