@@ -154,7 +154,7 @@ class TrainNN2(object):
         graph = Graph()
 
         #hidden_dim = input_dim / 2
-        hidden_dim = 2000
+        hidden_dim = 100
         
         graph.add_input(name='X', input_shape=(input_dim,))
 
