@@ -96,7 +96,7 @@ class KNN:
         N_test, _ = self.top_indices.shape
         pred = np.empty((N_test,))
         for i in xrange(N_test):
-            top_indices = self.top_indices[i,:k]
+            top_indices = self.top_indices[i,:self.k]
             #print top_indices
             #print [self.labels[int(j)] for j in top_indices]
             pred[i] = stats.mode([self.labels[int(j)] for j in top_indices])[0][0]
