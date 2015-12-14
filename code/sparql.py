@@ -60,6 +60,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
 
             if len(results) > 1:
                 results_dict[relation] = results
+            else:
+                print 'No results for', relation
 
         for relation in try_later:
             try:
@@ -71,6 +73,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
 
             if len(results) > 1:
                 results_dict[relation] = results
+            else:
+                print 'No results for', relation
 
         for relation in try_again_later:
             try:
@@ -81,6 +85,8 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"""
 
             if len(results) > 1:
                 results_dict[relation] = results
+            else:
+                print 'No results for', relation
 
         return results_dict
 
