@@ -13,6 +13,7 @@ class KNN:
     def __init__(self, k, rep='', validation=0):
         self.k = k
         self.rep = rep
+        self.split = validation
         if rep == '':
             self.XY_train = np.load(config.NEW_DATA_TRAIN_NPY)
             self.XY_test = np.load(config.NEW_DATA_TEST_NPY)
@@ -39,8 +40,7 @@ class KNN:
         elif rep == 'pca_autoencode':
             self.XY_train = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
             self.XY_test = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
-        if validation > 0:
-            self.split = validation
+        if self.split > 0:            
             self.XY_train, self.XY_test = self.make_validation_set(self.XY_train, self.split)
         
     def make_validation_set(self, XY_train, split):
@@ -120,7 +120,7 @@ class KNN:
             
     def build_dist_matrix(self):
         fname = 'distance_matrix_%s.npy' %self.rep
-        if self.validation > 0:
+        if self.split > 0:
             fname = 'validation_'+fname
         if os.path.isfile(fname):
             #print 'loading %s . . .' %fname
@@ -149,7 +149,7 @@ class KNN:
             
     def build_top_indices(self):
         fname = 'top_indices_%s.npy' %self.rep
-        if self.validation > 0:
+        if self.split > 0:
             fname = 'validation_' + fname
         if os.path.isfile(fname):
             #print 'loading top_indices . . .'
