@@ -52,8 +52,8 @@ class KNN:
         relations2labels = {}
         for i in xrange(2*N):
             relations2labels[self._vec2str(X[i])] = int(Y[i][0])
-        print '# relation labels:', len(set(relations2labels.values()))
-        print '# unique relations:', len(relations2labels.keys())
+        #print '# relation labels:', len(set(relations2labels.values()))
+        #print '# unique relations:', len(relations2labels.keys())
         self.relations = np.empty((len(relations2labels),(D-2)/2))
         self.labels = np.empty((len(relations2labels),1))
         i = 0
@@ -73,8 +73,8 @@ class KNN:
         for i in xrange(N):
             l1 = pred[i]
             l2 = pred[N+i]
-            print 'pred',l1,l2
-            print 'Y',Y[i,0],Y[i,1]
+            #print 'pred',l1,l2
+            #print 'Y',Y[i,0],Y[i,1]
             if l1 == l2 and Y[i,0] == Y[i,1]:
                 TP += 1
             elif l1 == l2 and Y[i,0] != Y[i,1]:
@@ -105,19 +105,19 @@ class KNN:
     def build_dist_matrix(self):        
         fname = 'distance_matrix_%s.npy' %self.rep
         if os.path.isfile(fname):
-            print 'loading %s . . .' %fname
+            #print 'loading %s . . .' %fname
             self.distances = np.load(fname)
         else:
-            print 'building distance matrix . . .'
+            #print 'building distance matrix . . .'
             N_relations, _ = self.relations.shape
-            print self.relations.shape
+            #print self.relations.shape
             # where N_relations is the number of unique relations in the training set
             N_test, D = self.XY_test.shape
             self.distances = np.empty((2*N_test,N_relations))
-            print self.distances.shape
-            print 'test relations',N_test
+            #print self.distances.shape
+            #print 'test relations',N_test
             for i in xrange(N_test):
-                print 'row',i
+                #print 'row',i
                 # stack
                 x1 = self.XY_test[i,:(D-2)/2]
                 x2 = self.XY_test[i,(D-2)/2:-2]
@@ -126,16 +126,16 @@ class KNN:
                 self.distances[N_test+i] = np.array(
                     [self._distance(x2,self.relations[j]) for j in xrange(N_relations)])
             np.save(fname, self.distances)
-        print 'distances: ',self.distances.shape
+        #print 'distances: ',self.distances.shape
         sys.stdout.flush()
             
     def build_top_indices(self):
         if os.path.isfile('top_indices_%s.npy' %self.rep):
-            print 'loading top_indices . . .'
+            #print 'loading top_indices . . .'
             self.top_indices = np.load('top_indices_%s.npy' %self.rep)
             sys.stdout.flush()
             return
-        print 'creating top_indices . . .'
+        #print 'creating top_indices . . .'
         self.build_dist_matrix()
         N_test, N_relations = self.distances.shape
         # where N_relations is the number of unique relations in the training set
@@ -162,10 +162,10 @@ class KNN:
     
 
 if __name__=='__main__':
-    #for k in [1,2,5,10,15,30,45,60]:
-    for k in [10, 15, 20]:
-        #for rep in ['','pca','subtract','pca_subtract','autoencode','pca_autoencode']:
-        for rep in ['autoencode']:
+    for k in [1,2,5,10,15,30,45,60]:
+    #for k in [10, 15, 20]:
+        for rep in ['','pca','subtract','pca_subtract','autoencode','pca_autoencode']:
+        #for rep in ['autoencode']:
             print 'k =',k
             print 'rep:',rep
             knn = KNN(k,rep)
