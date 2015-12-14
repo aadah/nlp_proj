@@ -53,7 +53,7 @@ class KNN:
         new_train[:N_train/2] = XY_train[N_validate/2:N/2]
         new_train[N_train/2:] = XY_train[N/2:-N_validate/2]
         validate[N_validate/2:] = XY_train[-N_validate/2:]
-        print new_train.shape, validate.shape
+        #print new_train.shape, validate.shape
         return new_train, validate
 
     def train(self):
@@ -183,10 +183,16 @@ class KNN:
     
 
 if __name__=='__main__':
-    for k in [1,2,5,10,15,30,45,60]:
+    #for k in [1,2,5,10,15,30,45,60]:
     #for k in [10, 15, 20]:
-        for rep in ['','pca','subtract','pca_subtract','autoencode','pca_autoencode']:
+    for k in [1]:
+        #for rep in ['','pca','subtract','pca_subtract','autoencode','pca_autoencode']:
+        for rep in ['']:
+        #for rep in ['pca']:
+        #for rep in ['subtract']:
+        #for rep in ['pca_subtract']:
         #for rep in ['autoencode']:
+        #for rep in ['pca_autoencode']:
             print 'k =',k
             print 'rep:',rep
             knn = KNN(k,rep, validation=0.1)
