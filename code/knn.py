@@ -10,7 +10,7 @@ from sklearn.cluster import DBSCAN
 np.random.seed(1)
 
 class KNN:
-    def __init__(self, k, rep=''):
+    def __init__(self, k, rep='', validation=0):
         self.k = k
         self.rep = rep
         if rep == '':
@@ -39,6 +39,16 @@ class KNN:
         elif rep == 'pca_autoencode':
             self.XY_train = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
             self.XY_test = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
+        if validation > 0:
+            self.validation = validation
+            N, D = self.XY_train.shape
+            N_validate = int(validation*N)
+            new_train = self.XY_train[:-N_validate]
+            validate = self.XY_train[-N_validate:]
+            self.XY_train = new_train
+            self.XY_test = validate
+            print self.XY_train.shape
+            print self.XY_test.shape
         
     def train(self):
         print 'Training . . .'
@@ -102,8 +112,10 @@ class KNN:
             pred[i] = stats.mode([self.labels[int(j)] for j in top_indices])[0][0]
         return pred
             
-    def build_dist_matrix(self):        
+    def build_dist_matrix(self):
         fname = 'distance_matrix_%s.npy' %self.rep
+        if self.validation > 0:
+            fname = 'validation_'+fname
         if os.path.isfile(fname):
             #print 'loading %s . . .' %fname
             self.distances = np.load(fname)
@@ -130,9 +142,12 @@ class KNN:
         sys.stdout.flush()
             
     def build_top_indices(self):
-        if os.path.isfile('top_indices_%s.npy' %self.rep):
+        fname = 'top_indices_%s.npy' %self.rep)
+        if self.validation > 0:
+            fname = 'validation_' + fname
+        if os.path.isfile(fname):
             #print 'loading top_indices . . .'
-            self.top_indices = np.load('top_indices_%s.npy' %self.rep)
+            self.top_indices = np.load(fname)
             sys.stdout.flush()
             return
         #print 'creating top_indices . . .'
@@ -146,7 +161,7 @@ class KNN:
             tagged_row.sort(key=lambda d: d[0]) # sort by distance
             self.top_indices[j] = np.array([d[1] for d in tagged_row])
         #print 'top_indices',self.top_indices.shape
-        np.save('top_indices_%s.npy' %self.rep, self.top_indices)
+        np.save(fname, self.top_indices)
         sys.stdout.flush()
         
     def _vec2str(self, arr):
@@ -168,6 +183,6 @@ if __name__=='__main__':
         #for rep in ['autoencode']:
             print 'k =',k
             print 'rep:',rep
-            knn = KNN(k,rep)
+            knn = KNN(k,rep, validation=0.1)
             knn.train()
             knn.test()
