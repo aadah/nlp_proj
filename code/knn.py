@@ -10,9 +10,10 @@ from sklearn.cluster import DBSCAN
 np.random.seed(1)
 
 class KNN:
-    def __init__(self, k, rep=''):
+    def __init__(self, k, rep='', validation=0):
         self.k = k
         self.rep = rep
+        self.split = validation
         if rep == '':
             self.XY_train = np.load(config.NEW_DATA_TRAIN_NPY)
             self.XY_test = np.load(config.NEW_DATA_TEST_NPY)
@@ -39,7 +40,22 @@ class KNN:
         elif rep == 'pca_autoencode':
             self.XY_train = np.load(config.PCA_DATA_TRAIN_AUTOENCODE_NPY)
             self.XY_test = np.load(config.PCA_DATA_TEST_AUTOENCODE_NPY)
+        if self.split > 0:            
+            self.XY_train, self.XY_test = self.make_validation_set(self.XY_train, self.split)
         
+    def make_validation_set(self, XY_train, split):
+        N, D = XY_train.shape
+        N_validate = int(split*N)
+        N_train = N - N_validate
+        new_train = np.empty((N_train,D))
+        validate = np.empty((N_validate,D))
+        validate[:N_validate/2] = XY_train[:N_validate/2]
+        new_train[:N_train/2] = XY_train[N_validate/2:N/2]
+        new_train[N_train/2:] = XY_train[N/2:-N_validate/2]
+        validate[N_validate/2:] = XY_train[-N_validate/2:]
+        #print new_train.shape, validate.shape
+        return new_train, validate
+
     def train(self):
         print 'Training . . .'
         N, D = self.XY_train.shape
@@ -96,14 +112,16 @@ class KNN:
         N_test, _ = self.top_indices.shape
         pred = np.empty((N_test,))
         for i in xrange(N_test):
-            top_indices = self.top_indices[i,:k]
+            top_indices = self.top_indices[i,:self.k]
             #print top_indices
             #print [self.labels[int(j)] for j in top_indices]
             pred[i] = stats.mode([self.labels[int(j)] for j in top_indices])[0][0]
         return pred
             
-    def build_dist_matrix(self):        
+    def build_dist_matrix(self):
         fname = 'distance_matrix_%s.npy' %self.rep
+        if self.split > 0:
+            fname = 'validation_'+fname
         if os.path.isfile(fname):
             #print 'loading %s . . .' %fname
             self.distances = np.load(fname)
@@ -130,9 +148,12 @@ class KNN:
         sys.stdout.flush()
             
     def build_top_indices(self):
-        if os.path.isfile('top_indices_%s.npy' %self.rep):
+        fname = 'top_indices_%s.npy' %self.rep
+        if self.split > 0:
+            fname = 'validation_' + fname
+        if os.path.isfile(fname):
             #print 'loading top_indices . . .'
-            self.top_indices = np.load('top_indices_%s.npy' %self.rep)
+            self.top_indices = np.load(fname)
             sys.stdout.flush()
             return
         #print 'creating top_indices . . .'
@@ -146,7 +167,7 @@ class KNN:
             tagged_row.sort(key=lambda d: d[0]) # sort by distance
             self.top_indices[j] = np.array([d[1] for d in tagged_row])
         #print 'top_indices',self.top_indices.shape
-        np.save('top_indices_%s.npy' %self.rep, self.top_indices)
+        np.save(fname, self.top_indices)
         sys.stdout.flush()
         
     def _vec2str(self, arr):
@@ -162,12 +183,18 @@ class KNN:
     
 
 if __name__=='__main__':
-    for k in [1,2,5,10,15,30,45,60]:
+    #for k in [1,2,5,10,15,30,45,60]:
     #for k in [10, 15, 20]:
-        for rep in ['','pca','subtract','pca_subtract','autoencode','pca_autoencode']:
+    for k in [1]:
+        #for rep in ['','pca','subtract','pca_subtract','autoencode','pca_autoencode']:
+        for rep in ['']:
+        #for rep in ['pca']:
+        #for rep in ['subtract']:
+        #for rep in ['pca_subtract']:
         #for rep in ['autoencode']:
+        #for rep in ['pca_autoencode']:
             print 'k =',k
             print 'rep:',rep
-            knn = KNN(k,rep)
+            knn = KNN(k,rep, validation=0.1)
             knn.train()
             knn.test()
